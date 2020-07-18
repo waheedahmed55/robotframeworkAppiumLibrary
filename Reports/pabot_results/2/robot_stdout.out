@@ -1,0 +1,24 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.LoginRegistrationPage                                                  
+==============================================================================
+RUNNING...
+Verify invalid Login                                                  | PASS |
+------------------------------------------------------------------------------
+Verify valid Login                                                    | PASS |
+------------------------------------------------------------------------------
+Verify invalid signUp                                                 RUNNING...
+| PASS |
+------------------------------------------------------------------------------
+Verify valid signUp                                                   | PASS |
+------------------------------------------------------------------------------
+Suites.LoginRegistrationPage                                          | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+4 critical tests, 4 passed, 0 failed
+4 tests total, 4 passed, 0 failed
+==============================================================================
+Output:  C:\Automation\AppiumLibraryRobotFramework\Reports\pabot_results\2\output.xml

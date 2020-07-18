@@ -1,0 +1,8 @@
+datasources:6eef4bcfd7c3fc54c4a8368b1e9fa922e74c61f9
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:4bfacdaea0c22b2b8e1ff7f80a0d06ca8031500d
+--suite Suites.FormsDataDriven
+--suite Suites.HomePage
+--suite Suites.LoginRegistrationPage
+--suite Suites.Sim

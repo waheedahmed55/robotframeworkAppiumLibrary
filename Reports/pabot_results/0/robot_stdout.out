@@ -1,0 +1,21 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.FormsDataDriven                                                        
+==============================================================================
+RUNNING...
+Perform action on Waheed webdriver.io is awesome This button is ac... | PASS |
+------------------------------------------------------------------------------
+Perform action on Raheel Appium is awesome This button is active      | PASS |
+------------------------------------------------------------------------------
+Perform action on Moeed This app is awesome This button is active     | PASS |
+------------------------------------------------------------------------------
+Suites.FormsDataDriven                                                | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Output:  C:\Automation\AppiumLibraryRobotFramework\Reports\pabot_results\0\output.xml

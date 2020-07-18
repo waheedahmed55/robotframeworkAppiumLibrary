@@ -1,0 +1,7 @@
+robotframework
+robotframework-appiumLibrary
+robotframework-datadriver
+xlrd
+robotframework-excellib
+allure-robotframework
+robotframework-pabot

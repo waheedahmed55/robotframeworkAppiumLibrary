@@ -1,0 +1,21 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.HomePage                                                               
+==============================================================================
+RUNNING...
+Verify home page screen                                               | PASS |
+------------------------------------------------------------------------------
+Open all tab on in the application                                    | PASS |
+------------------------------------------------------------------------------
+Verify WebView tab Action                                             | PASS |
+------------------------------------------------------------------------------
+Suites.HomePage                                                       | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Output:  C:\Automation\AppiumLibraryRobotFramework\Reports\pabot_results\1\output.xml
