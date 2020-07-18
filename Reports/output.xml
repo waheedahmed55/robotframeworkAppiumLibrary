@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.1 on win32)" generated="20200718 14:47:33.167" rpa="false">
-<suite id="s1" name="HomePage" source="C:\Automation\AppiumLibraryRobotFramework\Testcases\HomePage.robot">
+<robot generator="Robot 3.2.1 (Python 3.8.1 on win32)" generated="20200718 17:13:46.186" rpa="false">
+<suite id="s1" name="SwitchContextDemo" source="C:\Automation\AppiumLibraryRobotFramework\robotframeworkAppiumLibrary\TestCases\SwitchContextDemo.robot">
 <kw name="Open the application in device" library="Setup" type="setup">
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -19,11 +19,11 @@
 <arg>${remote_url}</arg>
 <arg>localhost</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:47:33.784" endtime="20200718 14:47:33.784"></status>
+<status status="PASS" starttime="20200718 17:13:46.700" endtime="20200718 17:13:46.701"></status>
 </kw>
-<msg timestamp="20200718 14:47:33.784" level="INFO">${match} = PASS</msg>
-<msg timestamp="20200718 14:47:33.784" level="INFO">${value} = None</msg>
-<status status="PASS" starttime="20200718 14:47:33.784" endtime="20200718 14:47:33.784"></status>
+<msg timestamp="20200718 17:13:46.701" level="INFO">${match} = PASS</msg>
+<msg timestamp="20200718 17:13:46.701" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20200718 17:13:46.700" endtime="20200718 17:13:46.701"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -39,24 +39,24 @@
 <arg>${s}</arg>
 <arg>startAppiumServer</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:47:33.785" endtime="20200718 14:47:33.877"></status>
+<status status="PASS" starttime="20200718 17:13:46.701" endtime="20200718 17:13:46.792"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:33.784" endtime="20200718 14:47:33.878"></status>
+<status status="PASS" starttime="20200718 17:13:46.701" endtime="20200718 17:13:46.792"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20200718 14:47:38.879" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20200718 14:47:33.878" endtime="20200718 14:47:38.880"></status>
+<msg timestamp="20200718 17:13:51.795" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200718 17:13:46.793" endtime="20200718 17:13:51.795"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>RUNNING...</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:47:38.880" endtime="20200718 14:47:38.882"></status>
+<status status="PASS" starttime="20200718 17:13:51.795" endtime="20200718 17:13:51.796"></status>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.
@@ -73,12 +73,13 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>deviceName=${deviceName}</arg>
 <arg>automationName=${automationName}</arg>
 <arg>app=${appPath}</arg>
+<arg>nativeWebScreenshot=true</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:47:38.883" endtime="20200718 14:47:53.487"></status>
+<status status="PASS" starttime="20200718 17:13:51.798" endtime="20200718 17:14:06.591"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:33.783" endtime="20200718 14:47:53.487"></status>
+<status status="PASS" starttime="20200718 17:13:46.699" endtime="20200718 17:14:06.592"></status>
 </kw>
-<test id="s1-t1" name="Verify home page screen">
+<test id="s1-t1" name="Work with multple elements">
 <kw name="Open the option" library="CommonKeywords" type="setup">
 <arguments>
 <arg>Home</arg>
@@ -94,9 +95,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:47:53.494" endtime="20200718 14:47:54.249"></status>
+<status status="PASS" starttime="20200718 17:14:06.598" endtime="20200718 17:14:07.429"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:53.492" endtime="20200718 14:47:54.251"></status>
+<status status="PASS" starttime="20200718 17:14:06.597" endtime="20200718 17:14:07.429"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -113,21 +114,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:47:54.257" endtime="20200718 14:47:54.535"></status>
+<status status="PASS" starttime="20200718 17:14:07.434" endtime="20200718 17:14:07.758"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:54.254" endtime="20200718 14:47:54.535"></status>
+<status status="PASS" starttime="20200718 17:14:07.432" endtime="20200718 17:14:07.758"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:47:54.543" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:47:54.536" endtime="20200718 14:47:54.859"></status>
+<msg timestamp="20200718 17:14:07.763" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200718 17:14:07.758" endtime="20200718 17:14:08.231"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:54.252" endtime="20200718 14:47:54.859"></status>
+<status status="PASS" starttime="20200718 17:14:07.430" endtime="20200718 17:14:08.232"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:53.489" endtime="20200718 14:47:54.859"></status>
+<status status="PASS" starttime="20200718 17:14:06.596" endtime="20200718 17:14:08.234"></status>
 </kw>
 <kw name="Verify android large icon is available" library="CommonKeywords">
 <kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
@@ -141,287 +142,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:47:54.861" endtime="20200718 14:47:55.157"></status>
+<status status="PASS" starttime="20200718 17:14:08.238" endtime="20200718 17:14:08.626"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:54.860" endtime="20200718 14:47:55.157"></status>
+<status status="PASS" starttime="20200718 17:14:08.236" endtime="20200718 17:14:08.627"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:54.859" endtime="20200718 14:47:55.159"></status>
-</kw>
-<kw name="Verify text is available on the page" library="CommonKeywords">
-<arguments>
-<arg>WEBDRIVER</arg>
-</arguments>
-<kw name="Screen should contains text" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>${text}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:47:55.164" endtime="20200718 14:47:55.330"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:55.162" endtime="20200718 14:47:55.331"></status>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<doc>Verifies that current page contains `text`.</doc>
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<msg timestamp="20200718 14:47:55.516" level="INFO">Current page contains text 'WEBDRIVER'.</msg>
-<status status="PASS" starttime="20200718 14:47:55.331" endtime="20200718 14:47:55.516"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:55.160" endtime="20200718 14:47:55.516"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:55.159" endtime="20200718 14:47:55.517"></status>
-</kw>
-<kw name="Verify text is available on the page" library="CommonKeywords">
-<arguments>
-<arg>Demo app for the appium-boilerplate</arg>
-</arguments>
-<kw name="Screen should contains text" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>${text}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:47:55.519" endtime="20200718 14:47:55.690"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:55.518" endtime="20200718 14:47:55.691"></status>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<doc>Verifies that current page contains `text`.</doc>
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<msg timestamp="20200718 14:47:55.842" level="INFO">Current page contains text 'Demo app for the appium-boilerplate'.</msg>
-<status status="PASS" starttime="20200718 14:47:55.691" endtime="20200718 14:47:55.842"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:55.518" endtime="20200718 14:47:55.842"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:55.517" endtime="20200718 14:47:55.843"></status>
-</kw>
-<kw name="Verify text is available on the page" library="CommonKeywords">
-<arguments>
-<arg>Support</arg>
-</arguments>
-<kw name="Screen should contains text" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>${text}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:47:55.845" endtime="20200718 14:47:56.009"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:55.844" endtime="20200718 14:47:56.010"></status>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<doc>Verifies that current page contains `text`.</doc>
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<msg timestamp="20200718 14:47:56.152" level="INFO">Current page contains text 'Support'.</msg>
-<status status="PASS" starttime="20200718 14:47:56.011" endtime="20200718 14:47:56.152"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:55.843" endtime="20200718 14:47:56.152"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:55.843" endtime="20200718 14:47:56.153"></status>
-</kw>
-<kw name="Verify option available on the page" library="CommonKeywords">
-<arguments>
-<arg>Home</arg>
-</arguments>
-<kw name="Screen should contains element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Page Should Contain Element" library="AppiumLibrary">
-<doc>Verifies that current page contains `locator` element.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:47:56.302" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:47:56.156" endtime="20200718 14:47:56.302"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:56.154" endtime="20200718 14:47:56.303"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:56.153" endtime="20200718 14:47:56.304"></status>
-</kw>
-<kw name="Verify option available on the page" library="CommonKeywords">
-<arguments>
-<arg>WebView</arg>
-</arguments>
-<kw name="Screen should contains element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Page Should Contain Element" library="AppiumLibrary">
-<doc>Verifies that current page contains `locator` element.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:47:56.537" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
-<status status="PASS" starttime="20200718 14:47:56.310" endtime="20200718 14:47:56.538"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:56.307" endtime="20200718 14:47:56.538"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:56.305" endtime="20200718 14:47:56.539"></status>
-</kw>
-<kw name="Verify option available on the page" library="CommonKeywords">
-<arguments>
-<arg>Login</arg>
-</arguments>
-<kw name="Screen should contains element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Page Should Contain Element" library="AppiumLibrary">
-<doc>Verifies that current page contains `locator` element.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:47:56.738" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Login']'.</msg>
-<status status="PASS" starttime="20200718 14:47:56.541" endtime="20200718 14:47:56.738"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:56.540" endtime="20200718 14:47:56.738"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:56.539" endtime="20200718 14:47:56.739"></status>
-</kw>
-<kw name="Verify option available on the page" library="CommonKeywords">
-<arguments>
-<arg>Forms</arg>
-</arguments>
-<kw name="Screen should contains element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Page Should Contain Element" library="AppiumLibrary">
-<doc>Verifies that current page contains `locator` element.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:47:56.917" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
-<status status="PASS" starttime="20200718 14:47:56.743" endtime="20200718 14:47:56.918"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:56.741" endtime="20200718 14:47:56.918"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:56.739" endtime="20200718 14:47:56.918"></status>
-</kw>
-<kw name="Verify option available on the page" library="CommonKeywords">
-<arguments>
-<arg>Swipe</arg>
-</arguments>
-<kw name="Screen should contains element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Page Should Contain Element" library="AppiumLibrary">
-<doc>Verifies that current page contains `locator` element.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:47:57.095" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Swipe']'.</msg>
-<status status="PASS" starttime="20200718 14:47:56.921" endtime="20200718 14:47:57.096"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:56.919" endtime="20200718 14:47:57.096"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:56.919" endtime="20200718 14:47:57.097"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:53.488" endtime="20200718 14:47:57.098" critical="yes"></status>
-</test>
-<test id="s1-t2" name="Open all tab on in the application">
-<kw name="Open the option" library="CommonKeywords" type="setup">
-<arguments>
-<arg>Home</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:47:57.106" endtime="20200718 14:47:57.779"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:57.103" endtime="20200718 14:47:57.780"></status>
-</kw>
-<kw name="Click on an element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${locator}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:47:57.784" endtime="20200718 14:47:58.034"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:57.782" endtime="20200718 14:47:58.035"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:47:58.039" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:47:58.035" endtime="20200718 14:47:58.726"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:57.780" endtime="20200718 14:47:58.727"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:57.101" endtime="20200718 14:47:58.727"></status>
-</kw>
-<kw name="Verify android large icon is available" library="CommonKeywords">
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${HomeAndroidIcon}</arg>
-<arg>30</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:47:58.730" endtime="20200718 14:47:58.982"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:58.728" endtime="20200718 14:47:58.982"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:58.728" endtime="20200718 14:47:58.982"></status>
+<status status="PASS" starttime="20200718 17:14:08.235" endtime="20200718 17:14:08.627"></status>
 </kw>
 <kw name="Open the option" library="CommonKeywords">
 <arguments>
@@ -438,9 +163,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:47:58.985" endtime="20200718 14:47:59.227"></status>
+<status status="PASS" starttime="20200718 17:14:08.630" endtime="20200718 17:14:08.993"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:58.983" endtime="20200718 14:47:59.227"></status>
+<status status="PASS" starttime="20200718 17:14:08.629" endtime="20200718 17:14:08.994"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -457,21 +182,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:47:59.228" endtime="20200718 14:47:59.495"></status>
+<status status="PASS" starttime="20200718 17:14:08.997" endtime="20200718 17:14:09.305"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:59.228" endtime="20200718 14:47:59.496"></status>
+<status status="PASS" starttime="20200718 17:14:08.996" endtime="20200718 17:14:09.307"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:47:59.501" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:47:59.496" endtime="20200718 14:47:59.830"></status>
+<msg timestamp="20200718 17:14:09.315" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200718 17:14:09.307" endtime="20200718 17:14:09.727"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:59.227" endtime="20200718 14:47:59.830"></status>
+<status status="PASS" starttime="20200718 17:14:08.994" endtime="20200718 17:14:09.728"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:58.983" endtime="20200718 14:47:59.831"></status>
+<status status="PASS" starttime="20200718 17:14:08.628" endtime="20200718 17:14:09.729"></status>
 </kw>
 <kw name="Open the option" library="CommonKeywords">
 <arguments>
@@ -488,9 +213,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:47:59.834" endtime="20200718 14:48:00.160"></status>
+<status status="PASS" starttime="20200718 17:14:09.738" endtime="20200718 17:14:10.123"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:59.832" endtime="20200718 14:48:00.160"></status>
+<status status="PASS" starttime="20200718 17:14:09.736" endtime="20200718 17:14:10.123"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -507,21 +232,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:48:00.163" endtime="20200718 14:48:00.714"></status>
+<status status="PASS" starttime="20200718 17:14:10.129" endtime="20200718 17:14:10.524"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:00.162" endtime="20200718 14:48:00.715"></status>
+<status status="PASS" starttime="20200718 17:14:10.126" endtime="20200718 17:14:10.524"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:48:00.721" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
-<status status="PASS" starttime="20200718 14:48:00.715" endtime="20200718 14:48:01.085"></status>
+<msg timestamp="20200718 17:14:10.535" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
+<status status="PASS" starttime="20200718 17:14:10.525" endtime="20200718 17:14:10.841"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:00.161" endtime="20200718 14:48:01.085"></status>
+<status status="PASS" starttime="20200718 17:14:10.124" endtime="20200718 17:14:10.842"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:59.831" endtime="20200718 14:48:01.086"></status>
+<status status="PASS" starttime="20200718 17:14:09.735" endtime="20200718 17:14:10.842"></status>
 </kw>
 <kw name="Wait for the page to be load" library="CommonKeywords">
 <kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
@@ -535,636 +260,133 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:48:01.089" endtime="20200718 14:48:01.796"></status>
+<status status="PASS" starttime="20200718 17:14:10.847" endtime="20200718 17:14:11.569"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:01.087" endtime="20200718 14:48:01.797"></status>
+<status status="PASS" starttime="20200718 17:14:10.846" endtime="20200718 17:14:11.570"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:01.086" endtime="20200718 14:48:01.798"></status>
-</kw>
-<kw name="Open the option" library="CommonKeywords">
-<arguments>
-<arg>Login</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:01.800" endtime="20200718 14:48:02.818"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:01.798" endtime="20200718 14:48:02.819"></status>
-</kw>
-<kw name="Click on an element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${locator}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:02.824" endtime="20200718 14:48:04.252"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:02.822" endtime="20200718 14:48:04.252"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:48:04.256" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Login']'.</msg>
-<status status="PASS" starttime="20200718 14:48:04.253" endtime="20200718 14:48:04.901"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:02.820" endtime="20200718 14:48:04.902"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:01.798" endtime="20200718 14:48:04.903"></status>
-</kw>
-<kw name="Open the option" library="CommonKeywords">
-<arguments>
-<arg>Forms</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:04.910" endtime="20200718 14:48:05.804"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:04.905" endtime="20200718 14:48:05.804"></status>
-</kw>
-<kw name="Click on an element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${locator}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:05.807" endtime="20200718 14:48:06.130"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:05.806" endtime="20200718 14:48:06.131"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:48:06.159" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
-<status status="PASS" starttime="20200718 14:48:06.133" endtime="20200718 14:48:06.474"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:05.805" endtime="20200718 14:48:06.475"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:04.904" endtime="20200718 14:48:06.476"></status>
-</kw>
-<kw name="Open the option" library="CommonKeywords">
-<arguments>
-<arg>Swipe</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:06.481" endtime="20200718 14:48:07.721"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:06.478" endtime="20200718 14:48:07.722"></status>
-</kw>
-<kw name="Click on an element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${locator}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:07.729" endtime="20200718 14:48:07.973"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:07.725" endtime="20200718 14:48:07.976"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:48:08.006" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Swipe']'.</msg>
-<status status="PASS" starttime="20200718 14:48:07.977" endtime="20200718 14:48:08.557"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:07.723" endtime="20200718 14:48:08.557"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:06.477" endtime="20200718 14:48:08.557"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:47:57.100" endtime="20200718 14:48:08.558" critical="yes"></status>
-</test>
-<test id="s1-t3" name="Verify WebView tab Action">
-<kw name="Open the option" library="CommonKeywords" type="setup">
-<arguments>
-<arg>Home</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:08.563" endtime="20200718 14:48:10.706"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:08.561" endtime="20200718 14:48:10.706"></status>
-</kw>
-<kw name="Click on an element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${locator}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:10.710" endtime="20200718 14:48:11.127"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:10.708" endtime="20200718 14:48:11.128"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:48:11.132" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:48:11.128" endtime="20200718 14:48:11.535"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:10.706" endtime="20200718 14:48:11.535"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:08.560" endtime="20200718 14:48:11.536"></status>
-</kw>
-<kw name="Verify android large icon is available" library="CommonKeywords">
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${HomeAndroidIcon}</arg>
-<arg>30</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:11.539" endtime="20200718 14:48:12.343"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:11.537" endtime="20200718 14:48:12.343"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:11.536" endtime="20200718 14:48:12.343"></status>
-</kw>
-<kw name="Open the option" library="CommonKeywords">
-<arguments>
-<arg>WebView</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:12.345" endtime="20200718 14:48:12.650"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:12.344" endtime="20200718 14:48:12.651"></status>
-</kw>
-<kw name="Click on an element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${locator}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:12.656" endtime="20200718 14:48:13.053"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:12.654" endtime="20200718 14:48:13.054"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:48:13.064" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
-<status status="PASS" starttime="20200718 14:48:13.054" endtime="20200718 14:48:13.461"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:12.651" endtime="20200718 14:48:13.461"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:12.343" endtime="20200718 14:48:13.462"></status>
+<status status="PASS" starttime="20200718 17:14:10.845" endtime="20200718 17:14:11.570"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20200718 14:48:18.463" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20200718 14:48:13.462" endtime="20200718 14:48:18.463"></status>
+<msg timestamp="20200718 17:14:16.579" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200718 17:14:11.577" endtime="20200718 17:14:16.580"></status>
 </kw>
-<kw name="Verify text is available on the page" library="CommonKeywords">
-<arguments>
-<arg>Docs</arg>
-</arguments>
-<kw name="Screen should contains text" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>${text}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:18.466" endtime="20200718 14:48:18.965"></status>
+<kw name="Get Contexts" library="AppiumLibrary">
+<doc>Get available contexts.</doc>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20200718 17:14:17.592" level="INFO">['NATIVE_APP', 'WEBVIEW_com.wdiodemoapp']</msg>
+<msg timestamp="20200718 17:14:17.593" level="INFO">${val} = ['NATIVE_APP', 'WEBVIEW_com.wdiodemoapp']</msg>
+<status status="PASS" starttime="20200718 17:14:16.585" endtime="20200718 17:14:17.593"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:18.465" endtime="20200718 14:48:18.966"></status>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<doc>Verifies that current page contains `text`.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${text}</arg>
+<arg>${val}</arg>
 </arguments>
-<msg timestamp="20200718 14:48:19.531" level="INFO">Current page contains text 'Docs'.</msg>
-<status status="PASS" starttime="20200718 14:48:18.966" endtime="20200718 14:48:19.531"></status>
+<status status="PASS" starttime="20200718 17:14:17.597" endtime="20200718 17:14:17.600"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:18.464" endtime="20200718 14:48:19.531"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:18.463" endtime="20200718 14:48:19.532"></status>
-</kw>
-<kw name="Verify text is available on the page" library="CommonKeywords">
+<kw name="Switch to the context" library="AppiumLibraryKeywords">
 <arguments>
-<arg>API</arg>
+<arg>WEBVIEW_com.wdiodemoapp</arg>
 </arguments>
-<kw name="Screen should contains text" library="AppiumLibraryKeywords">
+<kw name="Switch To Context" library="AppiumLibrary">
+<doc>Switch to a new context</doc>
 <arguments>
-<arg>${text}</arg>
+<arg>${context}</arg>
 </arguments>
-<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
+<status status="PASS" starttime="20200718 17:14:17.603" endtime="20200718 17:14:21.331"></status>
+</kw>
+<status status="PASS" starttime="20200718 17:14:17.601" endtime="20200718 17:14:21.331"></status>
+</kw>
+<kw name="Get Webelements" library="AppiumLibrary">
+<doc>Returns list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
 <arguments>
-<arg>${text}</arg>
-<arg>5</arg>
+<arg>css=nav.slidingNav li&gt;a</arg>
 </arguments>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<doc>Waits until `text` appears on current page.</doc>
+<assign>
+<var>@{elements}</var>
+</assign>
+<msg timestamp="20200718 17:14:21.548" level="INFO">@{elements} = [ &lt;appium.webdriver.webelement.WebElement (session="e0a493a8-326a-495f-9074-0dc930b9ce4d", element="d7b76462-b492-4f4e-9716-7a0a28358426")&gt; | &lt;appium.webdriver.webelement.WebElement (session="e0a493a8...</msg>
+<status status="PASS" starttime="20200718 17:14:21.343" endtime="20200718 17:14:21.549"></status>
+</kw>
+<kw name="${i} IN RANGE [ 6 ]" type="for">
+<kw name="${i} = 0" type="foritem">
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
 <arguments>
-<arg>${text}</arg>
-<arg>${timeout}</arg>
+<arg>${elements}[${i}]</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:48:19.535" endtime="20200718 14:48:20.070"></status>
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20200718 17:14:21.712" level="INFO">Element '&lt;appium.webdriver.webelement.WebElement (session="e0a493a8-326a-495f-9074-0dc930b9ce4d", element="d7b76462-b492-4f4e-9716-7a0a28358426")&gt;' text is 'Docs' </msg>
+<msg timestamp="20200718 17:14:21.712" level="INFO">${val} = Docs</msg>
+<status status="PASS" starttime="20200718 17:14:21.561" endtime="20200718 17:14:21.712"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:19.534" endtime="20200718 14:48:20.070"></status>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<doc>Verifies that current page contains `text`.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${text}</arg>
+<arg>${val}</arg>
 </arguments>
-<msg timestamp="20200718 14:48:20.533" level="INFO">Current page contains text 'API'.</msg>
-<status status="PASS" starttime="20200718 14:48:20.071" endtime="20200718 14:48:20.533"></status>
+<status status="PASS" starttime="20200718 17:14:21.712" endtime="20200718 17:14:21.713"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:19.533" endtime="20200718 14:48:20.533"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:19.532" endtime="20200718 14:48:20.533"></status>
-</kw>
-<kw name="Verify text is available on the page" library="CommonKeywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>Help</arg>
+<arg>5s</arg>
 </arguments>
-<kw name="Screen should contains text" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>${text}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:20.535" endtime="20200718 14:48:21.133"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:20.534" endtime="20200718 14:48:21.134"></status>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<doc>Verifies that current page contains `text`.</doc>
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<msg timestamp="20200718 14:48:21.696" level="INFO">Current page contains text 'Help'.</msg>
-<status status="PASS" starttime="20200718 14:48:21.134" endtime="20200718 14:48:21.696"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:20.534" endtime="20200718 14:48:21.697"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:20.533" endtime="20200718 14:48:21.697"></status>
-</kw>
-<kw name="Verify text is available on the page" library="CommonKeywords">
-<arguments>
-<arg>Versions</arg>
-</arguments>
-<kw name="Screen should contains text" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>${text}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:21.700" endtime="20200718 14:48:22.585"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:21.698" endtime="20200718 14:48:22.585"></status>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<doc>Verifies that current page contains `text`.</doc>
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<msg timestamp="20200718 14:48:23.079" level="INFO">Current page contains text 'Versions'.</msg>
-<status status="PASS" starttime="20200718 14:48:22.586" endtime="20200718 14:48:23.079"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:21.698" endtime="20200718 14:48:23.080"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:21.697" endtime="20200718 14:48:23.080"></status>
-</kw>
-<kw name="Verify text is available on the page" library="CommonKeywords">
-<arguments>
-<arg>Blog</arg>
-</arguments>
-<kw name="Screen should contains text" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>${text}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:23.082" endtime="20200718 14:48:23.531"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:23.082" endtime="20200718 14:48:23.531"></status>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<doc>Verifies that current page contains `text`.</doc>
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<msg timestamp="20200718 14:48:24.120" level="INFO">Current page contains text 'Blog'.</msg>
-<status status="PASS" starttime="20200718 14:48:23.531" endtime="20200718 14:48:24.120"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:23.081" endtime="20200718 14:48:24.121"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:23.080" endtime="20200718 14:48:24.121"></status>
-</kw>
-<kw name="Verify text is available on the page" library="CommonKeywords">
-<arguments>
-<arg>Contribute</arg>
-</arguments>
-<kw name="Screen should contains text" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>${text}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:24.127" endtime="20200718 14:48:24.622"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:24.125" endtime="20200718 14:48:24.623"></status>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<doc>Verifies that current page contains `text`.</doc>
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<msg timestamp="20200718 14:48:25.164" level="INFO">Current page contains text 'Contribute'.</msg>
-<status status="PASS" starttime="20200718 14:48:24.623" endtime="20200718 14:48:25.164"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:24.123" endtime="20200718 14:48:25.165"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:24.122" endtime="20200718 14:48:25.165"></status>
-</kw>
-<kw name="Swipe the screen up" library="CommonKeywords">
-<kw name="Swipe the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>599</arg>
-<arg>1754</arg>
-<arg>599</arg>
-<arg>1123</arg>
-</arguments>
-<kw name="Swipe" library="AppiumLibrary">
-<doc>Swipe from one point to another point, for an optional duration.</doc>
-<arguments>
-<arg>${start_x}</arg>
-<arg>${start_y}</arg>
-<arg>${offset_x}</arg>
-<arg>${offset_y}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:25.168" endtime="20200718 14:48:26.497"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:25.167" endtime="20200718 14:48:26.497"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:25.165" endtime="20200718 14:48:26.498"></status>
-</kw>
-<kw name="Verify text is available on the page" library="CommonKeywords">
-<arguments>
-<arg>GET STARTED</arg>
-</arguments>
-<kw name="Screen should contains text" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${text}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<doc>Waits until `text` appears on current page.</doc>
-<arguments>
-<arg>${text}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:26.503" endtime="20200718 14:48:27.619"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:26.502" endtime="20200718 14:48:27.620"></status>
-</kw>
-<kw name="Page Should Contain Text" library="AppiumLibrary">
-<doc>Verifies that current page contains `text`.</doc>
-<arguments>
-<arg>${text}</arg>
-</arguments>
-<msg timestamp="20200718 14:48:28.076" level="INFO">Current page contains text 'GET STARTED'.</msg>
-<status status="PASS" starttime="20200718 14:48:27.620" endtime="20200718 14:48:28.076"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:26.499" endtime="20200718 14:48:28.076"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:26.498" endtime="20200718 14:48:28.076"></status>
-</kw>
-<kw name="Swipe the screen down" library="CommonKeywords">
-<kw name="Swipe the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>599</arg>
-<arg>1123</arg>
-<arg>599</arg>
-<arg>1754</arg>
-</arguments>
-<kw name="Swipe" library="AppiumLibrary">
-<doc>Swipe from one point to another point, for an optional duration.</doc>
-<arguments>
-<arg>${start_x}</arg>
-<arg>${start_y}</arg>
-<arg>${offset_x}</arg>
-<arg>${offset_y}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:28.079" endtime="20200718 14:48:29.365"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:28.077" endtime="20200718 14:48:29.366"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:28.076" endtime="20200718 14:48:29.366"></status>
-</kw>
-<kw name="Open the option" library="CommonKeywords">
-<arguments>
-<arg>Swipe</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:29.370" endtime="20200718 14:48:29.864"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:29.368" endtime="20200718 14:48:29.865"></status>
-</kw>
-<kw name="Click on an element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${locator}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:48:29.866" endtime="20200718 14:48:30.326"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:48:29.865" endtime="20200718 14:48:30.327"></status>
+<msg timestamp="20200718 17:14:26.716" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200718 17:14:21.714" endtime="20200718 17:14:26.716"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>${locator}</arg>
+<arg>${elements}[${i}]</arg>
 </arguments>
-<msg timestamp="20200718 14:48:30.333" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Swipe']'.</msg>
-<status status="PASS" starttime="20200718 14:48:30.327" endtime="20200718 14:48:30.867"></status>
+<msg timestamp="20200718 17:14:26.726" level="INFO">Clicking element '&lt;appium.webdriver.webelement.WebElement (session="e0a493a8-326a-495f-9074-0dc930b9ce4d", element="d7b76462-b492-4f4e-9716-7a0a28358426")&gt;'.</msg>
+<status status="PASS" starttime="20200718 17:14:26.717" endtime="20200718 17:14:27.742"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:29.865" endtime="20200718 14:48:30.868"></status>
+<status status="PASS" starttime="20200718 17:14:21.560" endtime="20200718 17:14:27.742"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:29.367" endtime="20200718 14:48:30.868"></status>
+<kw name="${i} = 1" type="foritem">
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${elements}[${i}]</arg>
+</arguments>
+<assign>
+<var>${val}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20200718 17:14:28.531" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200718 17:14:27.977" endtime="20200718 17:14:28.532"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:08.559" endtime="20200718 14:48:30.869" critical="yes"></status>
+<msg timestamp="20200718 17:14:28.536" level="FAIL">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=84.0.4147.89)
+</msg>
+<status status="FAIL" starttime="20200718 17:14:27.743" endtime="20200718 17:14:28.536"></status>
+</kw>
+<status status="FAIL" starttime="20200718 17:14:27.742" endtime="20200718 17:14:28.536"></status>
+</kw>
+<status status="FAIL" starttime="20200718 17:14:21.559" endtime="20200718 17:14:28.537"></status>
+</kw>
+<tags>
+<tag>Test</tag>
+</tags>
+<status status="FAIL" starttime="20200718 17:14:06.592" endtime="20200718 17:14:28.538" critical="yes">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=84.0.4147.89)
+</status>
 </test>
 <kw name="Close the application" library="Setup" type="teardown">
 <kw name="Close All Applications" library="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20200718 14:48:30.873" endtime="20200718 14:48:31.822"></status>
+<status status="PASS" starttime="20200718 17:14:28.540" endtime="20200718 17:14:29.488"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -1183,11 +405,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${remote_url}</arg>
 <arg>localhost</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:48:31.823" endtime="20200718 14:48:31.824"></status>
+<status status="PASS" starttime="20200718 17:14:29.490" endtime="20200718 17:14:29.490"></status>
 </kw>
-<msg timestamp="20200718 14:48:31.824" level="INFO">${match} = PASS</msg>
-<msg timestamp="20200718 14:48:31.824" level="INFO">${value} = None</msg>
-<status status="PASS" starttime="20200718 14:48:31.823" endtime="20200718 14:48:31.824"></status>
+<msg timestamp="20200718 17:14:29.490" level="INFO">${match} = PASS</msg>
+<msg timestamp="20200718 17:14:29.490" level="INFO">${value} = None</msg>
+<status status="PASS" starttime="20200718 17:14:29.488" endtime="20200718 17:14:29.490"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1203,23 +425,24 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${s}</arg>
 <arg>stopAppiumServer</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:48:31.826" endtime="20200718 14:48:32.117"></status>
+<status status="PASS" starttime="20200718 17:14:29.492" endtime="20200718 17:14:29.673"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:31.825" endtime="20200718 14:48:32.117"></status>
+<status status="PASS" starttime="20200718 17:14:29.491" endtime="20200718 17:14:29.673"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:48:30.872" endtime="20200718 14:48:32.117"></status>
+<status status="PASS" starttime="20200718 17:14:28.539" endtime="20200718 17:14:29.673"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:47:33.176" endtime="20200718 14:48:32.117"></status>
+<status status="FAIL" starttime="20200718 17:13:46.188" endtime="20200718 17:14:29.674"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0">Critical Tests</stat>
-<stat pass="3" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1">Test</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" id="s1" name="HomePage">HomePage</stat>
+<stat pass="0" fail="1" id="s1" name="SwitchContextDemo">SwitchContextDemo</stat>
 </suite>
 </statistics>
 <errors>

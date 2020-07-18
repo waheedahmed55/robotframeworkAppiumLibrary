@@ -7,6 +7,7 @@ Suite Teardown   Close the application
 
 *** Test Cases ***
 Verify home page screen
+    [Tags]      smoke1
     Verify android large icon is available
     Verify text is available on the page    WEBDRIVER
     Verify text is available on the page    Demo app for the appium-boilerplate
@@ -18,6 +19,7 @@ Verify home page screen
     Verify option available on the page     Swipe
 
 Open all tab on in the application
+    [Tags]      smoke
     Verify android large icon is available
     Open the option     Home
     Open the option     WebView
@@ -27,6 +29,7 @@ Open all tab on in the application
     Open the option     Swipe
 
 Verify WebView tab Action
+    [Tags]      smoke
     Verify android large icon is available
     Open the option     WebView
     sleep   5s

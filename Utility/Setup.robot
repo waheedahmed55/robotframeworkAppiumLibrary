@@ -10,7 +10,7 @@ Open the application in device
     Run Keyword If      '${match}' == 'PASS'     call method     ${s}    startAppiumServer
     Sleep   5s
     log to console      RUNNING...
-    Open application    remote_url=${remote_url}     device=${deviceId}     os_version=${os_version}      platformName=${platformName}    deviceName=${deviceName}    automationName=${automationName}       app=${appPath}
+    Open application    remote_url=${remote_url}     device=${deviceId}     os_version=${os_version}      platformName=${platformName}    deviceName=${deviceName}    automationName=${automationName}       app=${appPath}     nativeWebScreenshot=true
 
 Close the application
     close all applications

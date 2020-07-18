@@ -1,1 +1,1 @@
-appium -p 4723
+appium --chromedriver-executable %CD%\App\chromedriver.exe -p 4723
