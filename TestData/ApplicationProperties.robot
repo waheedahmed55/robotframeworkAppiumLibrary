@@ -25,6 +25,8 @@ ${InvalidUserName}          aaa
 ${InvalidUserPassword}      aaa
 ${ValidUserName}            waheedahmed55@gmail.com
 ${ValidUserPassword}        password
+${WebView}                  WEBVIEW_com.wdiodemoapp
+${NativeView}               NATIVE_APP
 
 
 

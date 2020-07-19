@@ -298,3 +298,40 @@ Switch to the context
 #Get the Current Context
 Get the Current Context
     [return]    Get Current Context
+
+#Get all context
+Get all available context
+    [return]    Get Contexts
+
+Generate Random String With Defined Size
+    [Arguments]    ${size}    ${type}
+    ${str}=    Generate Random String    ${size}    ${type}
+    [Return]    ${str}
+
+Generate Random Number With Defined Size
+    [Arguments]    ${size}    ${type}
+    ${num}=    Generate Random String    ${size}    ${type}
+    [Return]    ${num}
+
+Static wait for
+    [Arguments]     ${Second}
+    Sleep    ${Second}s
+
+Verify both values are equal
+    [Arguments]    ${val1}  ${val2}
+    Should Be Equal     ${val1}     ${val2}
+
+Scroll at the bottom of the page
+    Execute Script      window.scrollTo(0,document.body.scrollHeight)
+
+Scroll at the top of the page
+    Execute Script      window.scrollTo(0,0)
+
+
+Perform JavaScript Action
+    [Arguments]    ${script}
+    Execute Script    ${script}
+
+Get matching WebElement by xpath
+    [Arguments]      ${locator}
+    [return]    Get Matching Xpath Count     ${locator}

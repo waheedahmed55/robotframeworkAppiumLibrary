@@ -1,28 +1,30 @@
 *** Settings ***
-Library     AppiumLibrary
+Library          Collections
 Resource         ../Utility/Setup.robot
 Resource         ../Utility/CommonKeywords.robot
+Resource         ../TestData/ApplicationProperties.robot
+Resource         ../Helper/ContextHelper.robot
 Suite Setup      Open the application in device
 Test Setup       Open the option     Home
 Suite Teardown   Close the application
 
 *** Test Cases ***
-Test1
+Verify switching to context
     Verify android large icon is available
     Open the option     Home
     Open the option     WebView
     Wait for the page to be load
     Sleep       10s
-    ${val}=     Get Contexts
+    ${val}=     Get available context in the app
     log to console      ${val}
-    Switch to the context       WEBVIEW_com.wdiodemoapp
+    Switch to the current Context       ${WebView}
     Execute Script      window.scrollTo(0,document.body.scrollHeight)
     Sleep   6s
-    Click on an element     xpath=//a[text()='Blog']
+    Click on header menu     Blog
     Sleep   6s
-    ${val}=     Get Contexts
+    ${val}=     Get available context in the app
     log to console      ${val}
-    Switch to the context       NATIVE_APP
+    Switch to the current Context       ${NativeVew}
     Open the option     Home
     Verify text is available on the page    WEBDRIVER
     Verify text is available on the page    Demo app for the appium-boilerplate
@@ -40,16 +42,7 @@ Work with multple elements
     Open the option     WebView
     Wait for the page to be load
     Sleep       5s
-    ${val}=     Get Contexts
-    log to console      ${val}
-    Switch to the context       WEBVIEW_com.wdiodemoapp
-    @{elements}     Get WebElements      css=nav.slidingNav li>a
-    #log to console      @{elements}
-    #${len}=     Get Length      @{elements}
-    FOR     ${i}   IN RANGE    6
-        ${val}=      Get Text       ${elements}[${i}]
-        log to console      ${val}
-        Sleep   5s
-        #@{elements}     Get WebElements      css=nav.slidingNav li>a
-        Click Element     ${elements}[${i}]
-    END
+    Get Header text and click on it
+    Scroll to the copyright
+    sleep   5s
+    Verify Copyright text is avilable
