@@ -1,17 +1,25 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.Sim                                                                    
+Suites.SwitchContextDemo                                                      
 ==============================================================================
-Open the Application                                                  | FAIL |
-MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x03F204C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+RUNNING...
+Verify switching to context                                           Get all available context
+Get all available context
+| FAIL |
+Variable '${NativeVew}' not found. Did you mean:
+    ${NativeView}
 ------------------------------------------------------------------------------
-Suites.Sim                                                            | FAIL |
-1 critical test, 0 passed, 1 failed
-1 test total, 0 passed, 1 failed
+Work with multple elements                                            | FAIL |
+Setup failed:
+Element locator 'xpath=//android.widget.TextView[@text='Home']' did not match any elements after 5 seconds
+------------------------------------------------------------------------------
+Suites.SwitchContextDemo                                              | FAIL |
+2 critical tests, 0 passed, 2 failed
+2 tests total, 0 passed, 2 failed
 ==============================================================================
 Suites                                                                | FAIL |
-1 critical test, 0 passed, 1 failed
-1 test total, 0 passed, 1 failed
+2 critical tests, 0 passed, 2 failed
+2 tests total, 0 passed, 2 failed
 ==============================================================================
-Output:  C:\Automation\AppiumLibraryRobotFramework\Reports\pabot_results\3\output.xml
+Output:  C:\Automation\AppiumLibraryRobotFramework\robotframeworkAppiumLibrary\Reports\pabot_results\3\output.xml

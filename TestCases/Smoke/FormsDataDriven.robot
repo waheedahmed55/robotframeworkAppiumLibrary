@@ -1,8 +1,8 @@
 *** Settings ***
-Resource         ../Utility/Setup.robot
-Resource         ../Utility/CommonKeywords.robot
-Resource         ../TestData/ApplicationProperties.robot
-Resource         ../Helper/FormsPageHelper.robot
+Resource         ../../Utility/Setup.robot
+Resource         ../../Utility/CommonKeywords.robot
+Resource         ../../TestData/ApplicationProperties.robot
+Resource         ../../Helper/FormsPageHelper.robot
 Library          ExcelLibrary
 Library          DataDriver  file=${EXECDIR}/TestData/FormData.xlsx     sheet_name=Sheet1
 Test Template    DataDriven Test cases

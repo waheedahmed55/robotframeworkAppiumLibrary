@@ -1,6 +1,6 @@
 *** Settings ***
-Resource         ../Utility/Setup.robot
-Resource         ../Utility/CommonKeywords.robot
+Resource         ../../Utility/Setup.robot
+Resource         ../../Utility/CommonKeywords.robot
 Suite Setup      Open the application in device
 Test Setup       Open the option     Home
 Suite Teardown   Close the application
@@ -21,7 +21,6 @@ Verify home page screen
 Open all tab on in the application
     [Tags]      smoke
     Verify android large icon is available
-    Open the option     Home
     Open the option     WebView
     Wait for the page to be load
     Open the option     Login

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.1 on win32)" generated="20200718 14:22:43.491" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.1 on win32)" generated="20200722 07:59:36.841" rpa="false">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="HomePage" source="C:\Automation\AppiumLibraryRobotFramework\TestCases\HomePage.robot">
+<suite id="s1-s1" name="HomePage" source="C:\Automation\AppiumLibraryRobotFramework\robotframeworkAppiumLibrary\TestCases\HomePage.robot">
 <kw name="Open the application in device" library="Setup" type="setup">
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -20,12 +20,12 @@
 <arg>${remote_url}</arg>
 <arg>localhost</arg>
 </arguments>
-<msg timestamp="20200718 14:22:44.452" level="FAIL">'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
-<status status="FAIL" starttime="20200718 14:22:44.451" endtime="20200718 14:22:44.452"></status>
+<msg timestamp="20200722 07:59:38.107" level="FAIL">'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="FAIL" starttime="20200722 07:59:38.106" endtime="20200722 07:59:38.107"></status>
 </kw>
-<msg timestamp="20200718 14:22:44.452" level="INFO">${match} = FAIL</msg>
-<msg timestamp="20200718 14:22:44.452" level="INFO">${value} = 'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
-<status status="PASS" starttime="20200718 14:22:44.450" endtime="20200718 14:22:44.452"></status>
+<msg timestamp="20200722 07:59:38.107" level="INFO">${match} = FAIL</msg>
+<msg timestamp="20200722 07:59:38.107" level="INFO">${value} = 'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="PASS" starttime="20200722 07:59:38.105" endtime="20200722 07:59:38.107"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -35,22 +35,22 @@
 <arg>${s}</arg>
 <arg>startAppiumServer</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:22:44.452" endtime="20200718 14:22:44.453"></status>
+<status status="PASS" starttime="20200722 07:59:38.108" endtime="20200722 07:59:38.110"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20200718 14:22:49.455" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20200718 14:22:44.453" endtime="20200718 14:22:49.455"></status>
+<msg timestamp="20200722 07:59:43.112" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200722 07:59:38.110" endtime="20200722 07:59:43.113"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>RUNNING...</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:22:49.460" endtime="20200718 14:22:49.460"></status>
+<status status="PASS" starttime="20200722 07:59:43.113" endtime="20200722 07:59:43.114"></status>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.
@@ -67,10 +67,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>deviceName=${deviceName}</arg>
 <arg>automationName=${automationName}</arg>
 <arg>app=${appPath}</arg>
+<arg>nativeWebScreenshot=true</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:22:49.461" endtime="20200718 14:23:08.546"></status>
+<status status="PASS" starttime="20200722 07:59:43.114" endtime="20200722 08:00:02.761"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:22:44.449" endtime="20200718 14:23:08.546"></status>
+<status status="PASS" starttime="20200722 07:59:38.085" endtime="20200722 08:00:02.761"></status>
 </kw>
 <test id="s1-s1-t1" name="Verify home page screen">
 <kw name="Open the option" library="CommonKeywords" type="setup">
@@ -88,9 +89,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:08.548" endtime="20200718 14:23:09.752"></status>
+<status status="PASS" starttime="20200722 08:00:02.763" endtime="20200722 08:00:03.867"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:08.548" endtime="20200718 14:23:09.752"></status>
+<status status="PASS" starttime="20200722 08:00:02.762" endtime="20200722 08:00:03.868"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -107,21 +108,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:09.754" endtime="20200718 14:23:10.090"></status>
+<status status="PASS" starttime="20200722 08:00:03.872" endtime="20200722 08:00:04.198"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:09.753" endtime="20200718 14:23:10.091"></status>
+<status status="PASS" starttime="20200722 08:00:03.870" endtime="20200722 08:00:04.199"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:10.095" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:23:10.091" endtime="20200718 14:23:10.412"></status>
+<msg timestamp="20200722 08:00:04.206" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200722 08:00:04.199" endtime="20200722 08:00:04.545"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:09.753" endtime="20200718 14:23:10.413"></status>
+<status status="PASS" starttime="20200722 08:00:03.868" endtime="20200722 08:00:04.546"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:08.547" endtime="20200718 14:23:10.414"></status>
+<status status="PASS" starttime="20200722 08:00:02.762" endtime="20200722 08:00:04.546"></status>
 </kw>
 <kw name="Verify android large icon is available" library="CommonKeywords">
 <kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
@@ -135,11 +136,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:10.418" endtime="20200718 14:23:10.725"></status>
+<status status="PASS" starttime="20200722 08:00:04.548" endtime="20200722 08:00:04.891"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:10.416" endtime="20200718 14:23:10.725"></status>
+<status status="PASS" starttime="20200722 08:00:04.547" endtime="20200722 08:00:04.891"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:10.414" endtime="20200718 14:23:10.725"></status>
+<status status="PASS" starttime="20200722 08:00:04.547" endtime="20200722 08:00:04.891"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -160,21 +161,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:10.727" endtime="20200718 14:23:11.100"></status>
+<status status="PASS" starttime="20200722 08:00:04.895" endtime="20200722 08:00:05.240"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:10.726" endtime="20200718 14:23:11.100"></status>
+<status status="PASS" starttime="20200722 08:00:04.894" endtime="20200722 08:00:05.241"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:11.347" level="INFO">Current page contains text 'WEBDRIVER'.</msg>
-<status status="PASS" starttime="20200718 14:23:11.101" endtime="20200718 14:23:11.348"></status>
+<msg timestamp="20200722 08:00:05.460" level="INFO">Current page contains text 'WEBDRIVER'.</msg>
+<status status="PASS" starttime="20200722 08:00:05.241" endtime="20200722 08:00:05.460"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:10.725" endtime="20200718 14:23:11.348"></status>
+<status status="PASS" starttime="20200722 08:00:04.893" endtime="20200722 08:00:05.461"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:10.725" endtime="20200718 14:23:11.348"></status>
+<status status="PASS" starttime="20200722 08:00:04.892" endtime="20200722 08:00:05.462"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -195,21 +196,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:11.352" endtime="20200718 14:23:11.719"></status>
+<status status="PASS" starttime="20200722 08:00:05.466" endtime="20200722 08:00:05.662"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:11.351" endtime="20200718 14:23:11.719"></status>
+<status status="PASS" starttime="20200722 08:00:05.464" endtime="20200722 08:00:05.664"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:11.977" level="INFO">Current page contains text 'Demo app for the appium-boilerplate'.</msg>
-<status status="PASS" starttime="20200718 14:23:11.719" endtime="20200718 14:23:11.977"></status>
+<msg timestamp="20200722 08:00:05.873" level="INFO">Current page contains text 'Demo app for the appium-boilerplate'.</msg>
+<status status="PASS" starttime="20200722 08:00:05.664" endtime="20200722 08:00:05.873"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:11.350" endtime="20200718 14:23:11.978"></status>
+<status status="PASS" starttime="20200722 08:00:05.463" endtime="20200722 08:00:05.874"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:11.349" endtime="20200718 14:23:11.978"></status>
+<status status="PASS" starttime="20200722 08:00:05.462" endtime="20200722 08:00:05.874"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -230,21 +231,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:11.981" endtime="20200718 14:23:12.147"></status>
+<status status="PASS" starttime="20200722 08:00:05.879" endtime="20200722 08:00:06.085"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:11.980" endtime="20200718 14:23:12.147"></status>
+<status status="PASS" starttime="20200722 08:00:05.877" endtime="20200722 08:00:06.086"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:12.306" level="INFO">Current page contains text 'Support'.</msg>
-<status status="PASS" starttime="20200718 14:23:12.147" endtime="20200718 14:23:12.306"></status>
+<msg timestamp="20200722 08:00:06.316" level="INFO">Current page contains text 'Support'.</msg>
+<status status="PASS" starttime="20200722 08:00:06.086" endtime="20200722 08:00:06.316"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:11.979" endtime="20200718 14:23:12.306"></status>
+<status status="PASS" starttime="20200722 08:00:05.876" endtime="20200722 08:00:06.316"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:11.978" endtime="20200718 14:23:12.306"></status>
+<status status="PASS" starttime="20200722 08:00:05.874" endtime="20200722 08:00:06.318"></status>
 </kw>
 <kw name="Verify option available on the page" library="CommonKeywords">
 <arguments>
@@ -259,12 +260,12 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:12.435" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:23:12.307" endtime="20200718 14:23:12.435"></status>
+<msg timestamp="20200722 08:00:06.541" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200722 08:00:06.320" endtime="20200722 08:00:06.541"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.307" endtime="20200718 14:23:12.435"></status>
+<status status="PASS" starttime="20200722 08:00:06.319" endtime="20200722 08:00:06.542"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.307" endtime="20200718 14:23:12.435"></status>
+<status status="PASS" starttime="20200722 08:00:06.318" endtime="20200722 08:00:06.542"></status>
 </kw>
 <kw name="Verify option available on the page" library="CommonKeywords">
 <arguments>
@@ -279,12 +280,12 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:12.631" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
-<status status="PASS" starttime="20200718 14:23:12.437" endtime="20200718 14:23:12.631"></status>
+<msg timestamp="20200722 08:00:06.708" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
+<status status="PASS" starttime="20200722 08:00:06.545" endtime="20200722 08:00:06.708"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.436" endtime="20200718 14:23:12.632"></status>
+<status status="PASS" starttime="20200722 08:00:06.544" endtime="20200722 08:00:06.709"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.436" endtime="20200718 14:23:12.632"></status>
+<status status="PASS" starttime="20200722 08:00:06.542" endtime="20200722 08:00:06.709"></status>
 </kw>
 <kw name="Verify option available on the page" library="CommonKeywords">
 <arguments>
@@ -299,12 +300,12 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:12.800" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Login']'.</msg>
-<status status="PASS" starttime="20200718 14:23:12.633" endtime="20200718 14:23:12.800"></status>
+<msg timestamp="20200722 08:00:06.923" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Login']'.</msg>
+<status status="PASS" starttime="20200722 08:00:06.710" endtime="20200722 08:00:06.923"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.632" endtime="20200718 14:23:12.801"></status>
+<status status="PASS" starttime="20200722 08:00:06.710" endtime="20200722 08:00:06.923"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.632" endtime="20200718 14:23:12.801"></status>
+<status status="PASS" starttime="20200722 08:00:06.709" endtime="20200722 08:00:06.923"></status>
 </kw>
 <kw name="Verify option available on the page" library="CommonKeywords">
 <arguments>
@@ -319,12 +320,12 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:12.986" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
-<status status="PASS" starttime="20200718 14:23:12.802" endtime="20200718 14:23:12.986"></status>
+<msg timestamp="20200722 08:00:07.101" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
+<status status="PASS" starttime="20200722 08:00:06.925" endtime="20200722 08:00:07.101"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.801" endtime="20200718 14:23:12.987"></status>
+<status status="PASS" starttime="20200722 08:00:06.924" endtime="20200722 08:00:07.102"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.801" endtime="20200718 14:23:12.990"></status>
+<status status="PASS" starttime="20200722 08:00:06.924" endtime="20200722 08:00:07.102"></status>
 </kw>
 <kw name="Verify option available on the page" library="CommonKeywords">
 <arguments>
@@ -339,14 +340,17 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:13.594" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Swipe']'.</msg>
-<status status="PASS" starttime="20200718 14:23:12.994" endtime="20200718 14:23:13.594"></status>
+<msg timestamp="20200722 08:00:07.266" level="INFO">Current page contains element 'xpath=//android.widget.TextView[@text='Swipe']'.</msg>
+<status status="PASS" starttime="20200722 08:00:07.105" endtime="20200722 08:00:07.266"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.992" endtime="20200718 14:23:13.594"></status>
+<status status="PASS" starttime="20200722 08:00:07.104" endtime="20200722 08:00:07.267"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.991" endtime="20200718 14:23:13.594"></status>
+<status status="PASS" starttime="20200722 08:00:07.103" endtime="20200722 08:00:07.267"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:08.546" endtime="20200718 14:23:13.594" critical="yes"></status>
+<tags>
+<tag>smoke1</tag>
+</tags>
+<status status="PASS" starttime="20200722 08:00:02.761" endtime="20200722 08:00:07.267" critical="yes"></status>
 </test>
 <test id="s1-s1-t2" name="Open all tab on in the application">
 <kw name="Open the option" library="CommonKeywords" type="setup">
@@ -364,9 +368,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:13.600" endtime="20200718 14:23:13.846"></status>
+<status status="PASS" starttime="20200722 08:00:07.276" endtime="20200722 08:00:07.511"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:13.599" endtime="20200718 14:23:13.846"></status>
+<status status="PASS" starttime="20200722 08:00:07.275" endtime="20200722 08:00:07.511"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -383,21 +387,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:13.849" endtime="20200718 14:23:14.101"></status>
+<status status="PASS" starttime="20200722 08:00:07.514" endtime="20200722 08:00:07.788"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:13.847" endtime="20200718 14:23:14.101"></status>
+<status status="PASS" starttime="20200722 08:00:07.513" endtime="20200722 08:00:07.788"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:14.104" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:23:14.102" endtime="20200718 14:23:14.380"></status>
+<msg timestamp="20200722 08:00:07.791" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200722 08:00:07.788" endtime="20200722 08:00:08.068"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:13.846" endtime="20200718 14:23:14.382"></status>
+<status status="PASS" starttime="20200722 08:00:07.512" endtime="20200722 08:00:08.069"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:13.598" endtime="20200718 14:23:14.383"></status>
+<status status="PASS" starttime="20200722 08:00:07.273" endtime="20200722 08:00:08.070"></status>
 </kw>
 <kw name="Verify android large icon is available" library="CommonKeywords">
 <kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
@@ -411,61 +415,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:14.387" endtime="20200718 14:23:14.668"></status>
+<status status="PASS" starttime="20200722 08:00:08.074" endtime="20200722 08:00:08.337"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:14.386" endtime="20200718 14:23:14.669"></status>
+<status status="PASS" starttime="20200722 08:00:08.072" endtime="20200722 08:00:08.338"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:14.385" endtime="20200718 14:23:14.669"></status>
-</kw>
-<kw name="Open the option" library="CommonKeywords">
-<arguments>
-<arg>Home</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:23:14.670" endtime="20200718 14:23:14.957"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:23:14.670" endtime="20200718 14:23:14.957"></status>
-</kw>
-<kw name="Click on an element" library="AppiumLibraryKeywords">
-<arguments>
-<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
-</arguments>
-<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
-<arguments>
-<arg>${locator}</arg>
-<arg>5</arg>
-</arguments>
-<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${locator}</arg>
-<arg>${timeout}</arg>
-</arguments>
-<status status="PASS" starttime="20200718 14:23:14.959" endtime="20200718 14:23:15.478"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:23:14.958" endtime="20200718 14:23:15.479"></status>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${locator}</arg>
-</arguments>
-<msg timestamp="20200718 14:23:15.485" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:23:15.480" endtime="20200718 14:23:15.767"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:23:14.957" endtime="20200718 14:23:15.768"></status>
-</kw>
-<status status="PASS" starttime="20200718 14:23:14.669" endtime="20200718 14:23:15.768"></status>
+<status status="PASS" starttime="20200722 08:00:08.071" endtime="20200722 08:00:08.338"></status>
 </kw>
 <kw name="Open the option" library="CommonKeywords">
 <arguments>
@@ -482,9 +436,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:15.770" endtime="20200718 14:23:16.017"></status>
+<status status="PASS" starttime="20200722 08:00:08.340" endtime="20200722 08:00:08.581"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:15.769" endtime="20200718 14:23:16.017"></status>
+<status status="PASS" starttime="20200722 08:00:08.339" endtime="20200722 08:00:08.582"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -501,21 +455,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:16.018" endtime="20200718 14:23:16.312"></status>
+<status status="PASS" starttime="20200722 08:00:08.592" endtime="20200722 08:00:08.860"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:16.018" endtime="20200718 14:23:16.312"></status>
+<status status="PASS" starttime="20200722 08:00:08.588" endtime="20200722 08:00:08.860"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:16.315" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
-<status status="PASS" starttime="20200718 14:23:16.312" endtime="20200718 14:23:16.557"></status>
+<msg timestamp="20200722 08:00:08.872" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
+<status status="PASS" starttime="20200722 08:00:08.861" endtime="20200722 08:00:09.121"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:16.017" endtime="20200718 14:23:16.557"></status>
+<status status="PASS" starttime="20200722 08:00:08.583" endtime="20200722 08:00:09.122"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:15.768" endtime="20200718 14:23:16.557"></status>
+<status status="PASS" starttime="20200722 08:00:08.338" endtime="20200722 08:00:09.123"></status>
 </kw>
 <kw name="Wait for the page to be load" library="CommonKeywords">
 <kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
@@ -529,11 +483,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:16.558" endtime="20200718 14:23:17.285"></status>
+<status status="PASS" starttime="20200722 08:00:09.127" endtime="20200722 08:00:09.828"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:16.557" endtime="20200718 14:23:17.286"></status>
+<status status="PASS" starttime="20200722 08:00:09.125" endtime="20200722 08:00:09.829"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:16.557" endtime="20200718 14:23:17.286"></status>
+<status status="PASS" starttime="20200722 08:00:09.124" endtime="20200722 08:00:09.829"></status>
 </kw>
 <kw name="Open the option" library="CommonKeywords">
 <arguments>
@@ -550,9 +504,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:17.288" endtime="20200718 14:23:17.931"></status>
+<status status="PASS" starttime="20200722 08:00:09.831" endtime="20200722 08:00:11.540"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:17.287" endtime="20200718 14:23:17.932"></status>
+<status status="PASS" starttime="20200722 08:00:09.830" endtime="20200722 08:00:11.540"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -569,21 +523,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:17.933" endtime="20200718 14:23:18.174"></status>
+<status status="PASS" starttime="20200722 08:00:11.544" endtime="20200722 08:00:12.216"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:17.932" endtime="20200718 14:23:18.174"></status>
+<status status="PASS" starttime="20200722 08:00:11.542" endtime="20200722 08:00:12.218"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:18.177" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Login']'.</msg>
-<status status="PASS" starttime="20200718 14:23:18.174" endtime="20200718 14:23:19.410"></status>
+<msg timestamp="20200722 08:00:12.234" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Login']'.</msg>
+<status status="PASS" starttime="20200722 08:00:12.219" endtime="20200722 08:00:12.498"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:17.932" endtime="20200718 14:23:19.410"></status>
+<status status="PASS" starttime="20200722 08:00:11.541" endtime="20200722 08:00:12.498"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:17.286" endtime="20200718 14:23:19.411"></status>
+<status status="PASS" starttime="20200722 08:00:09.829" endtime="20200722 08:00:12.499"></status>
 </kw>
 <kw name="Open the option" library="CommonKeywords">
 <arguments>
@@ -600,9 +554,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:19.412" endtime="20200718 14:23:20.302"></status>
+<status status="PASS" starttime="20200722 08:00:12.502" endtime="20200722 08:00:13.353"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:19.411" endtime="20200718 14:23:20.302"></status>
+<status status="PASS" starttime="20200722 08:00:12.501" endtime="20200722 08:00:13.354"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -619,21 +573,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:20.305" endtime="20200718 14:23:20.586"></status>
+<status status="PASS" starttime="20200722 08:00:13.357" endtime="20200722 08:00:13.628"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:20.303" endtime="20200718 14:23:20.587"></status>
+<status status="PASS" starttime="20200722 08:00:13.356" endtime="20200722 08:00:13.628"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:20.594" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
-<status status="PASS" starttime="20200718 14:23:20.587" endtime="20200718 14:23:20.850"></status>
+<msg timestamp="20200722 08:00:13.634" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
+<status status="PASS" starttime="20200722 08:00:13.628" endtime="20200722 08:00:13.940"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:20.302" endtime="20200718 14:23:20.851"></status>
+<status status="PASS" starttime="20200722 08:00:13.354" endtime="20200722 08:00:13.940"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:19.411" endtime="20200718 14:23:20.851"></status>
+<status status="PASS" starttime="20200722 08:00:12.499" endtime="20200722 08:00:13.941"></status>
 </kw>
 <kw name="Open the option" library="CommonKeywords">
 <arguments>
@@ -650,9 +604,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:20.853" endtime="20200718 14:23:21.631"></status>
+<status status="PASS" starttime="20200722 08:00:13.944" endtime="20200722 08:00:15.093"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:20.852" endtime="20200718 14:23:21.631"></status>
+<status status="PASS" starttime="20200722 08:00:13.942" endtime="20200722 08:00:15.094"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -669,23 +623,26 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:21.634" endtime="20200718 14:23:21.879"></status>
+<status status="PASS" starttime="20200722 08:00:15.099" endtime="20200722 08:00:15.377"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:21.632" endtime="20200718 14:23:21.880"></status>
+<status status="PASS" starttime="20200722 08:00:15.097" endtime="20200722 08:00:15.377"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:21.884" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Swipe']'.</msg>
-<status status="PASS" starttime="20200718 14:23:21.880" endtime="20200718 14:23:22.127"></status>
+<msg timestamp="20200722 08:00:15.380" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Swipe']'.</msg>
+<status status="PASS" starttime="20200722 08:00:15.377" endtime="20200722 08:00:15.664"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:21.631" endtime="20200718 14:23:22.127"></status>
+<status status="PASS" starttime="20200722 08:00:15.095" endtime="20200722 08:00:15.664"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:20.851" endtime="20200718 14:23:22.128"></status>
+<status status="PASS" starttime="20200722 08:00:13.941" endtime="20200722 08:00:15.664"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:13.596" endtime="20200718 14:23:22.128" critical="yes"></status>
+<tags>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20200722 08:00:07.270" endtime="20200722 08:00:15.664" critical="yes"></status>
 </test>
 <test id="s1-s1-t3" name="Verify WebView tab Action">
 <kw name="Open the option" library="CommonKeywords" type="setup">
@@ -703,9 +660,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:22.130" endtime="20200718 14:23:23.998"></status>
+<status status="PASS" starttime="20200722 08:00:15.671" endtime="20200722 08:00:18.111"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:22.130" endtime="20200718 14:23:23.999"></status>
+<status status="PASS" starttime="20200722 08:00:15.668" endtime="20200722 08:00:18.111"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -722,21 +679,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:24.002" endtime="20200718 14:23:24.281"></status>
+<status status="PASS" starttime="20200722 08:00:18.112" endtime="20200722 08:00:18.353"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:24.001" endtime="20200718 14:23:24.281"></status>
+<status status="PASS" starttime="20200722 08:00:18.112" endtime="20200722 08:00:18.354"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:24.286" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:23:24.282" endtime="20200718 14:23:24.568"></status>
+<msg timestamp="20200722 08:00:18.356" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200722 08:00:18.354" endtime="20200722 08:00:18.594"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:24.000" endtime="20200718 14:23:24.570"></status>
+<status status="PASS" starttime="20200722 08:00:18.111" endtime="20200722 08:00:18.594"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:22.129" endtime="20200718 14:23:24.571"></status>
+<status status="PASS" starttime="20200722 08:00:15.666" endtime="20200722 08:00:18.594"></status>
 </kw>
 <kw name="Verify android large icon is available" library="CommonKeywords">
 <kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
@@ -750,11 +707,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:24.577" endtime="20200718 14:23:25.327"></status>
+<status status="PASS" starttime="20200722 08:00:18.595" endtime="20200722 08:00:19.718"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:24.573" endtime="20200718 14:23:25.328"></status>
+<status status="PASS" starttime="20200722 08:00:18.595" endtime="20200722 08:00:19.719"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:24.572" endtime="20200718 14:23:25.329"></status>
+<status status="PASS" starttime="20200722 08:00:18.595" endtime="20200722 08:00:19.720"></status>
 </kw>
 <kw name="Open the option" library="CommonKeywords">
 <arguments>
@@ -771,9 +728,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:25.334" endtime="20200718 14:23:25.608"></status>
+<status status="PASS" starttime="20200722 08:00:19.725" endtime="20200722 08:00:20.004"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:25.332" endtime="20200718 14:23:25.608"></status>
+<status status="PASS" starttime="20200722 08:00:19.723" endtime="20200722 08:00:20.005"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -790,29 +747,29 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:25.612" endtime="20200718 14:23:25.850"></status>
+<status status="PASS" starttime="20200722 08:00:20.007" endtime="20200722 08:00:20.269"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:25.610" endtime="20200718 14:23:25.850"></status>
+<status status="PASS" starttime="20200722 08:00:20.006" endtime="20200722 08:00:20.270"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:25.853" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
-<status status="PASS" starttime="20200718 14:23:25.850" endtime="20200718 14:23:26.095"></status>
+<msg timestamp="20200722 08:00:20.278" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
+<status status="PASS" starttime="20200722 08:00:20.271" endtime="20200722 08:00:20.737"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:25.608" endtime="20200718 14:23:26.096"></status>
+<status status="PASS" starttime="20200722 08:00:20.005" endtime="20200722 08:00:20.738"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:25.330" endtime="20200718 14:23:26.097"></status>
+<status status="PASS" starttime="20200722 08:00:19.721" endtime="20200722 08:00:20.738"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20200718 14:23:31.100" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20200718 14:23:26.097" endtime="20200718 14:23:31.100"></status>
+<msg timestamp="20200722 08:00:25.741" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200722 08:00:20.739" endtime="20200722 08:00:25.741"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -833,21 +790,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:31.105" endtime="20200718 14:23:31.713"></status>
+<status status="PASS" starttime="20200722 08:00:25.744" endtime="20200722 08:00:26.290"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:31.103" endtime="20200718 14:23:31.714"></status>
+<status status="PASS" starttime="20200722 08:00:25.743" endtime="20200722 08:00:26.291"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:32.262" level="INFO">Current page contains text 'Docs'.</msg>
-<status status="PASS" starttime="20200718 14:23:31.714" endtime="20200718 14:23:32.262"></status>
+<msg timestamp="20200722 08:00:27.067" level="INFO">Current page contains text 'Docs'.</msg>
+<status status="PASS" starttime="20200722 08:00:26.291" endtime="20200722 08:00:27.068"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:31.101" endtime="20200718 14:23:32.264"></status>
+<status status="PASS" starttime="20200722 08:00:25.742" endtime="20200722 08:00:27.068"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:31.100" endtime="20200718 14:23:32.265"></status>
+<status status="PASS" starttime="20200722 08:00:25.741" endtime="20200722 08:00:27.068"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -868,21 +825,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:32.268" endtime="20200718 14:23:32.909"></status>
+<status status="PASS" starttime="20200722 08:00:27.070" endtime="20200722 08:00:27.558"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:32.268" endtime="20200718 14:23:32.911"></status>
+<status status="PASS" starttime="20200722 08:00:27.069" endtime="20200722 08:00:27.558"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:33.505" level="INFO">Current page contains text 'API'.</msg>
-<status status="PASS" starttime="20200718 14:23:32.912" endtime="20200718 14:23:33.505"></status>
+<msg timestamp="20200722 08:00:28.027" level="INFO">Current page contains text 'API'.</msg>
+<status status="PASS" starttime="20200722 08:00:27.559" endtime="20200722 08:00:28.028"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:32.267" endtime="20200718 14:23:33.506"></status>
+<status status="PASS" starttime="20200722 08:00:27.069" endtime="20200722 08:00:28.028"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:32.265" endtime="20200718 14:23:33.507"></status>
+<status status="PASS" starttime="20200722 08:00:27.068" endtime="20200722 08:00:28.028"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -903,21 +860,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:33.513" endtime="20200718 14:23:34.004"></status>
+<status status="PASS" starttime="20200722 08:00:28.029" endtime="20200722 08:00:28.607"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:33.511" endtime="20200718 14:23:34.005"></status>
+<status status="PASS" starttime="20200722 08:00:28.029" endtime="20200722 08:00:28.608"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:34.946" level="INFO">Current page contains text 'Help'.</msg>
-<status status="PASS" starttime="20200718 14:23:34.005" endtime="20200718 14:23:34.947"></status>
+<msg timestamp="20200722 08:00:29.152" level="INFO">Current page contains text 'Help'.</msg>
+<status status="PASS" starttime="20200722 08:00:28.608" endtime="20200722 08:00:29.154"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:33.509" endtime="20200718 14:23:34.948"></status>
+<status status="PASS" starttime="20200722 08:00:28.028" endtime="20200722 08:00:29.155"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:33.507" endtime="20200718 14:23:34.949"></status>
+<status status="PASS" starttime="20200722 08:00:28.028" endtime="20200722 08:00:29.156"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -938,21 +895,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:34.955" endtime="20200718 14:23:35.348"></status>
+<status status="PASS" starttime="20200722 08:00:29.161" endtime="20200722 08:00:29.738"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:34.953" endtime="20200718 14:23:35.348"></status>
+<status status="PASS" starttime="20200722 08:00:29.160" endtime="20200722 08:00:29.738"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:35.878" level="INFO">Current page contains text 'Versions'.</msg>
-<status status="PASS" starttime="20200718 14:23:35.348" endtime="20200718 14:23:35.878"></status>
+<msg timestamp="20200722 08:00:30.260" level="INFO">Current page contains text 'Versions'.</msg>
+<status status="PASS" starttime="20200722 08:00:29.739" endtime="20200722 08:00:30.260"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:34.951" endtime="20200718 14:23:35.880"></status>
+<status status="PASS" starttime="20200722 08:00:29.158" endtime="20200722 08:00:30.260"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:34.949" endtime="20200718 14:23:35.881"></status>
+<status status="PASS" starttime="20200722 08:00:29.156" endtime="20200722 08:00:30.260"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -973,21 +930,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:35.884" endtime="20200718 14:23:36.471"></status>
+<status status="PASS" starttime="20200722 08:00:30.262" endtime="20200722 08:00:31.093"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:35.883" endtime="20200718 14:23:36.472"></status>
+<status status="PASS" starttime="20200722 08:00:30.261" endtime="20200722 08:00:31.093"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:37.036" level="INFO">Current page contains text 'Blog'.</msg>
-<status status="PASS" starttime="20200718 14:23:36.473" endtime="20200718 14:23:37.037"></status>
+<msg timestamp="20200722 08:00:31.683" level="INFO">Current page contains text 'Blog'.</msg>
+<status status="PASS" starttime="20200722 08:00:31.093" endtime="20200722 08:00:31.683"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:35.882" endtime="20200718 14:23:37.037"></status>
+<status status="PASS" starttime="20200722 08:00:30.261" endtime="20200722 08:00:31.683"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:35.882" endtime="20200718 14:23:37.038"></status>
+<status status="PASS" starttime="20200722 08:00:30.261" endtime="20200722 08:00:31.683"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -1008,21 +965,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:37.043" endtime="20200718 14:23:37.441"></status>
+<status status="PASS" starttime="20200722 08:00:31.686" endtime="20200722 08:00:32.100"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:37.042" endtime="20200718 14:23:37.442"></status>
+<status status="PASS" starttime="20200722 08:00:31.685" endtime="20200722 08:00:32.101"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:37.822" level="INFO">Current page contains text 'Contribute'.</msg>
-<status status="PASS" starttime="20200718 14:23:37.442" endtime="20200718 14:23:37.822"></status>
+<msg timestamp="20200722 08:00:32.662" level="INFO">Current page contains text 'Contribute'.</msg>
+<status status="PASS" starttime="20200722 08:00:32.101" endtime="20200722 08:00:32.662"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:37.040" endtime="20200718 14:23:37.823"></status>
+<status status="PASS" starttime="20200722 08:00:31.684" endtime="20200722 08:00:32.662"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:37.039" endtime="20200718 14:23:37.823"></status>
+<status status="PASS" starttime="20200722 08:00:31.684" endtime="20200722 08:00:32.663"></status>
 </kw>
 <kw name="Swipe the screen up" library="CommonKeywords">
 <kw name="Swipe the screen" library="AppiumLibraryKeywords">
@@ -1040,11 +997,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${offset_x}</arg>
 <arg>${offset_y}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:37.827" endtime="20200718 14:23:38.382"></status>
+<status status="PASS" starttime="20200722 08:00:32.664" endtime="20200722 08:00:33.261"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:37.825" endtime="20200718 14:23:38.383"></status>
+<status status="PASS" starttime="20200722 08:00:32.663" endtime="20200722 08:00:33.262"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:37.824" endtime="20200718 14:23:38.383"></status>
+<status status="PASS" starttime="20200722 08:00:32.663" endtime="20200722 08:00:33.262"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -1065,21 +1022,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:38.385" endtime="20200718 14:23:39.686"></status>
+<status status="PASS" starttime="20200722 08:00:33.268" endtime="20200722 08:00:34.808"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:38.385" endtime="20200718 14:23:39.686"></status>
+<status status="PASS" starttime="20200722 08:00:33.265" endtime="20200722 08:00:34.810"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:40.305" level="INFO">Current page contains text 'GET STARTED'.</msg>
-<status status="PASS" starttime="20200718 14:23:39.686" endtime="20200718 14:23:40.306"></status>
+<msg timestamp="20200722 08:00:35.393" level="INFO">Current page contains text 'GET STARTED'.</msg>
+<status status="PASS" starttime="20200722 08:00:34.811" endtime="20200722 08:00:35.393"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:38.384" endtime="20200718 14:23:40.307"></status>
+<status status="PASS" starttime="20200722 08:00:33.264" endtime="20200722 08:00:35.393"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:38.383" endtime="20200718 14:23:40.308"></status>
+<status status="PASS" starttime="20200722 08:00:33.263" endtime="20200722 08:00:35.394"></status>
 </kw>
 <kw name="Swipe the screen down" library="CommonKeywords">
 <kw name="Swipe the screen" library="AppiumLibraryKeywords">
@@ -1097,11 +1054,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${offset_x}</arg>
 <arg>${offset_y}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:40.316" endtime="20200718 14:23:40.921"></status>
+<status status="PASS" starttime="20200722 08:00:35.396" endtime="20200722 08:00:35.970"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:40.311" endtime="20200718 14:23:40.922"></status>
+<status status="PASS" starttime="20200722 08:00:35.395" endtime="20200722 08:00:35.971"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:40.309" endtime="20200718 14:23:40.923"></status>
+<status status="PASS" starttime="20200722 08:00:35.394" endtime="20200722 08:00:35.971"></status>
 </kw>
 <kw name="Open the option" library="CommonKeywords">
 <arguments>
@@ -1118,9 +1075,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:40.928" endtime="20200718 14:23:42.368"></status>
+<status status="PASS" starttime="20200722 08:00:35.973" endtime="20200722 08:00:37.616"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:40.926" endtime="20200718 14:23:42.368"></status>
+<status status="PASS" starttime="20200722 08:00:35.972" endtime="20200722 08:00:37.616"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -1137,28 +1094,31 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:42.372" endtime="20200718 14:23:42.620"></status>
+<status status="PASS" starttime="20200722 08:00:37.618" endtime="20200722 08:00:37.857"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:42.369" endtime="20200718 14:23:42.621"></status>
+<status status="PASS" starttime="20200722 08:00:37.617" endtime="20200722 08:00:37.857"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:42.626" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Swipe']'.</msg>
-<status status="PASS" starttime="20200718 14:23:42.622" endtime="20200718 14:23:42.882"></status>
+<msg timestamp="20200722 08:00:37.861" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Swipe']'.</msg>
+<status status="PASS" starttime="20200722 08:00:37.858" endtime="20200722 08:00:38.224"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:42.369" endtime="20200718 14:23:42.884"></status>
+<status status="PASS" starttime="20200722 08:00:37.616" endtime="20200722 08:00:38.224"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:40.924" endtime="20200718 14:23:42.884"></status>
+<status status="PASS" starttime="20200722 08:00:35.971" endtime="20200722 08:00:38.225"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:22.128" endtime="20200718 14:23:42.885" critical="yes"></status>
+<tags>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" starttime="20200722 08:00:15.665" endtime="20200722 08:00:38.226" critical="yes"></status>
 </test>
 <kw name="Close the application" library="Setup" type="teardown">
 <kw name="Close All Applications" library="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20200718 14:23:42.890" endtime="20200718 14:23:43.144"></status>
+<status status="PASS" starttime="20200722 08:00:38.234" endtime="20200722 08:00:38.551"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -1177,12 +1137,12 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${remote_url}</arg>
 <arg>localhost</arg>
 </arguments>
-<msg timestamp="20200718 14:23:43.149" level="FAIL">'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
-<status status="FAIL" starttime="20200718 14:23:43.147" endtime="20200718 14:23:43.150"></status>
+<msg timestamp="20200722 08:00:38.553" level="FAIL">'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="FAIL" starttime="20200722 08:00:38.552" endtime="20200722 08:00:38.554"></status>
 </kw>
-<msg timestamp="20200718 14:23:43.150" level="INFO">${match} = FAIL</msg>
-<msg timestamp="20200718 14:23:43.150" level="INFO">${value} = 'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
-<status status="PASS" starttime="20200718 14:23:43.145" endtime="20200718 14:23:43.151"></status>
+<msg timestamp="20200722 08:00:38.554" level="INFO">${match} = FAIL</msg>
+<msg timestamp="20200722 08:00:38.554" level="INFO">${value} = 'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="PASS" starttime="20200722 08:00:38.552" endtime="20200722 08:00:38.554"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1192,13 +1152,13 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${s}</arg>
 <arg>stopAppiumServer</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:43.151" endtime="20200718 14:23:43.152"></status>
+<status status="PASS" starttime="20200722 08:00:38.554" endtime="20200722 08:00:38.555"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:42.890" endtime="20200718 14:23:43.154"></status>
+<status status="PASS" starttime="20200722 08:00:38.232" endtime="20200722 08:00:38.555"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:22:43.583" endtime="20200718 14:23:43.154"></status>
+<status status="PASS" starttime="20200722 07:59:36.976" endtime="20200722 08:00:38.555"></status>
 </suite>
-<status status="PASS" starttime="20200718 14:22:43.497" endtime="20200718 14:23:43.163"></status>
+<status status="PASS" starttime="20200722 07:59:36.849" endtime="20200722 08:00:38.558"></status>
 </suite>
 <statistics>
 <total>
@@ -1206,6 +1166,8 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <stat pass="3" fail="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="2" fail="0">smoke</stat>
+<stat pass="1" fail="0">smoke1</stat>
 </tag>
 <suite>
 <stat pass="3" fail="0" id="s1" name="Suites">Suites</stat>

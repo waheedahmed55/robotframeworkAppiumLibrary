@@ -1,8 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.1 on win32)" generated="20200718 14:22:43.502" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.1 on win32)" generated="20200722 08:00:39.570" rpa="false">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="Sim" source="C:\Automation\AppiumLibraryRobotFramework\TestCases\Sim.robot">
-<test id="s1-s1-t1" name="Open the Application">
+<suite id="s1-s1" name="SwitchContextDemo" source="C:\Automation\AppiumLibraryRobotFramework\robotframeworkAppiumLibrary\TestCases\SwitchContextDemo.robot">
+<kw name="Open the application in device" library="Setup" type="setup">
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${remote_url}</arg>
+<arg>localhost</arg>
+</arguments>
+<assign>
+<var>${match}</var>
+<var>${value}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${remote_url}</arg>
+<arg>localhost</arg>
+</arguments>
+<msg timestamp="20200722 08:00:40.070" level="FAIL">'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="FAIL" starttime="20200722 08:00:40.070" endtime="20200722 08:00:40.071"></status>
+</kw>
+<msg timestamp="20200722 08:00:40.071" level="INFO">${match} = FAIL</msg>
+<msg timestamp="20200722 08:00:40.071" level="INFO">${value} = 'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="PASS" starttime="20200722 08:00:40.070" endtime="20200722 08:00:40.071"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${match}' == 'PASS'</arg>
+<arg>call method</arg>
+<arg>${s}</arg>
+<arg>startAppiumServer</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:00:40.071" endtime="20200722 08:00:40.071"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20200722 08:00:45.073" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200722 08:00:40.071" endtime="20200722 08:00:45.073"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>RUNNING...</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:00:45.073" endtime="20200722 08:00:45.074"></status>
+</kw>
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
@@ -11,49 +60,1301 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
 <arguments>
-<arg>remote_url=http://localhost:4723/wd/hub</arg>
-<arg>device=R38MC00R9KJ</arg>
-<arg>platformName=Android</arg>
-<arg>deviceName=AndroidDevice</arg>
-<arg>automationName=uiautomator2</arg>
-<arg>app=C:\\Automation\\AppiumLibraryRobotFramework\\TestCases\\..\\App\\DemoApp.apk</arg>
+<arg>remote_url=${remote_url}</arg>
+<arg>device=${deviceId}</arg>
+<arg>os_version=${os_version}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>automationName=${automationName}</arg>
+<arg>app=${appPath}</arg>
+<arg>nativeWebScreenshot=true</arg>
 </arguments>
-<msg timestamp="20200718 14:22:46.446" level="INFO">Could not connect to port 4723 on host localhost</msg>
-<msg timestamp="20200718 14:22:46.446" level="INFO">Could not get IP address for host: localhost</msg>
-<msg timestamp="20200718 14:22:48.457" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F20370&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
-<msg timestamp="20200718 14:22:50.478" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F203E8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
-<msg timestamp="20200718 14:22:52.494" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F20418&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
+<status status="PASS" starttime="20200722 08:00:45.074" endtime="20200722 08:01:04.611"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:00:40.069" endtime="20200722 08:01:04.612"></status>
+</kw>
+<test id="s1-s1-t1" name="Verify switching to context">
+<kw name="Open the option" library="CommonKeywords" type="setup">
+<arguments>
+<arg>Home</arg>
+</arguments>
+<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
+<arg>5</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:04.616" endtime="20200722 08:01:05.822"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:04.614" endtime="20200722 08:01:05.823"></status>
+</kw>
+<kw name="Click on an element" library="AppiumLibraryKeywords">
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
+</arguments>
+<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
+<arguments>
+<arg>${locator}</arg>
+<arg>5</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:05.824" endtime="20200722 08:01:06.122"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:05.823" endtime="20200722 08:01:06.123"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200722 08:01:06.126" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200722 08:01:06.123" endtime="20200722 08:01:06.502"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:05.823" endtime="20200722 08:01:06.504"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:04.613" endtime="20200722 08:01:06.506"></status>
+</kw>
+<kw name="Verify android large icon is available" library="CommonKeywords">
+<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
+<arguments>
+<arg>${HomeAndroidIcon}</arg>
+<arg>30</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:06.517" endtime="20200722 08:01:06.891"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:06.512" endtime="20200722 08:01:06.892"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:06.508" endtime="20200722 08:01:06.893"></status>
+</kw>
+<kw name="Open the option" library="CommonKeywords">
+<arguments>
+<arg>Home</arg>
+</arguments>
+<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
+<arg>5</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:06.896" endtime="20200722 08:01:07.191"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:06.894" endtime="20200722 08:01:07.191"></status>
+</kw>
+<kw name="Click on an element" library="AppiumLibraryKeywords">
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
+</arguments>
+<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
+<arguments>
+<arg>${locator}</arg>
+<arg>5</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:07.193" endtime="20200722 08:01:07.465"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:07.192" endtime="20200722 08:01:07.465"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200722 08:01:07.468" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200722 08:01:07.465" endtime="20200722 08:01:07.878"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:07.191" endtime="20200722 08:01:07.879"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:06.893" endtime="20200722 08:01:07.881"></status>
+</kw>
+<kw name="Open the option" library="CommonKeywords">
+<arguments>
+<arg>WebView</arg>
+</arguments>
+<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
+<arg>5</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:07.882" endtime="20200722 08:01:08.229"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:07.882" endtime="20200722 08:01:08.230"></status>
+</kw>
+<kw name="Click on an element" library="AppiumLibraryKeywords">
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
+</arguments>
+<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
+<arguments>
+<arg>${locator}</arg>
+<arg>5</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:08.233" endtime="20200722 08:01:08.631"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:08.232" endtime="20200722 08:01:08.632"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200722 08:01:08.635" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='WebView']'.</msg>
+<status status="PASS" starttime="20200722 08:01:08.632" endtime="20200722 08:01:08.930"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:08.230" endtime="20200722 08:01:08.930"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:07.881" endtime="20200722 08:01:08.931"></status>
+</kw>
+<kw name="Wait for the page to be load" library="CommonKeywords">
+<kw name="Wait Until Page Contains text on the screen" library="AppiumLibraryKeywords">
+<arguments>
+<arg>LOADING...</arg>
+<arg>10</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${text}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:08.932" endtime="20200722 08:01:09.767"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:08.932" endtime="20200722 08:01:09.768"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:08.931" endtime="20200722 08:01:09.768"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20200722 08:01:19.770" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20200722 08:01:09.768" endtime="20200722 08:01:19.770"></status>
+</kw>
+<kw name="Get available context in the app" library="ContextHelper">
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20200722 08:01:19.770" level="INFO">${val} = Get all available context</msg>
+<status status="PASS" starttime="20200722 08:01:19.770" endtime="20200722 08:01:19.770"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${val}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:19.770" endtime="20200722 08:01:19.770"></status>
+</kw>
+<kw name="Switch to the current Context" library="ContextHelper">
+<arguments>
+<arg>${WebView}</arg>
+</arguments>
+<kw name="Switch to the context" library="AppiumLibraryKeywords">
+<arguments>
+<arg>${context}</arg>
+</arguments>
+<kw name="Switch To Context" library="AppiumLibrary">
+<doc>Switch to a new context</doc>
+<arguments>
+<arg>${context}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:19.771" endtime="20200722 08:01:20.443"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:19.771" endtime="20200722 08:01:20.443"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:19.770" endtime="20200722 08:01:20.444"></status>
+</kw>
+<kw name="Execute Script" library="AppiumLibrary">
+<doc>Inject a snippet of JavaScript into the page for execution in the
+context of the currently selected frame (Web context only).</doc>
+<arguments>
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:20.444" endtime="20200722 08:01:20.584"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6s</arg>
+</arguments>
+<msg timestamp="20200722 08:01:26.587" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20200722 08:01:20.584" endtime="20200722 08:01:26.587"></status>
+</kw>
+<kw name="Click on header menu" library="ContextHelper">
+<arguments>
+<arg>Blog</arg>
+</arguments>
+<kw name="Click on an element" library="AppiumLibraryKeywords">
+<arguments>
+<arg>xpath=//a[text()='${headerMenu}']</arg>
+</arguments>
+<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
+<arguments>
+<arg>${locator}</arg>
+<arg>5</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:26.589" endtime="20200722 08:01:26.856"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:26.588" endtime="20200722 08:01:26.856"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20200722 08:01:26.858" level="INFO">Clicking element 'xpath=//a[text()='Blog']'.</msg>
+<status status="PASS" starttime="20200722 08:01:26.856" endtime="20200722 08:01:29.624"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:26.588" endtime="20200722 08:01:29.625"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:26.587" endtime="20200722 08:01:29.625"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>6s</arg>
+</arguments>
+<msg timestamp="20200722 08:01:35.626" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20200722 08:01:29.625" endtime="20200722 08:01:35.626"></status>
+</kw>
+<kw name="Get available context in the app" library="ContextHelper">
+<assign>
+<var>${val}</var>
+</assign>
+<msg timestamp="20200722 08:01:35.627" level="INFO">${val} = Get all available context</msg>
+<status status="PASS" starttime="20200722 08:01:35.626" endtime="20200722 08:01:35.627"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${val}</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:35.627" endtime="20200722 08:01:35.627"></status>
+</kw>
+<kw name="Switch to the current Context" library="ContextHelper">
+<arguments>
+<arg>${NativeVew}</arg>
+</arguments>
+<msg timestamp="20200722 08:01:35.630" level="FAIL">Variable '${NativeVew}' not found. Did you mean:
+    ${NativeView}</msg>
+<status status="FAIL" starttime="20200722 08:01:35.627" endtime="20200722 08:01:35.630"></status>
+</kw>
+<status status="FAIL" starttime="20200722 08:01:04.612" endtime="20200722 08:01:35.631" critical="yes">Variable '${NativeVew}' not found. Did you mean:
+    ${NativeView}</status>
+</test>
+<test id="s1-s1-t2" name="Work with multple elements">
+<kw name="Open the option" library="CommonKeywords" type="setup">
+<arguments>
+<arg>Home</arg>
+</arguments>
+<kw name="Wait untill element is visible on the screen" library="AppiumLibraryKeywords">
+<arguments>
+<arg>xpath=//android.widget.TextView[@text='${option}']</arg>
+<arg>5</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+</arguments>
+<msg timestamp="20200722 08:01:42.417" level="INFO">&lt;html lang="en"&gt;&lt;head&gt;&lt;style&gt;#back-to-top{background:#000;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;bottom:20px;-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);-moz-box-shadow:0 2px 5px 0 rgba(0,0,0,.26);box-shadow:0 2px 5px 0 rgba(0,0,0,.26);color:#fff;cursor:pointer;display:block;height:56px;opacity:1;outline:0;position:fixed;right:20px;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-transition:bottom .2s,opacity .2s;-o-transition:bottom .2s,opacity .2s;-moz-transition:bottom .2s,opacity .2s;transition:bottom .2s,opacity .2s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:56px;z-index:100}#back-to-top svg{display:block;fill:currentColor;height:24px;margin:16px auto 0;width:24px}#back-to-top.hidden{bottom:-56px;opacity:0}&lt;/style&gt;&lt;meta charset="utf-8"&gt;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;&lt;title&gt;Blog · WebdriverIO&lt;/title&gt;&lt;meta name="viewport" content="width=device-width"&gt;&lt;meta name="generator" content="Docusaurus"&gt;&lt;meta name="description" content="Next-gen browser and mobile automation test framework for Node.js"&gt;&lt;meta name="docsearch:language" content="en"&gt;&lt;meta property="og:title" content="Blog · WebdriverIO"&gt;&lt;meta property="og:type" content="website"&gt;&lt;meta property="og:url" content="https://webdriver.io/index.html"&gt;&lt;meta property="og:description" content="Next-gen browser and mobile automation test framework for Node.js"&gt;&lt;meta property="og:image" content="https://webdriver.io/img/webdriverio.png"&gt;&lt;meta name="twitter:card" content="summary"&gt;&lt;meta name="twitter:image" content="https://webdriver.io/img/webdriverio.png"&gt;&lt;link rel="shortcut icon" href="/img/favicon.png"&gt;&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"&gt;&lt;link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"&gt;&lt;link rel="alternate" type="application/atom+xml" href="https://webdriver.io/blog/atom.xml" title="WebdriverIO Blog ATOM Feed"&gt;&lt;link rel="alternate" type="application/rss+xml" href="https://webdriver.io/blog/feed.xml" title="WebdriverIO Blog RSS Feed"&gt;&lt;script id="twitter-wjs" src="https://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;script async="" src="https://www.google-analytics.com/analytics.js"&gt;&lt;/script&gt;&lt;script&gt;
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-47063382-1', 'auto');
+              ga('send', 'pageview');
+            &lt;/script&gt;&lt;script type="text/javascript" src="https://buttons.github.io/buttons.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="https://platform.twitter.com/widgets.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"&gt;&lt;/script&gt;&lt;script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"&gt;&lt;/script&gt;&lt;script&gt;
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        &lt;/script&gt;&lt;script src="/js/scrollSpy.js"&gt;&lt;/script&gt;&lt;link rel="stylesheet" href="/css/main.css"&gt;&lt;script src="/js/codetabs.js"&gt;&lt;/script&gt;&lt;/head&gt;&lt;body class="blog"&gt;&lt;div class="fixedHeaderContainer" style="top: 130px;"&gt;&lt;div class="headerWrapper wrapper"&gt;&lt;header&gt;&lt;a href="/"&gt;&lt;h2 class="headerTitle"&gt;WebdriverIO&lt;/h2&gt;&lt;/a&gt;&lt;div class="navigationWrapper navigationSlider"&gt;&lt;nav class="slidingNav"&gt;&lt;ul class="nav-site nav-site-internal"&gt;&lt;li class=""&gt;&lt;a href="/docs/gettingstarted.html" target="_self"&gt;Docs&lt;/a&gt;&lt;/li&gt;&lt;li class=""&gt;&lt;a href="/docs/api.html" target="_self"&gt;API&lt;/a&gt;&lt;/li&gt;&lt;li class=""&gt;&lt;a href="/help.html" target="_self"&gt;Help&lt;/a&gt;&lt;/li&gt;&lt;li class=""&gt;&lt;a href="/docs/versions.html" target="_self"&gt;Versions&lt;/a&gt;&lt;/li&gt;&lt;li class="siteNavGroupActive siteNavItemActive"&gt;&lt;a href="/blog/" target="_self"&gt;Blog&lt;/a&gt;&lt;/li&gt;&lt;li class=""&gt;&lt;a href="/docs/contribute.html" target="_self"&gt;Contribute&lt;/a&gt;&lt;/li&gt;&lt;li class="navSearchWrapper reactNavSearchWrapper"&gt;&lt;span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"&gt;&lt;input type="text" id="search_input_react" placeholder="Search" title="Search" class="aa-input" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-labelledby="search_input_react" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"&gt;&lt;pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Lato, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"&gt;&lt;/pre&gt;&lt;span class="aa-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"&gt;&lt;div class="aa-dataset-1"&gt;&lt;/div&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li class=""&gt;&lt;a href="https://github.com/webdriverio/webdriverio" target="_self"&gt;GitHub&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;/div&gt;&lt;/header&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="navPusher" style="padding-top: 180px;"&gt;&lt;div class="docMainWrapper wrapper"&gt;&lt;div class="docsNavContainer" id="docsNav"&gt;&lt;nav class="toc"&gt;&lt;div class="toggleNav"&gt;&lt;section class="navWrapper wrapper"&gt;&lt;div class="navBreadcrumb wrapper"&gt;&lt;div class="navToggle" id="navToggler"&gt;&lt;div class="hamburger-menu"&gt;&lt;div class="line1"&gt;&lt;/div&gt;&lt;div class="line2"&gt;&lt;/div&gt;&lt;div class="line3"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;h2&gt;&lt;i&gt;›&lt;/i&gt;&lt;span&gt;Recent Posts&lt;/span&gt;&lt;/h2&gt;&lt;div class="tocToggler" id="tocToggler"&gt;&lt;i class="icon-toc"&gt;&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="navGroups"&gt;&lt;div class="navGroup"&gt;&lt;h3 class="navGroupCategoryTitle"&gt;Recent Posts&lt;/h3&gt;&lt;ul class=""&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2020/07/10/network-primitives.html"&gt;New Network Primitives (Beta)&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2020/07/01/office-hours.html"&gt;WebdriverIO Open Office Hours&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2020/03/26/webdriverio-v6-released.html"&gt;WebdriverIO v6 Released&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2019/12/05/wiremock.html"&gt;WireMock as a Service&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2019/11/01/spec-filtering.html"&gt;Avoid starting session for excluded specs&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2019/09/16/devtools.html"&gt;Chrome DevTools as Automation Protocol&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2019/07/11/cucumberjs-v5-released.html"&gt;WebdriverIO V5 now also supports CucumberJS&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2019/06/25/file-upload.html"&gt;File Uploads with WebdriverIO&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2019/05/18/visual-regression-for-v5.html"&gt;Visual Regression for V5&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2019/04/03/react-selectors.html"&gt;React Selectors&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2019/02/22/shadow-dom-support.html"&gt;Shadow DOM Support &amp;amp; reusable component objects&lt;/a&gt;&lt;/li&gt;&lt;li class="navListItem"&gt;&lt;a class="navItem" href="/blog/2018/12/19/webdriverio-v5-released.html"&gt;WebdriverIO v5 Released&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;script&gt;
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i &lt; coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j &lt; links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings &amp;&amp; headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        &lt;/script&gt;&lt;/nav&gt;&lt;/div&gt;&lt;div class="container mainContainer postContainer blogContainer"&gt;&lt;div class="wrapper"&gt;&lt;div class="posts"&gt;&lt;div class="post"&gt;&lt;header class="postHeader"&gt;&lt;h1 class="postHeaderTitle"&gt;&lt;a href="/blog/2020/07/10/network-primitives.html"&gt;New Network Primitives (Beta)&lt;/a&gt;&lt;/h1&gt;&lt;p class="post-meta"&gt;July 10, 2020&lt;/p&gt;&lt;div class="authorBlock"&gt;&lt;p class="post-authorName"&gt;&lt;a href="http://twitter.com/bromann" target="_blank" rel="noreferrer noopener"&gt;Christian Bromann&lt;/a&gt;&lt;/p&gt;&lt;div class="authorPhoto"&gt;&lt;a href="http://twitter.com/bromann" target="_blank" rel="noreferrer noopener"&gt;&lt;img src="https://s.gravatar.com/avatar/d98b16d7c93d15865f34a225dd4b1254?s=80" alt="Christian Bromann"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;article class="post-content"&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;The WebdriverIO team continues its efforts to provide more functionality to its automation interface by shipping new network primitives to its API. With the latest &lt;code&gt;v6.3&lt;/code&gt;. update you can now easily mock web resources in your test and define custom responses that allow you to drastically reduce testing time as you can now better test individual scenarios. With that WebdriverIO catches up with other popular testing tools like &lt;a href="https://pptr.dev/"&gt;Puppeteer&lt;/a&gt;, &lt;a href="https://playwright.dev/"&gt;Playwright&lt;/a&gt; or &lt;a href="https://www.cypress.io/"&gt;Cypress&lt;/a&gt; and even simplifies mocking further.&lt;/p&gt;
+&lt;p&gt;Replacing a REST API request from a browser can now be as simple as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; mock = browser.mock(&lt;span class="hljs-string"&gt;'https://todo-backend-express-knex.herokuapp.com/'&lt;/span&gt;)
+
+mock.respond([{
+    &lt;span class="hljs-attr"&gt;title&lt;/span&gt;: &lt;span class="hljs-string"&gt;'Injected (non) completed Todo'&lt;/span&gt;,
+    &lt;span class="hljs-attr"&gt;order&lt;/span&gt;: &lt;span class="hljs-literal"&gt;null&lt;/span&gt;,
+    &lt;span class="hljs-attr"&gt;completed&lt;/span&gt;: &lt;span class="hljs-literal"&gt;false&lt;/span&gt;
+}, {
+    &lt;span class="hljs-attr"&gt;title&lt;/span&gt;: &lt;span class="hljs-string"&gt;'Injected completed Todo'&lt;/span&gt;,
+    &lt;span class="hljs-attr"&gt;order&lt;/span&gt;: &lt;span class="hljs-literal"&gt;null&lt;/span&gt;,
+    &lt;span class="hljs-attr"&gt;completed&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt;
+}])
+
+browser.url(&lt;span class="hljs-string"&gt;'https://todobackend.com/client/index.html?https://todo-backend-express-knex.herokuapp.com/'&lt;/span&gt;)
+
+$(&lt;span class="hljs-string"&gt;'#todo-list li'&lt;/span&gt;).waitForExist()
+&lt;span class="hljs-built_in"&gt;console&lt;/span&gt;.log($$(&lt;span class="hljs-string"&gt;'#todo-list li'&lt;/span&gt;).map(&lt;span class="hljs-function"&gt;&lt;span class="hljs-params"&gt;el&lt;/span&gt; =&amp;gt;&lt;/span&gt; el.getText()))
+&lt;span class="hljs-comment"&gt;// outputs: "[ 'Injected (non) completed Todo', 'Injected completed Todo' ]"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In addition to that you can als modify JavaScript of CSS files as well as abort requests or modify responses dynamically based on the original reponse. You can find more information on all features in the &lt;a href="/docs/mocksandspies.html"&gt;Mocks and Spies&lt;/a&gt; section of the docs.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="throttling"&gt;&lt;/a&gt;&lt;a href="#throttling" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Throttling&lt;/h2&gt;
+&lt;p&gt;Aside mocking the new version also ships with another network command that allows to modify the network throughput of the browser allowing to test under different network condition, e.g. Regular 3G or even Offline mode:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-comment"&gt;// throttle to Regular 3G&lt;/span&gt;
+browser.throttle(&lt;span class="hljs-string"&gt;'Regular 3G'&lt;/span&gt;)
+&lt;span class="hljs-comment"&gt;// disable network completely&lt;/span&gt;
+browser.throttle(&lt;span class="hljs-string"&gt;'Offline'&lt;/span&gt;)
+&lt;span class="hljs-comment"&gt;// set custom network throughput&lt;/span&gt;
+browser.throttle({
+    &lt;span class="hljs-string"&gt;'offline'&lt;/span&gt;: &lt;span class="hljs-literal"&gt;false&lt;/span&gt;,
+    &lt;span class="hljs-string"&gt;'downloadThroughput'&lt;/span&gt;: &lt;span class="hljs-number"&gt;200&lt;/span&gt; * &lt;span class="hljs-number"&gt;1024&lt;/span&gt; / &lt;span class="hljs-number"&gt;8&lt;/span&gt;,
+    &lt;span class="hljs-string"&gt;'uploadThroughput'&lt;/span&gt;: &lt;span class="hljs-number"&gt;200&lt;/span&gt; * &lt;span class="hljs-number"&gt;1024&lt;/span&gt; / &lt;span class="hljs-number"&gt;8&lt;/span&gt;,
+    &lt;span class="hljs-string"&gt;'latency'&lt;/span&gt;: &lt;span class="hljs-number"&gt;20&lt;/span&gt;
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This can open up interesting use case where you want to ensure that your progressive web app (PWA) stores all essential resources for offline users to use the application.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="support"&gt;&lt;/a&gt;&lt;a href="#support" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Support&lt;/h2&gt;
+&lt;p&gt;This feature uses Chrome DevTools capabilities to enable such behavior. Therefor it can only be supported where such an interface is available which is &lt;strong&gt;Chrome&lt;/strong&gt;, &lt;strong&gt;Firefox Nightly&lt;/strong&gt; and &lt;strong&gt;Chromium Edge&lt;/strong&gt; right now. The Firefox team at Mozilla is working hard to ship this into the stable build of Firefox, therefor support for it can be expected soon.&lt;/p&gt;
+&lt;p&gt;On top of that the folks at &lt;a href="https://saucelabs.com/"&gt;Sauce Labs&lt;/a&gt; working on various of WebDriver extensions that even allow this functionality to be support in the cloud. More updates on this will follow soon.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="implementation"&gt;&lt;/a&gt;&lt;a href="#implementation" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Implementation&lt;/h2&gt;
+&lt;p&gt;With this feature WebdriverIO now always incorperates &lt;a href="https://pptr.dev/"&gt;Puppeteer&lt;/a&gt; as second automation driver allowing these extra features whenever possible. Moving forward the team is looking into more opportunities to enable Chrome DevTools features into the built in API.&lt;/p&gt;
+&lt;p&gt;Please let us know what you think! We are expecting some bugs here and there but will make sure to fix them immediately. While we are pretty confident with the current interface design it might be still possible that some tweaks will be applied to make it even more user friendly.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="give-us-feedback"&gt;&lt;/a&gt;&lt;a href="#give-us-feedback" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Give us feedback!&lt;/h2&gt;
+&lt;p&gt;We are releasing this as &lt;code&gt;beta&lt;/code&gt; feature and hope that you can help us identify weaknesses in the implementation and support. Please give it a try and create an issue if things are unclear or just don't work. We hope with the help of the community and you we are able to ship this as stable within the next months!&lt;/p&gt;
+&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class="post"&gt;&lt;header class="postHeader"&gt;&lt;h1 class="postHeaderTitle"&gt;&lt;a href="/blog/2020/07/01/office-hours.html"&gt;WebdriverIO Open Office Hours&lt;/a&gt;&lt;/h1&gt;&lt;p class="post-meta"&gt;July 1, 2020&lt;/p&gt;&lt;div class="authorBlock"&gt;&lt;p class="post-authorName"&gt;&lt;a href="http://twitter.com/bromann" target="_blank" rel="noreferrer noopener"&gt;Christian Bromann&lt;/a&gt;&lt;/p&gt;&lt;div class="authorPhoto"&gt;&lt;a href="http://twitter.com/bromann" target="_blank" rel="noreferrer noopener"&gt;&lt;img src="https://s.gravatar.com/avatar/d98b16d7c93d15865f34a225dd4b1254?s=80" alt="Christian Bromann"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;article class="post-content"&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;Contributing to a big Open Source project can be hard. Especially if the codebase is large and requires a lot of context to understand what certain changes do. Then there is the possibility that tools or infrastructure is being used that are unkown. Nevertheless the project depends on your contributions and help to identify bugs and fix them. How can we overcome this hurdle?&lt;/p&gt;
+&lt;p&gt;At last weeks &lt;a href="https://openjsf.org/"&gt;OpenJS Foundation&lt;/a&gt; &lt;a href="https://openjscs2020.sched.com/"&gt;Collaborator Summit&lt;/a&gt; the WebdriverIO team announced to introduce Open Office Hours that allow everyone to schedule individual 1:1 pairing sessions with the WebdriverIO contributors. This allows you to get started contributing to WebdriverIO easily with the help of people that know the code base well. We only ask you to pick &lt;a href="https://github.com/webdriverio/webdriverio/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Afirst-timers-only"&gt;a task&lt;/a&gt; you would like to work on up-front so that the pairing partner can be prepared for the session to provide better guidance. This is a free opportunity for you to not only give back to the WebdriverIO community but also get to know the team behind the project.&lt;/p&gt;
+&lt;p&gt;Currently we offer 4 slots a week from: every Wednesday 10am - 12am (CEST / GMT+2) for our European friends as well as: 11am - 13am (PDT / GMT -7) for people living on the west side of this hemisphere. You can book an appointment at any time on:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://calendly.com/webdriverio/open-office-hours"&gt;calendly.com/webdriverio/open-office-hours&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;All sessions will be held over &lt;a href="https://zoom.us/"&gt;Zoom&lt;/a&gt; or &lt;a href="https://hangouts.google.com/"&gt;Google Hangouts&lt;/a&gt; but alternative platforms are possible, please let us know in the comment section. Also please note that this is not a way to get individual consulting for your own projects. The time is to be used to work on WebdriverIO related bugs or features. For support questions we still ask you to use our &lt;a href="https://gitter.im/webdriverio/webdriverio"&gt;Gitter Support Channel&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are looking forward to meet you all online and hope to find more collaborators helping us to push the project forward!&lt;/p&gt;
+&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class="post"&gt;&lt;header class="postHeader"&gt;&lt;h1 class="postHeaderTitle"&gt;&lt;a href="/blog/2020/03/26/webdriverio-v6-released.html"&gt;WebdriverIO v6 Released&lt;/a&gt;&lt;/h1&gt;&lt;p class="post-meta"&gt;March 26, 2020&lt;/p&gt;&lt;div class="authorBlock"&gt;&lt;p class="post-authorName"&gt;&lt;a href="http://twitter.com/bromann" target="_blank" rel="noreferrer noopener"&gt;Christian Bromann&lt;/a&gt;&lt;/p&gt;&lt;div class="authorPhoto"&gt;&lt;a href="http://twitter.com/bromann" target="_blank" rel="noreferrer noopener"&gt;&lt;img src="https://s.gravatar.com/avatar/d98b16d7c93d15865f34a225dd4b1254?s=80" alt="Christian Bromann"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;article class="post-content"&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;If you read this and are already about to freak out because you just spent a lot of time migrating to v5, don't worry! This major update is far less "breaking" than the one last year. While all the architectural changes last year left us no choice to break a lot of things, we were very careful this time and made sure that upgrading the framework won't become a big task.&lt;/p&gt;
+&lt;p&gt;This major update is much more reasonable and contains subtle changes that will help the project further grow while remaining performant at the same time. This blog post will go into details about all major changes and will explain what you need to do to transition from v5 to the v6.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="drop-node-v8-support"&gt;&lt;/a&gt;&lt;a href="#drop-node-v8-support" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Drop Node v8 Support&lt;/h2&gt;
+&lt;p&gt;We've dropped support for Node v8, which was deprecated by the Node.js team at the start of 2020. It is not recommended to run any systems using that version anymore. We strongly advise to switch to Node v12 which will be supported until April 2022.&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="how-to-update"&gt;&lt;/a&gt;&lt;a href="#how-to-update" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to Update?&lt;/h3&gt;
+&lt;p&gt;To update Node.js, it is important to know how it was installed in the first place. If you are in a Docker environment, you can just upgrade the base image like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-git"&gt;- FROM mhart/alpine-&lt;span class="hljs-keyword"&gt;node&lt;/span&gt;&lt;span class="hljs-title"&gt;:8&lt;/span&gt;
++ FROM mhart/alpine-&lt;span class="hljs-keyword"&gt;node&lt;/span&gt;&lt;span class="hljs-title"&gt;:12&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We recommend using &lt;a href="https://github.com/nvm-sh/nvm"&gt;NVM&lt;/a&gt; (Node Version Manager) to install and manage Node.js versions. You can find a detailed description on how to install NVM and update Node in their &lt;a href="https://github.com/nvm-sh/nvm#installing-and-updating"&gt;project readme&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="devtools-automation-protocol-is-now-default"&gt;&lt;/a&gt;&lt;a href="#devtools-automation-protocol-is-now-default" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;code&gt;devtools&lt;/code&gt; Automation Protocol is now Default&lt;/h2&gt;
+&lt;p&gt;Because of the great success of automation tools like &lt;a href="https://pptr.dev/"&gt;Puppeteer&lt;/a&gt; and &lt;a href="https://www.cypress.io/"&gt;Cypress.io&lt;/a&gt; it became obvious that the &lt;a href="https://w3c.github.io/webdriver/"&gt;WebDriver&lt;/a&gt; protocol in its current shape and form doesn't meet the requirements of todays developer and automation engineers. Members of the WebdriverIO project are part of the &lt;a href="https://www.w3.org/testing/browser/"&gt;W3C Working Group&lt;/a&gt; that defines the WebDriver specification and they work together with browser vendors on solutions to improve the current state of the art. Thanks to folks from Microsoft there already proposals about a new &lt;a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/tree/master/WebDriverRPC"&gt;bidirectional connection&lt;/a&gt; similar to other automation protocols like &lt;a href="https://chromedevtools.github.io/devtools-protocol/"&gt;Chrome Devtools&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Until we have reached consensus between all browser vendors on the new WebDriver architecture, the project wants to offer alternative solutions. This is why we've started to support Puppeteer natively using the same APIs. We already announced support for it &lt;a href="https://webdriver.io/blog/2019/09/16/devtools.html"&gt;last year&lt;/a&gt; and have now fully embed it into the project. This means that to run a local test script you won't need to download a browser driver anymore. WebdriverIO checks if a browser driver is running and accessible at &lt;code&gt;localhost:4444/&lt;/code&gt; and uses Puppeteer as fallback if not. If you use the WebdriverIO API the experience using WebDriver vs Puppeteer should be the same, running commands on Puppeteer might even be a little faster.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; using Puppeteer instead of WebDriver is only supported if running tests locally and if the browser is located on the same machine as the tests.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Being able to access Puppeteer in your tests allows you to leverage the capabilities of the Chrome DevTools protocol which has a much richer set of automation features. In your tests you are free to switch between Puppeteer and WebdriverIO API as you wish, e.g.:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;describe(&lt;span class="hljs-string"&gt;'my e2e tests'&lt;/span&gt;, () =&amp;gt; {
+    &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+
+    it(&lt;span class="hljs-string"&gt;'replaces the WebdriverIO logo with the Puppeteer logo'&lt;/span&gt;, () =&amp;gt; {
+        browser.url(&lt;span class="hljs-string"&gt;'https://webdriver.io'&lt;/span&gt;)
+
+        &lt;span class="hljs-comment"&gt;/**
+         * run Puppeteer code with promises to intercept network requests
+         * and replace the WebdriverIO logo in the docs with the Puppeteer logo
+         */&lt;/span&gt;
+        &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; wdioLogo = &lt;span class="hljs-string"&gt;'webdriverio.png'&lt;/span&gt;
+        &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; pptrLogo = &lt;span class="hljs-string"&gt;'https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png'&lt;/span&gt;
+        browser.call(&lt;span class="hljs-keyword"&gt;async&lt;/span&gt; () =&amp;gt; {
+            &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; puppeteerBrowser = browser.getPuppeteer()
+            &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; page = (&lt;span class="hljs-keyword"&gt;await&lt;/span&gt; puppeteerBrowser.pages())[&lt;span class="hljs-number"&gt;0&lt;/span&gt;]
+            &lt;span class="hljs-keyword"&gt;await&lt;/span&gt; page.setRequestInterception(&lt;span class="hljs-literal"&gt;true&lt;/span&gt;)
+            page.on(&lt;span class="hljs-string"&gt;'request'&lt;/span&gt;, (interceptedRequest) =&amp;gt; (
+                interceptedRequest.url().endsWith(wdioLogo)
+                    ? interceptedRequest.continue({ &lt;span class="hljs-attr"&gt;url&lt;/span&gt;: pptrLogo })
+                    : interceptedRequest.continue()
+            ))
+        })
+
+        &lt;span class="hljs-comment"&gt;// continue with sync WebdriverIO commands&lt;/span&gt;
+        browser.refresh()
+        browser.pause(&lt;span class="hljs-number"&gt;2000&lt;/span&gt;)
+    })
+
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We have integrated Puppeteer so you can run "cross browser" tests on Chrome, Firefox (Nightly) and Chromium Edge. Note that the term cross browser is used with quotation marks here. A lot of automation tools today advertise their cross browser support while not being really honest about what it actually means. All Chromium based browser like Google Chrome, Chromium Edge or Electron based apps use the identical engine under the hood. It is questionable that there is much value testing on multiple Chromium based browser. In addition to that the support for Firefox is and will be experimental as it was implemented in an ad-hoc effort by a team at Mozilla which hasn't committed to bring it out of its experimental state and continue support for it.&lt;/p&gt;
+&lt;p&gt;We have not planned to integrate &lt;a href="https://github.com/microsoft/playwright"&gt;Playwright&lt;/a&gt; as we can not affort to download their custom build browsers every time someone installs WebdriverIO. We will observe its development and might consider an integration at some point.&lt;/p&gt;
+&lt;p&gt;The WebdriverIO team wants to emphasize that it continues to be invested in WebDriver as an automation standard which is till today the only true cross browser automation protocol. We will always prefer a standards based solution that has been developed by a diverse group of people representing the industry at large.&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="how-to-update-1"&gt;&lt;/a&gt;&lt;a href="#how-to-update-1" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to Update?&lt;/h3&gt;
+&lt;p&gt;If you are running your tests on WebDriver already, nothing needs to be changed. WebdriverIO will only fallback to Puppeteer if it can't find a browser driver running.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="performance-improvements"&gt;&lt;/a&gt;&lt;a href="#performance-improvements" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Performance Improvements&lt;/h2&gt;
+&lt;p&gt;A big goal with the new release was to make WebdriverIO more performant and faster. Running tests on Puppeteer can already speed up your local execution. But we also looked into other areas to improve. With v6 we replaced our heavy dependency to &lt;a href="https://github.com/request/request"&gt;&lt;code&gt;request&lt;/code&gt;&lt;/a&gt; which has been fully depcrecated as off February 11th 2020. With that we were able to reduce the bundle size of the &lt;code&gt;webdriver&lt;/code&gt; and &lt;code&gt;webdriverio&lt;/code&gt; package by 4x:&lt;/p&gt;
+&lt;p&gt;&lt;img src="./assets/bundlesize.png" alt="bundle size comparison"&gt;&lt;/p&gt;
+&lt;p&gt;By using &lt;a href="https://github.com/sindresorhus/got"&gt;&lt;code&gt;got&lt;/code&gt;&lt;/a&gt; as new dependency to make requests in WebDriver we are now technically also able to run WebdriverIO in the browser which creates interesting possibilities and was a requirement for our &lt;a href="https://github.com/webdriverio/webdriverio/blob/master/ROADMAP.md#upcoming-projects-in-no-particular-order"&gt;roadmap item&lt;/a&gt; to build a fiddle platform for WebdriverIO scripts.&lt;/p&gt;
+&lt;p&gt;The new version v6 will also come with a lot of internal improvements that will speed up test execution and lower CPU and memory usage. Especially when it comes to fetching elements we were able to reduce a lot of overhead and spead things up:&lt;/p&gt;
+&lt;p&gt;&lt;img src="./assets/flamechart.jpg" alt="improved flamechart"&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="how-to-update-2"&gt;&lt;/a&gt;&lt;a href="#how-to-update-2" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to Update?&lt;/h3&gt;
+&lt;p&gt;These improvements come for free and you don't need to do anything to better performance in v6 when upgrading.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="service-configurations"&gt;&lt;/a&gt;&lt;a href="#service-configurations" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Service Configurations&lt;/h2&gt;
+&lt;p&gt;We are very proud about the amount of different &lt;a href="https://www.npmjs.com/search?q=wdio-service"&gt;services&lt;/a&gt; and &lt;a href="https://www.npmjs.com/search?q=wdio-reporter"&gt;reporters&lt;/a&gt; that the community built. All these additional plugins require specific configurations in your &lt;code&gt;wdio.conf.js&lt;/code&gt; and we want to make sure that all these settings are being made standardised structure. Until v5 of WebdriverIO specific options to services and reporters could be defined anywhere in the &lt;code&gt;wdio.conf.js&lt;/code&gt;, e.g. the Sauce service:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-comment"&gt;// wdio.conf.js&lt;/span&gt;
+&lt;span class="hljs-keyword"&gt;export&lt;/span&gt;.config = {
+  &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+  &lt;span class="hljs-attr"&gt;services&lt;/span&gt;: [&lt;span class="hljs-string"&gt;'sauce'&lt;/span&gt;],
+  &lt;span class="hljs-attr"&gt;user&lt;/span&gt;: process.env.SAUCE_USERNAME,
+  &lt;span class="hljs-attr"&gt;key&lt;/span&gt;: process.env.SAUCE_ACCESS_KEY,
+  &lt;span class="hljs-attr"&gt;region&lt;/span&gt;: &lt;span class="hljs-string"&gt;'us'&lt;/span&gt;,
+  &lt;span class="hljs-attr"&gt;sauceConnect&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt;,
+  &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With v6 we moved all configurations into the services list close to where the service is actually defined. This will help to maintain a clear structure in the config file while at the same time keep the set of different "native" supported configurations clear. In v6 the example above needs to be modified as to become this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-comment"&gt;// wdio.conf.js&lt;/span&gt;
+&lt;span class="hljs-keyword"&gt;export&lt;/span&gt;.config = {
+    &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+    &lt;span class="hljs-attr"&gt;user&lt;/span&gt;: process.env.SAUCE_USERNAME,
+    &lt;span class="hljs-attr"&gt;key&lt;/span&gt;: process.env.SAUCE_ACCESS_KEY,
+    &lt;span class="hljs-attr"&gt;region&lt;/span&gt;: &lt;span class="hljs-string"&gt;'us'&lt;/span&gt;, &lt;span class="hljs-comment"&gt;// WebdriverIO Configuration&lt;/span&gt;
+    &lt;span class="hljs-attr"&gt;services&lt;/span&gt;: [
+        [&lt;span class="hljs-string"&gt;'sauce'&lt;/span&gt;, {
+            &lt;span class="hljs-attr"&gt;sauceConnect&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt;, &lt;span class="hljs-comment"&gt;// @wdio/sauce-service configuration&lt;/span&gt;
+            &lt;span class="hljs-attr"&gt;sauceConnectOpts&lt;/span&gt;: { &lt;span class="hljs-comment"&gt;// @wdio/sauce-service configuration&lt;/span&gt;
+                &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+            }
+        }]
+    ],
+    &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As part of this effort we also looked into the service option names and renamed to be more short and precise.&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="how-to-update-3"&gt;&lt;/a&gt;&lt;a href="#how-to-update-3" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to Update?&lt;/h3&gt;
+&lt;p&gt;Walk through your WDIO configuration files and look for configurations that are not specifically defined by as WebDriver or WDIO &lt;a href="https://webdriver.io/docs/options.html"&gt;options&lt;/a&gt;. These needs to be moved into the service list according to the example above. In addition to that have a look if option names have changed and update them accordingly.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="command-interface-changes"&gt;&lt;/a&gt;&lt;a href="#command-interface-changes" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Command Interface Changes&lt;/h2&gt;
+&lt;p&gt;In the past we have been adding a lot of additional functionality into single commands like click to serve different purposes. This new functionality could be used by applying parameters to the command. Unfortunately the amount of such parameters has grown and caused a lot of confusion and made some commands not readable anymore. If you ever had to use &lt;code&gt;$('#elem').waitForExist(null, null true)&lt;/code&gt; to wait until an element does &lt;strong&gt;not&lt;/strong&gt; exist anymore you will know how bad things have become.&lt;/p&gt;
+&lt;p&gt;With v6 we have changed the structure of a couple of commands to allow named parameters instead. With that the code becomes much more readable and allows better type enforcement when using TypeScript. The above example looks in v6 as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;$(&lt;span class="hljs-string"&gt;'#elem'&lt;/span&gt;).waitForExist({ &lt;span class="hljs-attr"&gt;reverse&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt; })
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="how-to-update-4"&gt;&lt;/a&gt;&lt;a href="#how-to-update-4" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to Update?&lt;/h3&gt;
+&lt;p&gt;We have changed the structure of the following commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;affected &lt;code&gt;browser&lt;/code&gt; methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/browser/newWindow.html"&gt;newWindow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/browser/react$.html"&gt;react$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/browser/react$$.html"&gt;react$$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/browser/waitUntil.html"&gt;waitUntil&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;affected element methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/element/dragAndDrop.html"&gt;dragAndDrop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/element/moveTo.html"&gt;moveTo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/element/react$.html"&gt;react$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/element/react$$.html"&gt;react$$&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/element/scrollIntoView.html"&gt;scrollIntoView&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/element/waitForClickable.html"&gt;waitForClickable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/element/waitForDisplayed.html"&gt;waitForDisplayed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/element/waitForEnabled.html"&gt;waitForEnabled&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/element/waitForExist.html"&gt;waitForExist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://webdriver.io/docs/api/element/waitUntil.html"&gt;waitUntil&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you use TypeScript in your project it should automatically tell you to all places that needs to be updated. If you don't use TypeScript which recommend to just search for every command in your code base and modify it accordingly. It should be a pretty mechanical and straightforward task.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="new-assertion-library"&gt;&lt;/a&gt;&lt;a href="#new-assertion-library" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;New Assertion Library&lt;/h2&gt;
+&lt;p&gt;With the update to v6 you will now automatically get access to our new native embedded assertion library &lt;a href="https://www.npmjs.com/package/expect-webdriverio"&gt;&lt;code&gt;expect-webdriverio&lt;/code&gt;&lt;/a&gt;. It is a special designed assertion library for WebdriverIO that was inspired by Jests &lt;a href="https://www.npmjs.com/package/expect"&gt;&lt;code&gt;expect&lt;/code&gt;&lt;/a&gt; package. It comes with key features like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;waits for expectation to succeed&lt;/li&gt;
+&lt;li&gt;detailed error messages&lt;/li&gt;
+&lt;li&gt;support for Mocha, Cucumber, Jest and Jasmine&lt;/li&gt;
+&lt;li&gt;builtin types for TypeScript and JS autocompletion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This will not only simplify the setup of your WebdriverIO framework but also gets you better error messages if an assertion fails, e.g. when checking the visibity of an element like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; elem = $(&lt;span class="hljs-string"&gt;'#someElem'&lt;/span&gt;)
+expect(elem).toHaveText(&lt;span class="hljs-string"&gt;'Click #2'&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It will fail with an error message like:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/mgrybyk/expect-webdriverio/HEAD/docs/img/errors/text.png?raw=true" alt="Error Message"&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="how-to-update-5"&gt;&lt;/a&gt;&lt;a href="#how-to-update-5" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to Update?&lt;/h3&gt;
+&lt;p&gt;If you already use an assertion library like &lt;a href="https://www.chaijs.com/"&gt;Chai&lt;/a&gt; you can continue doing, especially if you are not interested using &lt;code&gt;expect-webdriverio&lt;/code&gt;. However you can also start writing new assertions with the new assertion API and maintain two different types of assertion libraries until you decide to get rid of the other.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="other-changes"&gt;&lt;/a&gt;&lt;a href="#other-changes" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Other Changes&lt;/h2&gt;
+&lt;p&gt;Next to all major updates that were described above there are also some minor changes that are worth mentioning:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;TypeScript Support:&lt;/strong&gt; we improved the typings for WebdriverIO and WebDriver to include better descriptions and more detail&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WebDriver Default Path:&lt;/strong&gt; we changed default WebDriver path from &lt;code&gt;/wd/hub&lt;/code&gt; to &lt;code&gt;/&lt;/code&gt; as most of the browser drivers now default to this, this should have no effect for you - however if you have trouble connecting to a WebDriver endpoint after the upgrade, this could be a reason for that issue.
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note for Appium users:&lt;/strong&gt; If you are using a local or global install of Appium and you start Appium through the command line, you should also provide the cli argument &lt;code&gt;--base-path /&lt;/code&gt;. This will prevent Appium not finding a matching local emulator/simulator/real device and start using the default &lt;code&gt;path: '/'&lt;/code&gt; that WebdriverIO uses.&lt;br&gt;
+If you are using the &lt;code&gt;@wdio/appium-service&lt;/code&gt; you don't need to do anything.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Command Renaming:&lt;/strong&gt; we renamed command &lt;code&gt;launchApp&lt;/code&gt; to &lt;code&gt;launchChromeApp&lt;/code&gt; for Chrome WebDriver sessions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spec Filtering:&lt;/strong&gt; the &lt;a href="https://webdriver.io/blog/2019/11/01/spec-filtering.html"&gt;Spec Filtering&lt;/a&gt; feature is now enabled by default so that browser sessions aren't started if the framework can't find a test to run in the file (this can not be disabled anymore)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New Hook:&lt;/strong&gt; we added a new hook to the testrunner called &lt;code&gt;onWorkerStart&lt;/code&gt; which will be executed right before we launch the worker process&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Modified Hook Signature:&lt;/strong&gt; we modified the signature of our before/after test/hook hooks to allow you to access the frameworks native event objects - please have a look into the config file &lt;a href="/docs/configurationfile.html"&gt;documentation&lt;/a&gt; and update your hooks accordingly&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cucumber Update:&lt;/strong&gt; we have updated the &lt;code&gt;@wdio/cucumber-framework&lt;/code&gt; adapter to use v6 of Cucumber&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Overwrite Capabilities:&lt;/strong&gt; By default the launcher will overwrite the capabilities instead of merging them when using the launcher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="lts-support"&gt;&lt;/a&gt;&lt;a href="#lts-support" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;LTS Support&lt;/h2&gt;
+&lt;p&gt;With the release of v6 we will continue to support v5 until we decide to release a new major version v7. We created a &lt;a href="https://github.com/webdriverio/webdriverio/blob/master/CONTRIBUTING.md#back-porting-bug-fixes"&gt;backporting process&lt;/a&gt; that allows us to seamlessly backport bug fixes and features from v6 to v5. Please note that as the code between both versions diverge we won't be able to backport every feature and bug fix. We might ask code contributors to provide a similar PR that has been made to the &lt;code&gt;master&lt;/code&gt; branch also to the &lt;code&gt;v5&lt;/code&gt; branch.&lt;/p&gt;
+&lt;p&gt;That said, we generally recommend to update to the latest version as soon as possible to make sure that you leverage bug fixes that have been made to the project.&lt;/p&gt;
+&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class="post"&gt;&lt;header class="postHeader"&gt;&lt;h1 class="postHeaderTitle"&gt;&lt;a href="/blog/2019/12/05/wiremock.html"&gt;WireMock as a Service&lt;/a&gt;&lt;/h1&gt;&lt;p class="post-meta"&gt;December 5, 2019&lt;/p&gt;&lt;div class="authorBlock"&gt;&lt;p class="post-authorName"&gt;&lt;a href="http://github.com/erwinheitzman" target="_blank" rel="noreferrer noopener"&gt;Erwin Heitzman&lt;/a&gt;&lt;/p&gt;&lt;div class="authorPhoto"&gt;&lt;a href="http://github.com/erwinheitzman" target="_blank" rel="noreferrer noopener"&gt;&lt;img src="https://avatars1.githubusercontent.com/u/15839059?s=80&amp;amp;v=4" alt="Erwin Heitzman"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;article class="post-content"&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;We are pleased to announce that we now have a new mocking service for WebdriverIO called &lt;code&gt;wdio-wiremock-service&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="what-can-it-do"&gt;&lt;/a&gt;&lt;a href="#what-can-it-do" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What can it do?&lt;/h2&gt;
+&lt;p&gt;This service helps you to run WireMock seamlessly when running tests with &lt;a href="https://webdriver.io"&gt;WebdriverIO&lt;/a&gt;. It uses the well known &lt;a href="https://mvnrepository.com/repos/central"&gt;Maven&lt;/a&gt; repository to download the WireMock jar for you which is then automatically installed, started and stopped. Stay up to date by joining the community over at &lt;a href="https://gitter.im/erwinheitzman/wdio-wiremock-service"&gt;Gitter&lt;/a&gt; for help and support.&lt;/p&gt;
+&lt;p&gt;A few things you can do with this service:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Automatically run &lt;a href="http://wiremock.org/"&gt;WireMock&lt;/a&gt; alongside the WebdriverIO testrunner&lt;/li&gt;
+&lt;li&gt;Supports usage of mock and fixture files&lt;/li&gt;
+&lt;li&gt;Match request URLs, methods, headers cookies and bodies using a wide variety of strategies. First class support for JSON and XML.&lt;/li&gt;
+&lt;li&gt;Configure WireMock with all the available &lt;a href="https://github.com/erwinheitzman/wdio-wiremock-service/blob/master/README.md#options"&gt;options&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="installation"&gt;&lt;/a&gt;&lt;a href="#installation" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Installation&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="hljs css language-bash"&gt;npm install wdio-wiremock-service --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Instructions on how to install &lt;code&gt;WebdriverIO&lt;/code&gt; can be found &lt;a href="https://webdriver.io/docs/gettingstarted.html"&gt;here.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="configuration"&gt;&lt;/a&gt;&lt;a href="#configuration" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Configuration&lt;/h2&gt;
+&lt;p&gt;In order to use the service you need to add it to your service array:&lt;/p&gt;
+&lt;p&gt;&lt;sub&gt;&lt;sup&gt;&lt;code&gt;wdio.conf.js&lt;/code&gt;&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-keyword"&gt;export&lt;/span&gt;.config = {
+  &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+  &lt;span class="hljs-attr"&gt;services&lt;/span&gt;: [&lt;span class="hljs-string"&gt;'wiremock'&lt;/span&gt;],
+  &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are a lot more options that are available for configuration, for a full overview go &lt;a href="https://github.com/erwinheitzman/wdio-wiremock-service/blob/master/README.md#options"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="creating-mocks-and-fixtures"&gt;&lt;/a&gt;&lt;a href="#creating-mocks-and-fixtures" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Creating mocks and fixtures&lt;/h2&gt;
+&lt;p&gt;The service creates a directory (&lt;code&gt;./mock&lt;/code&gt; by default) with two subdirectories (&lt;code&gt;mappings&lt;/code&gt; and &lt;code&gt;__files&lt;/code&gt;). It will use the &lt;code&gt;mappings&lt;/code&gt; directory to look for mock files and it will use the &lt;code&gt;__files&lt;/code&gt; directory to look for fixture files.&lt;/p&gt;
+&lt;p&gt;Knowing this, creating a fixture is as easy as creating a file in the &lt;code&gt;__files&lt;/code&gt; directory:&lt;/p&gt;
+&lt;p&gt;&lt;sub&gt;&lt;sup&gt;&lt;code&gt;./mock/__files/hello-world.json&lt;/code&gt;&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-json"&gt;Hello world
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And creating your first mock is as simple as creating a file in the &lt;code&gt;mappings&lt;/code&gt; directory:&lt;/p&gt;
+&lt;p&gt;Knowing this, creating a fixture is as easy as creating a file in the &lt;code&gt;__files&lt;/code&gt; directory:&lt;/p&gt;
+&lt;p&gt;&lt;sub&gt;&lt;sup&gt;&lt;code&gt;./mock/mappings/my-test.json&lt;/code&gt;&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-json"&gt;{
+  &lt;span class="hljs-attr"&gt;"request"&lt;/span&gt;: {
+      &lt;span class="hljs-attr"&gt;"method"&lt;/span&gt;: &lt;span class="hljs-string"&gt;"GET"&lt;/span&gt;,
+      &lt;span class="hljs-attr"&gt;"url"&lt;/span&gt;: &lt;span class="hljs-string"&gt;"/api/mytest"&lt;/span&gt;
+  },
+  &lt;span class="hljs-attr"&gt;"response"&lt;/span&gt;: {
+      &lt;span class="hljs-attr"&gt;"status"&lt;/span&gt;: &lt;span class="hljs-number"&gt;200&lt;/span&gt;,
+      &lt;span class="hljs-attr"&gt;"bodyFileName"&lt;/span&gt;: &lt;span class="hljs-string"&gt;"hello-world.json"&lt;/span&gt;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="writing-tests"&gt;&lt;/a&gt;&lt;a href="#writing-tests" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Writing tests&lt;/h2&gt;
+&lt;p&gt;Writing your first test is really straight forward:&lt;/p&gt;
+&lt;p&gt;&lt;sub&gt;&lt;sup&gt;&lt;code&gt;./test/specs/mytest.js&lt;/code&gt;&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; fetch = &lt;span class="hljs-built_in"&gt;require&lt;/span&gt;(&lt;span class="hljs-string"&gt;'node-fetch'&lt;/span&gt;);
+&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; assert = &lt;span class="hljs-built_in"&gt;require&lt;/span&gt;(&lt;span class="hljs-string"&gt;'assert'&lt;/span&gt;);
+
+describe(&lt;span class="hljs-string"&gt;'My test'&lt;/span&gt;, () =&amp;gt; {
+  it(&lt;span class="hljs-string"&gt;'should assert the mock data'&lt;/span&gt;, () =&amp;gt; {
+    browser.call(&lt;span class="hljs-keyword"&gt;async&lt;/span&gt; () =&amp;gt; {
+      &lt;span class="hljs-keyword"&gt;await&lt;/span&gt; fetch(&lt;span class="hljs-string"&gt;'http://localhost:8080/api/mytest'&lt;/span&gt;)
+        .then(&lt;span class="hljs-function"&gt;(&lt;span class="hljs-params"&gt;res&lt;/span&gt;) =&amp;gt;&lt;/span&gt; res.text())
+        .then(&lt;span class="hljs-function"&gt;(&lt;span class="hljs-params"&gt;body&lt;/span&gt;) =&amp;gt;&lt;/span&gt; {
+            &lt;span class="hljs-comment"&gt;// assert that the request body returns the expected value&lt;/span&gt;
+            assert.equal(body, &lt;span class="hljs-string"&gt;'More content'&lt;/span&gt;);
+        });
+    });
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1&gt;&lt;a class="anchor" aria-hidden="true" id="support"&gt;&lt;/a&gt;&lt;a href="#support" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Support&lt;/h1&gt;
+&lt;p&gt;Stay up to date by joining the community over at &lt;a href="https://gitter.im/erwinheitzman/wdio-wiremock-service"&gt;Gitter&lt;/a&gt; to join others and for support and questions.&lt;/p&gt;
+&lt;p&gt;See you there!&lt;/p&gt;
+&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class="post"&gt;&lt;header class="postHeader"&gt;&lt;h1 class="postHeaderTitle"&gt;&lt;a href="/blog/2019/11/01/spec-filtering.html"&gt;Avoid starting session for excluded specs&lt;/a&gt;&lt;/h1&gt;&lt;p class="post-meta"&gt;November 1, 2019&lt;/p&gt;&lt;div class="authorBlock"&gt;&lt;p class="post-authorName"&gt;&lt;a href="http://github.com/mgrybyk" target="_blank" rel="noreferrer noopener"&gt;Mykola Grybyk&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/header&gt;&lt;article class="post-content"&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;It's a common approach to filter specs with tags, grep or any other techniques, however we had a gotcha here before - a new session is created for every spec file which takes some time, especially for mobile tests.&lt;/p&gt;
+&lt;p&gt;We've added a &lt;a href="https://github.com/webdriverio/webdriverio/pull/4531"&gt;feature&lt;/a&gt; that allows to filter spec files before a session is started. The feature is enabled by default for Cucumber framework only and is disabled by default for Mocha and Jasmine frameworks to avoid breaking changes. To use the feature, it has to be enabled in &lt;code&gt;wdio.conf.js&lt;/code&gt; with feature flag, also all &lt;code&gt;browser&lt;/code&gt; function calls like &lt;code&gt;browser.addCommand()&lt;/code&gt; or any other have to be moved away from root scope. You can still use env flags, config or capabilities as before.&lt;/p&gt;
+&lt;p&gt;The following is only required for Mocha and Jasmine users who want to use the feature:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable the feature with a flag in &lt;code&gt;wdio.conf.js&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-comment"&gt;// wdio.conf.js&lt;/span&gt;
+&lt;span class="hljs-keyword"&gt;export&lt;/span&gt;.config = {
+    &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+    &lt;span class="hljs-attr"&gt;featureFlags&lt;/span&gt;: {
+        &lt;span class="hljs-attr"&gt;specFiltering&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt;
+    },
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Move custom commands declaration to &lt;code&gt;before&lt;/code&gt; hook, if you have such, example:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-comment"&gt;// wdio.conf.js&lt;/span&gt;
+&lt;span class="hljs-keyword"&gt;export&lt;/span&gt;.config = {
+    &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+    &lt;span class="hljs-attr"&gt;mochaOpts&lt;/span&gt;: {
+        &lt;span class="hljs-comment"&gt;/**
+         * all the files that interacts with `browser` object in a root scope
+         * have to be required in `before` hook if `specFiltering` feature is enabled.
+         */&lt;/span&gt;
+        &lt;span class="hljs-attr"&gt;require&lt;/span&gt;: [
+            &lt;span class="hljs-string"&gt;"@babel/register"&lt;/span&gt;, &lt;span class="hljs-comment"&gt;// if you have any transpilers leave them as is&lt;/span&gt;
+            &lt;span class="hljs-string"&gt;"./src/wdio/commands"&lt;/span&gt; &lt;span class="hljs-comment"&gt;// remove from here&lt;/span&gt;
+        ]
+    },
+    before (capabilities, specs) {
+        &lt;span class="hljs-built_in"&gt;require&lt;/span&gt;(&lt;span class="hljs-string"&gt;"./src/wdio/commands"&lt;/span&gt;) &lt;span class="hljs-comment"&gt;// add here&lt;/span&gt;
+    },
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Move custom command declarations from root scope to suite level (or move them to another file and require it in &lt;code&gt;before&lt;/code&gt; hook, see 2.1), if you had such, example:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-comment"&gt;// my.spec.js&lt;/span&gt;
+
+&lt;span class="hljs-comment"&gt;/**
+ * move `browser.addCommand()` as well as other browser functions calls
+ * from root scope to suite level (or another file)
+ */&lt;/span&gt;
+browser.addCommand(&lt;span class="hljs-string"&gt;'myCommand'&lt;/span&gt;, () =&amp;gt; {}) &lt;span class="hljs-comment"&gt;// remove!&lt;/span&gt;
+
+&lt;span class="hljs-comment"&gt;// it's still possible to use config, capabilities or env flags as before.&lt;/span&gt;
+describe(&lt;span class="hljs-string"&gt;'my suite in '&lt;/span&gt; + browser.capabilities.browserName, () =&amp;gt; {
+    &lt;span class="hljs-comment"&gt;// add it to suite/test scope&lt;/span&gt;
+    browser.addCommand(&lt;span class="hljs-string"&gt;'myCommand'&lt;/span&gt;, () =&amp;gt; {})
+
+    it(&lt;span class="hljs-string"&gt;'my test'&lt;/span&gt;, () =&amp;gt; {
+        browser.myCommand()
+    })
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We are happy to answer any questions and awaiting your feedback.&lt;/p&gt;
+&lt;p&gt;Please note that the feature will be enabled for all test frameworks in v6 so it's recommended to start preparation in advance.&lt;/p&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;
+&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class="post"&gt;&lt;header class="postHeader"&gt;&lt;h1 class="postHeaderTitle"&gt;&lt;a href="/blog/2019/09/16/devtools.html"&gt;Chrome DevTools as Automation Protocol&lt;/a&gt;&lt;/h1&gt;&lt;p class="post-meta"&gt;September 16, 2019&lt;/p&gt;&lt;div class="authorBlock"&gt;&lt;p class="post-authorName"&gt;&lt;a href="http://github.com/christian-bromann" target="_blank" rel="noreferrer noopener"&gt;Christian Bromann&lt;/a&gt;&lt;/p&gt;&lt;div class="authorPhoto"&gt;&lt;a href="http://github.com/christian-bromann" target="_blank" rel="noreferrer noopener"&gt;&lt;img src="https://s.gravatar.com/avatar/d98b16d7c93d15865f34a225dd4b1254?s=80" alt="Christian Bromann"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;article class="post-content"&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;Over the last few years a lot of new testing frameworks have evolved that provide different capabilities but also come with certain limitations. While tools like &lt;a href="https://www.seleniumhq.org/"&gt;Selenium&lt;/a&gt; are often seen as slow and flaky and others like &lt;a href="https://www.cypress.io/"&gt;Cypress.io&lt;/a&gt; or &lt;a href="https://pptr.dev/"&gt;Puppeteer&lt;/a&gt; are hyped as the future in the testing space. In reality all tools have their own use cases, have different levels of support and are based on a completely different architecture. Comparing them is rather useless as it ends up comparing apples with oranges. In larger test suites flakiness and race conditions can happen using all of these tools so that we can safely say that up to this point none of them (including WebdriverIO) has found the ultimate solution for world &lt;code&gt;/(domin|autom)ation/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;At the end of the day there are more or less two different approaches to how you can automate a browser. One is using an official W3C web standard called &lt;a href="https://w3c.github.io/webdriver/"&gt;WebDriver&lt;/a&gt; and the other is the native browser interface that some of the browsers expose these days. The WebDriver protocol is the de-facto standard automation technique that allows you to not only automate all desktop browsers but also run automation on arbitrary user agents that include mobile devices, desktop applications or even Smart TVs. If you don't use WebDriver your automation framework most likely uses the native browser interfaces to run its automation on. While in the past every browser had its own (often not documented) protocol, these days a lot of browsers, including Chrome, Edge and soon even Firefox, come with a somewhat unified interface that is close to what is called the &lt;a href="https://chromedevtools.github.io/devtools-protocol/"&gt;Chrome DevTools Protocol&lt;/a&gt;. While WebDriver provides true cross browser support and allows you to run tests on a large scale in the cloud using vendors like &lt;a href="https://saucelabs.com/"&gt;Sauce Labs&lt;/a&gt;, native browser interfaces often allow many more automation capabilities like listening and interacting with network or DOM events while often being limited to a single browser only.&lt;/p&gt;
+&lt;p&gt;With the release of WebdriverIO v5.13 we now introduce a new option that allows you to specify the automation protocol for your test and leverage the capabilities of both worlds. With that you can now decide whether to run your tests using WebDriver or Chrome DevTools (via Puppeteer). Nothing actually changes for your tests, just the automation happens using different technologies. We've created a new NPM package that we call &lt;a href="https://www.npmjs.com/package/devtools"&gt;&lt;code&gt;devtools&lt;/code&gt;&lt;/a&gt; which has all WebDriver commands implemented but executes them using Puppeteer. It is a new type of plugin that even allows you to build your own WebDriver based automation package to automate an arbitrary device with WebdriverIO. The new option, called &lt;code&gt;automationProtocol&lt;/code&gt;, expects a string and is by default set to &lt;code&gt;"webdriver"&lt;/code&gt; to run automation using WebdriverIOs own &lt;a href="https://www.npmjs.com/package/webdriver"&gt;&lt;code&gt;webdriver&lt;/code&gt;&lt;/a&gt; bindings. However if you install the new &lt;code&gt;devtools&lt;/code&gt; package via:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-sh"&gt;$ npm install --save-dev devtools webdriverio
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and set &lt;code&gt;automationProtocol: 'devtools'&lt;/code&gt; in your options, all the automation happens via Chrome DevTools (more specifically via Puppeteer) while using the same WebdriverIO command interface:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; { remote } = &lt;span class="hljs-built_in"&gt;require&lt;/span&gt;(&lt;span class="hljs-string"&gt;'webdriverio'&lt;/span&gt;)
+
+&lt;span class="hljs-keyword"&gt;let&lt;/span&gt; client;
+
+(&lt;span class="hljs-keyword"&gt;async&lt;/span&gt; &lt;span class="hljs-function"&gt;&lt;span class="hljs-keyword"&gt;function&lt;/span&gt; (&lt;span class="hljs-params"&gt;&lt;/span&gt;) &lt;/span&gt;{
+    client = &lt;span class="hljs-keyword"&gt;await&lt;/span&gt; remote({
+        &lt;span class="hljs-attr"&gt;automationProtocol&lt;/span&gt;: &lt;span class="hljs-string"&gt;'devtools'&lt;/span&gt;, &lt;span class="hljs-comment"&gt;// CHANGE PROTOCOL HERE&lt;/span&gt;
+        &lt;span class="hljs-attr"&gt;capabilities&lt;/span&gt;: { &lt;span class="hljs-attr"&gt;browserName&lt;/span&gt;: &lt;span class="hljs-string"&gt;'chrome'&lt;/span&gt; } &lt;span class="hljs-comment"&gt;// or `browserName: 'firefox'`&lt;/span&gt;
+    })
+
+    &lt;span class="hljs-keyword"&gt;await&lt;/span&gt; client.url(&lt;span class="hljs-string"&gt;'https://webdriver.io'&lt;/span&gt;)
+    &lt;span class="hljs-built_in"&gt;console&lt;/span&gt;.log(&lt;span class="hljs-keyword"&gt;await&lt;/span&gt; client.getTitle())
+    &lt;span class="hljs-keyword"&gt;await&lt;/span&gt; client.deleteSession()
+})().catch(&lt;span class="hljs-keyword"&gt;async&lt;/span&gt; (e) =&amp;gt; {
+    &lt;span class="hljs-built_in"&gt;console&lt;/span&gt;.error(e.stack)
+    &lt;span class="hljs-keyword"&gt;await&lt;/span&gt; client.deleteSession()
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is especially great for local testing since you are no longer required to download a browser driver which often causes confusion as to where to download and how to run them. In addition to that, tests will run much quicker since WebdriverIO is directly connected to the browser.&lt;/p&gt;
+&lt;p&gt;As mentioned before, you can now leverage the advantages of running true cross browser tests at scale with WebDriver, as well as leveraging all the additional automation capabilities of DevTools in one single tool. That said, given the fact that it is not possible to switch the protocols during a session, you might want to have one set of tests that require Puppeteer involvement, while also having a second set that you run cross browser in the cloud.&lt;/p&gt;
+&lt;p&gt;In order to access Puppeteer in your tests, we have introduced a command called &lt;code&gt;getPuppeteer()&lt;/code&gt;, which returns the &lt;a href="https://pptr.dev/#?product=Puppeteer&amp;amp;version=v1.19.0&amp;amp;show=api-class-browser"&gt;&lt;code&gt;browser class&lt;/code&gt;&lt;/a&gt; of the Puppeteer framework. From there on you can access the Puppeteer interface and all of its other classes. Note that these interfaces provide commands that are soley promise-based and WebdriverIO does not wrap them as you might know it using the WDIO testrunner. In this case we recommend wrapping all Puppeteer command calls manually within the &lt;a href="https://webdriver.io/docs/api/browser/call.html"&gt;&lt;code&gt;call&lt;/code&gt;&lt;/a&gt; command that ensures that all promises are resolved before it moves on with other commands. For example, the following script shows how you can use WebdriverIO using the &lt;code&gt;devtools&lt;/code&gt; automation protocol via Puppeteer in the WDIO testrunner world:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;describe(&lt;span class="hljs-string"&gt;'my e2e tests'&lt;/span&gt;, () =&amp;gt; {
+    &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+
+    it(&lt;span class="hljs-string"&gt;'replaces the WebdriverIO logo with the Puppeteer logo'&lt;/span&gt;, () =&amp;gt; {
+        browser.url(&lt;span class="hljs-string"&gt;'https://webdriver.io'&lt;/span&gt;)
+
+        &lt;span class="hljs-comment"&gt;/**
+         * run Puppeteer code with promises to intercept network requests
+         * and replace the WebdriverIO logo in the docs with the Puppeteer logo
+         */&lt;/span&gt;
+        browser.call(&lt;span class="hljs-keyword"&gt;async&lt;/span&gt; () =&amp;gt; {
+            &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; puppeteerBrowser = browser.getPuppeteer()
+            &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; page = (&lt;span class="hljs-keyword"&gt;await&lt;/span&gt; puppeteerBrowser.pages())[&lt;span class="hljs-number"&gt;0&lt;/span&gt;]
+            &lt;span class="hljs-keyword"&gt;await&lt;/span&gt; page.setRequestInterception(&lt;span class="hljs-literal"&gt;true&lt;/span&gt;)
+            page.on(&lt;span class="hljs-string"&gt;'request'&lt;/span&gt;, interceptedRequest =&amp;gt; {
+                &lt;span class="hljs-keyword"&gt;if&lt;/span&gt; (interceptedRequest.url().endsWith(&lt;span class="hljs-string"&gt;'webdriverio.png'&lt;/span&gt;)) {
+                    &lt;span class="hljs-keyword"&gt;return&lt;/span&gt; interceptedRequest.continue({
+                        &lt;span class="hljs-attr"&gt;url&lt;/span&gt;: &lt;span class="hljs-string"&gt;'https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png'&lt;/span&gt;
+                    })
+                }
+
+                interceptedRequest.continue()
+            })
+        })
+
+        &lt;span class="hljs-comment"&gt;// continue with sync WebdriverIO commands&lt;/span&gt;
+        browser.refresh()
+        browser.pause(&lt;span class="hljs-number"&gt;2000&lt;/span&gt;)
+    })
+
+    &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We also made sure that you can use the &lt;code&gt;devtools&lt;/code&gt; automation protocol with WDIO testrunner services like &lt;a href="https://www.npmjs.com/package/@wdio/devtools-service"&gt;&lt;code&gt;@wdio/devtools-service&lt;/code&gt;&lt;/a&gt; to make the experience as seamless as possible. You can find the complete script example to run in standalone mode in the WebdriverIO &lt;a href="https://github.com/webdriverio/webdriverio/tree/master/examples/devtools/intercept.js"&gt;example directory&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We recommend only running tests on the devtools protocol if your functional test requires some sort of automation capability that is not provided by WebDriver. It also makes sense to switch to &lt;code&gt;devtools&lt;/code&gt; whenever running tests locally as the test execution will be much faster. If you follow our best practices you should split up your wdio config files per environment (e.g. local testing vs. run tests against Sauce Labs or in your grid). You can now have a config that defines a set of tests that require some Puppeteer interaction:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-comment"&gt;// wdio.devtools.conf.js&lt;/span&gt;
+&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; { config } = &lt;span class="hljs-built_in"&gt;require&lt;/span&gt;(&lt;span class="hljs-string"&gt;'./wdio.conf.js'&lt;/span&gt;)
+exports.config = &lt;span class="hljs-built_in"&gt;Object&lt;/span&gt;.assign(config, {
+    &lt;span class="hljs-comment"&gt;/**
+     * set automation protocol to devtools
+     */&lt;/span&gt;
+    &lt;span class="hljs-attr"&gt;automationProtocol&lt;/span&gt;: &lt;span class="hljs-string"&gt;'devtools'&lt;/span&gt;,
+    &lt;span class="hljs-comment"&gt;/**
+     * define a set of tests that require Puppeteer involvement
+     */&lt;/span&gt;
+    &lt;span class="hljs-attr"&gt;specs&lt;/span&gt;: [
+        &lt;span class="hljs-string"&gt;'tests/e2e/devtools/**'&lt;/span&gt;
+    ],
+    &lt;span class="hljs-comment"&gt;/**
+     * run tests only on Firefox and Chrome in headless mode
+     */&lt;/span&gt;
+    &lt;span class="hljs-attr"&gt;capabilities&lt;/span&gt;: [{
+        &lt;span class="hljs-attr"&gt;browserName&lt;/span&gt;: &lt;span class="hljs-string"&gt;'chrome'&lt;/span&gt;,
+        &lt;span class="hljs-string"&gt;'goog:chromeOptions'&lt;/span&gt;: {
+            &lt;span class="hljs-attr"&gt;headless&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt;
+        }
+    }, {
+        &lt;span class="hljs-attr"&gt;browserName&lt;/span&gt;: &lt;span class="hljs-string"&gt;'firefox'&lt;/span&gt;,
+        &lt;span class="hljs-string"&gt;'moz:firefoxOptions'&lt;/span&gt;: {
+            &lt;span class="hljs-attr"&gt;headless&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt;
+        }
+    }]
+    &lt;span class="hljs-comment"&gt;// other specific options ...&lt;/span&gt;
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With the new &lt;code&gt;automationProtocol&lt;/code&gt; option, we've opened the project up to automation technologies beyond WebDriver. There are advantages and disadvantages using both approaches and with this feature we allow you to use both in one single tool. The &lt;a href="https://www.npmjs.com/package/devtools"&gt;&lt;code&gt;devtools package&lt;/code&gt;&lt;/a&gt; is still work in progress and we are finalising all of its features within the upcoming weeks. If you have any feedback, bugs or comments on this please reach out via &lt;a href="https://twitter.com/webdriverio"&gt;Twitter&lt;/a&gt; or on our Gitter &lt;a href="https://gitter.im/webdriverio/webdriverio"&gt;support chat&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;
+&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class="post"&gt;&lt;header class="postHeader"&gt;&lt;h1 class="postHeaderTitle"&gt;&lt;a href="/blog/2019/07/11/cucumberjs-v5-released.html"&gt;WebdriverIO V5 now also supports CucumberJS&lt;/a&gt;&lt;/h1&gt;&lt;p class="post-meta"&gt;July 11, 2019&lt;/p&gt;&lt;div class="authorBlock"&gt;&lt;p class="post-authorName"&gt;&lt;a href="http://github.com/wswebcreation" target="_blank" rel="noreferrer noopener"&gt;Wim Selles&lt;/a&gt;&lt;/p&gt;&lt;div class="authorPhoto"&gt;&lt;a href="http://github.com/wswebcreation" target="_blank" rel="noreferrer noopener"&gt;&lt;img src="https://avatars2.githubusercontent.com/u/11979740?s=460&amp;amp;v=4" alt="Wim Selles"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;article class="post-content"&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;We are pleased to announce that we now have support for CucumberJS in WebdriverIO V5!!!!
+This has been a great challenge for the project committers so we're all very thankful for the time and effort they put into this.
+So normally we would say&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-sh"&gt;npm install @wdio/cucumber-framework --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and go with the flow, but this time it is different. When you upgrade to the latest version of the Cucumber framework you also need to upgrade to the &lt;strong&gt;latest version of WebdriverIO&lt;/strong&gt;.
+In this blog post we want to give you some guidelines on how to do that.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="where-to-start"&gt;&lt;/a&gt;&lt;a href="#where-to-start" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Where to start&lt;/h2&gt;
+&lt;p&gt;Upgrading to the latest version of the Cucumber framework isn't that simple, because as said, you also need to migrate to version 5 of WebdriverIO.
+To understand what you need to do we have created some steps you might want to follow which will make the migration a lot easier for you.
+But before we explain the steps, you first need to understand the differences between WebdriverIO V4 and WebdriverIO V5.&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="nodejs-support"&gt;&lt;/a&gt;&lt;a href="#nodejs-support" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;NodeJS support&lt;/h3&gt;
+&lt;p&gt;WebdriverIO now needs NodeJS 8 or higher. Be aware that NodeJS 8 will end it's LTS support at the end of 2019, so upgrading to 10 would be better.
+If you want to know more about the NodeJS LTS support check &lt;a href="https://github.com/nodejs/Release"&gt;this&lt;/a&gt;. This might help you convince your colleagues / DEVOPS engineers to upgrade you NodeJS instances.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;As a side note, if you want to know what is supported by NodeJS by default you can check &lt;a href="https://node.green/"&gt;node.green&lt;/a&gt; and follow all upcoming changes.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="w3c-support"&gt;&lt;/a&gt;&lt;a href="#w3c-support" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;W3C support&lt;/h3&gt;
+&lt;p&gt;WebdriverIO is now fully supporting the W3C protocol, this has a lot of advantages, but for your existing scripts some minor downsides.
+One of the downsides might be that you are using methods that are based on the JSONWire Protocol, that are not supported by the newest drivers like for example ChromeDriver 74+.
+This might result in errors like for example &lt;code&gt;browser.positionClick() is not a function&lt;/code&gt;. If you see this error you are using a not supported method for the W3C supported Driver.
+See the API documentation &lt;a href="https://webdriver.io/docs/api.html"&gt;here&lt;/a&gt; to see which command is a Webdriver Protocol (W3C) or a JSONWire protocol command.&lt;/p&gt;
+&lt;p&gt;Just a little side note, we tried to keep all &lt;code&gt;browser&lt;/code&gt; and &lt;code&gt;element&lt;/code&gt; commands, see the link above, agnostic to the protocol. Nothing changed here for you.
+To provide you some insight on how this works please check for example the &lt;code&gt;keys&lt;/code&gt; command, you will find the support for both protocols &lt;a href="https://github.com/webdriverio/webdriverio/blob/master/packages/webdriverio/src/commands/browser/keys.js#L45-L50"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you want to use W3C with cloud vendors, like for example Sauce Labs or Browserstack, you need to use a vendor specific prefix in your capabilities.
+Please check the websites of the vendors to see what you need to do.&lt;/p&gt;
+&lt;p&gt;But, you always need to end with the advantages. So, with W3C you will now see that the browsers follow a common web standard for web automation.
+This helps WebdriverIO to build a reliable framework on top of it. And last but not least, with W3C support from all browser vendors we now also get better support for Appium, check the latest post of &lt;a href="https://webkit.org/blog/9395/webdriver-is-coming-to-safari-in-ios-13/"&gt;Apple here&lt;/a&gt;.
+So, W3C is a major step for us all!!&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="command-changes"&gt;&lt;/a&gt;&lt;a href="#command-changes" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Command changes&lt;/h3&gt;
+&lt;p&gt;Over the years WebdriverIO added more and more commands for different automation protocols without applying a pattern to it which resulted in having a bunch of duplication and inconsistent naming.
+Even though the list looks exhausting, most of the commands that have changed were used internally. Please check the &lt;a href="https://github.com/webdriverio/webdriverio/blob/master/CHANGELOG.md#v500-2018-12-20"&gt;changelog of V5&lt;/a&gt; to see all the changes.&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="breaking-changes"&gt;&lt;/a&gt;&lt;a href="#breaking-changes" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Breaking changes&lt;/h3&gt;
+&lt;p&gt;When creating a better product and thus releasing a major version, you will always have breaking changes. We can't repeat it enough but please check the &lt;a href="https://github.com/webdriverio/webdriverio/blob/master/CHANGELOG.md#v500-2018-12-20"&gt;changelog of V5&lt;/a&gt; to see all the breaking changes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Don't only read the changes in the V5.0.0 release, but also read the rest of the changes!&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="its-not-only-webdriverio-who-evolved"&gt;&lt;/a&gt;&lt;a href="#its-not-only-webdriverio-who-evolved" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;It's not only WebdriverIO who evolved!&lt;/h3&gt;
+&lt;p&gt;When you are going to use the lastest version of the &lt;code&gt;@wdio/cucumber-framework&lt;/code&gt;, you'll also get the latest version of Cucumber. &lt;strong&gt;This means you also need to look at the breaking changes between CucumberJS 2 and CucumberJS 5.&lt;/strong&gt;
+Please check the &lt;a href="https://github.com/cucumber/cucumber-js/blob/master/CHANGELOG.md#300-2017-08-08"&gt;changelog of CucumberJS&lt;/a&gt; from version 3 till 5 to see what changed in CucumberJS.&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="migration-steps"&gt;&lt;/a&gt;&lt;a href="#migration-steps" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Migration steps&lt;/h3&gt;
+&lt;p&gt;So enough about the differences between V4 and V5, please follow the steps below to make the migration a little bit smoother. The idea behind these steps is to migrate with small baby steps.
+The advantage of doing it in small baby steps is that you also have some time to look at your code again and maybe refactor it or remove duplicate and ugly not needed code.&lt;/p&gt;
+&lt;h4&gt;&lt;a class="anchor" aria-hidden="true" id="1-start-with-a-clean-project"&gt;&lt;/a&gt;&lt;a href="#1-start-with-a-clean-project" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. Start with a clean project&lt;/h4&gt;
+&lt;p&gt;We advise you to create a fresh new project which you can easily copy to your old project and migrate 1 feature file and it's steps per scenario.
+When you do this you can easily disable scenario's in your old project, and run the new migrated tests in the new project, maybe even embed it in your pipeline.&lt;/p&gt;
+&lt;p&gt;Before installing dependencies, we need to initialize an empty NPM project (this will allow us to the cli to install needed dependencies to our local project).
+To do this, run:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-sh"&gt;$ mkdir webdriverio-test &amp;amp;&amp;amp; &lt;span class="hljs-built_in"&gt;cd&lt;/span&gt; webdriverio-test
+$ npm init -y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;-y&lt;/code&gt; will answer 'yes' to all the prompts, giving us a standard NPM project. Feel free to omit the &lt;code&gt;-y&lt;/code&gt; if you'd like to specify your own project details.&lt;/p&gt;
+&lt;h4&gt;&lt;a class="anchor" aria-hidden="true" id="2-install-webdriverio-cli"&gt;&lt;/a&gt;&lt;a href="#2-install-webdriverio-cli" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. Install WebdriverIO CLI&lt;/h4&gt;
+&lt;p&gt;We recommend using the test runner because it comes with a lot of useful features that makes your life easier. With WebdriverIO v5 and up, the testrunner has moved into the &lt;a href="https://www.npmjs.com/package/@wdio/cli"&gt;@wdio/cli&lt;/a&gt; NPM package.&lt;/p&gt;
+&lt;p&gt;Now we need to install the cli. Do that by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-sh"&gt;$ npm i --save-dev @wdio/cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;&lt;a class="anchor" aria-hidden="true" id="3-generate-configuration-file"&gt;&lt;/a&gt;&lt;a href="#3-generate-configuration-file" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. Generate Configuration File&lt;/h4&gt;
+&lt;p&gt;We'll next want to generate a configuration file that stores all of our WebdriverIO settings. To do that just run the configuration utility:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-sh"&gt;$ npx wdio config
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A question interface pops up. It will help to create the config easy and fast and install all needed dependencies.
+Check the file and read the comments, some things changed so reading them might help you understand what changed in the configuration file.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt;
+If you were using a compiler in your &lt;code&gt;cucumberOpts&lt;/code&gt; you need to be aware of the fact that CucumberJS removed the &lt;code&gt;compiler&lt;/code&gt;. This means that WebdriverIO can't provide you with this option, but, as you might expect from our hard working contributors, there is a different solution.
+Please check &lt;a href="https://webdriver.io/docs/babel.html"&gt;Babel&lt;/a&gt; or &lt;a href="https://webdriver.io/docs/typescript.html"&gt;TypeScript&lt;/a&gt; for the new way of using a compiler.&lt;/p&gt;
+&lt;h4&gt;&lt;a class="anchor" aria-hidden="true" id="4-create-the-same-folder-structure"&gt;&lt;/a&gt;&lt;a href="#4-create-the-same-folder-structure" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. Create the same folder structure&lt;/h4&gt;
+&lt;p&gt;Now that everything has been set up, it's best to create the same folder structure you now have in your project.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DON'T COPY THE FILE, ONLY THE FOLDER STRUCTURE&lt;/strong&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;a class="anchor" aria-hidden="true" id="5-migrate-feature-file-per-feature-file"&gt;&lt;/a&gt;&lt;a href="#5-migrate-feature-file-per-feature-file" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. Migrate feature file per feature file&lt;/h4&gt;
+&lt;p&gt;When you have the folder structure, copy &lt;strong&gt;1 feature file&lt;/strong&gt; to the new project. Start with the easiest file and if you have more than 1 scenario in it, comment out all scenario's and leave 1 active.
+Now make sure you migrate the steps that belong to that specific scenario, including all pageobjects that belong to the implementation, to the new project. Keep in mind that there are breaking changes in WebdriverIO in selecting elements and so on, see above.
+If you were using the &lt;code&gt;defineSupportCode&lt;/code&gt; from CucumberJS, please check the &lt;a href="https://github.com/cucumber/cucumber-js/blob/master/CHANGELOG.md#400-2018-01-24"&gt;CucumberJS changelog for V4&lt;/a&gt;. That is deprecated now.&lt;/p&gt;
+&lt;p&gt;Do this for each scenario, migrate it step by step, if you face issues, fix them and proceed. And don't forget to clean up the coding mess you, or your colleagues, might have made in the past.&lt;/p&gt;
+&lt;h4&gt;&lt;a class="anchor" aria-hidden="true" id="6-when-youre-done"&gt;&lt;/a&gt;&lt;a href="#6-when-youre-done" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;6. When you're done&lt;/h4&gt;
+&lt;p&gt;Because you created a clean project you can now easily do the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Remove all WebdriverIO V4 dependencies in your old project.&lt;/li&gt;
+&lt;li&gt;Copy all dependencies from the new project to the old project.&lt;/li&gt;
+&lt;li&gt;Remove all test related files.&lt;/li&gt;
+&lt;li&gt;Copy all new test related files to your project.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And you're done, time to party.&lt;/p&gt;
+&lt;h1&gt;&lt;a class="anchor" aria-hidden="true" id="support"&gt;&lt;/a&gt;&lt;a href="#support" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Support&lt;/h1&gt;
+&lt;p&gt;If you need support you can find us on the &lt;code&gt;WebdriverIO&lt;/code&gt;- Gitter channel by clicking on this link &lt;a href="https://gitter.im/webdriverio/webdriverio" title="Gitter chat"&gt;&lt;img src="https://badges.gitter.im/webdriverio/webdriverio.svg" alt="Gitter chat"&gt;&lt;/a&gt;.
+When you ask for support we only have 1 question for you, please provide us a detailed description of your issue, what you already did and so on. Otherwise you ask us to find a needle in a haystack and trust me, that will be very hard for us.&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;Grtz,&lt;/p&gt;
+&lt;p&gt;The Blue Guy&lt;/p&gt;
+&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class="post"&gt;&lt;header class="postHeader"&gt;&lt;h1 class="postHeaderTitle"&gt;&lt;a href="/blog/2019/06/25/file-upload.html"&gt;File Uploads with WebdriverIO&lt;/a&gt;&lt;/h1&gt;&lt;p class="post-meta"&gt;June 25, 2019&lt;/p&gt;&lt;div class="authorBlock"&gt;&lt;p class="post-authorName"&gt;&lt;a href="https://twitter.com/bromann" target="_blank" rel="noreferrer noopener"&gt;Christian Bromann&lt;/a&gt;&lt;/p&gt;&lt;div class="authorPhoto"&gt;&lt;a href="https://twitter.com/bromann" target="_blank" rel="noreferrer noopener"&gt;&lt;img src="https://s.gravatar.com/avatar/d98b16d7c93d15865f34a225dd4b1254?s=80" alt="Christian Bromann"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;article class="post-content"&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;Testing an upload scenario in the browser is a rare but not uncommon case in the automation testing space. It is always important to evaluate the importance of such a test because in many situations you end up testing the browser more than your application. So always keep in mind how much additional functionality your frontend application puts on top of the default upload behavior of the browser. If for example most of the magic happens in the backend it makes much more sense to mimik an upload using a simple Node.js &lt;code&gt;POST&lt;/code&gt; request using packages like &lt;a href="https://www.npmjs.com/package/request"&gt;&lt;code&gt;request&lt;/code&gt;&lt;/a&gt; or &lt;a href="https://www.npmjs.com/package/axios"&gt;&lt;code&gt;axios&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="find-and-expose-file-inputs"&gt;&lt;/a&gt;&lt;a href="#find-and-expose-file-inputs" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Find and expose file inputs&lt;/h2&gt;
+&lt;p&gt;Let's say our frontend app does a lot of things on top of just uploading a file (e.g. validation or some other frontend side manipulation of the file that is about to be uploaded). Now the first thing we should do is to find the input elements from type &lt;code&gt;file&lt;/code&gt;. Be aware that apps build in React, Angular or other frameworks often hide these elements as there are hard to style using pure CSS. Therefor they hide the elements and mimik the input with a &lt;code&gt;div&lt;/code&gt; or other more styleable HTML tags.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-comment"&gt;// Two hidden input elements, 1 for single file upload 1 for multiple.&lt;/span&gt;
+&amp;lt;input &lt;span class="hljs-class"&gt;&lt;span class="hljs-keyword"&gt;class&lt;/span&gt;&lt;/span&gt;=&lt;span class="hljs-string"&gt;"upload-data-file-input hidden"&lt;/span&gt; type=&lt;span class="hljs-string"&gt;"file"&lt;/span&gt;&amp;gt;
+&lt;span class="xml"&gt;&lt;span class="hljs-tag"&gt;&amp;lt;&lt;span class="hljs-name"&gt;input&lt;/span&gt; &lt;span class="hljs-attr"&gt;class&lt;/span&gt;=&lt;span class="hljs-string"&gt;"upload-data-file-input-multiple hidden"&lt;/span&gt; &lt;span class="hljs-attr"&gt;type&lt;/span&gt;=&lt;span class="hljs-string"&gt;"file"&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In order to become capable to modify the value of this element we need to make it visible. The &lt;a href="https://w3c.github.io/webdriver/#interactability"&gt;WebDriver spec&lt;/a&gt; defines input elements to be interactable in order to &lt;a href="https://w3c.github.io/webdriver/#element-send-keys"&gt;change their value&lt;/a&gt;. So let's do that:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-comment"&gt;/**
+ * The css class name "upload-data-file-input hidden" is just an example
+ * and you can replace with your app.
+ */&lt;/span&gt;
+&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; fileUpload = $(&lt;span class="hljs-string"&gt;'.upload-data-file-input'&lt;/span&gt;);
+browser.execute(
+    &lt;span class="hljs-comment"&gt;// assign style to elem in the browser&lt;/span&gt;
+    &lt;span class="hljs-function"&gt;(&lt;span class="hljs-params"&gt;el&lt;/span&gt;) =&amp;gt;&lt;/span&gt; el.style.display = &lt;span class="hljs-string"&gt;'block'&lt;/span&gt;,
+    &lt;span class="hljs-comment"&gt;// pass in element so we don't need to query it again in the browser&lt;/span&gt;
+    fileUpload
+);
+fileUpload.waitForDisplayed();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With the &lt;a href="https://webdriver.io/docs/api/browser/execute.html"&gt;&lt;code&gt;execute&lt;/code&gt;&lt;/a&gt; we can simply modify the element properties to either remove the &lt;code&gt;hidden&lt;/code&gt; class or give the element displayedness.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="uploading-the-file"&gt;&lt;/a&gt;&lt;a href="#uploading-the-file" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Uploading the file&lt;/h2&gt;
+&lt;p&gt;Unfortunately the mechansim to upload a file with a browser highly depends on your test setup. At the end of the day the browser needs to be able to access the file that you want tp upload. For the local scenario it is super simple. Since you run the browser on your local machine and the file that you want to upload also exists on your local machine, all you need to do is to set the value of the file path to the input element:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-comment"&gt;/**
+ * it is recommended to always use the absolute path of the file as it ensures
+ * that it can be found by the browser.
+ */&lt;/span&gt;
+&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; path = &lt;span class="hljs-built_in"&gt;require&lt;/span&gt;(&lt;span class="hljs-string"&gt;'path'&lt;/span&gt;);
+&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; filePath = path.join(__dirname, &lt;span class="hljs-string"&gt;'path/to/your/file'&lt;/span&gt;);
+fileUpload.setValue(filePath);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you automate a browser that is running on a remote machine this approach won't work anymore because the file that is located locally (or wherever the tests are running) does not exist on the remote machine where the browser is running. For these scenarios the Selenium project created a &lt;a href="https://webdriver.io/docs/api/chromium.html#file"&gt;&lt;code&gt;file&lt;/code&gt;&lt;/a&gt; that is currently only supported when running Chrome or using a Selenium Grid with the Selenium standalone server. The command expects the file payload to be passed in as base64 string. Since this is quite inconvenient to use WebdriverIO has implemented an &lt;code&gt;upload&lt;/code&gt; command that allows you to pass in just the file name and the framework takes care of parsing it properly. The upload example will now look like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; path = &lt;span class="hljs-built_in"&gt;require&lt;/span&gt;(&lt;span class="hljs-string"&gt;'path'&lt;/span&gt;);
+&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; filePath = path.join(__dirname, &lt;span class="hljs-string"&gt;'path/to/your/file'&lt;/span&gt;);
+
+&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; remoteFilePath = browser.uploadFile(filePath);
+$(&lt;span class="hljs-string"&gt;'.upload-data-file-input'&lt;/span&gt;).setValue(remoteFilePath);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that the remote file name is different from your local filename. Therefor you need to set the value based on the remote file name you get from the &lt;code&gt;uploadFile&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;That was it!!! Happy Uploading 😉🙌🏻 ❤️&lt;/p&gt;
+&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class="post"&gt;&lt;header class="postHeader"&gt;&lt;h1 class="postHeaderTitle"&gt;&lt;a href="/blog/2019/05/18/visual-regression-for-v5.html"&gt;Visual Regression for V5&lt;/a&gt;&lt;/h1&gt;&lt;p class="post-meta"&gt;May 18, 2019&lt;/p&gt;&lt;div class="authorBlock"&gt;&lt;p class="post-authorName"&gt;&lt;a href="http://github.com/wswebcreation" target="_blank" rel="noreferrer noopener"&gt;Wim Selles&lt;/a&gt;&lt;/p&gt;&lt;div class="authorPhoto"&gt;&lt;a href="http://github.com/wswebcreation" target="_blank" rel="noreferrer noopener"&gt;&lt;img src="https://avatars2.githubusercontent.com/u/11979740?s=460&amp;amp;v=4" alt="Wim Selles"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;article class="post-content"&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;We are pleased to announce that we now have a new Visual Regression service for WebdriverIO V5 called &lt;code&gt;wdio-image-comparison-service&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="what-can-it-do"&gt;&lt;/a&gt;&lt;a href="#what-can-it-do" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What can it do?&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;wdio-image-comparison-service&lt;/em&gt; is a lightweight &lt;em&gt;WebdriverIO&lt;/em&gt; service for browsers / mobile browsers / hybrid apps to do image comparison on screens, elements or full page screens.&lt;/p&gt;
+&lt;p&gt;You can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;save or compare screens / elements / full page screens against a baseline&lt;/li&gt;
+&lt;li&gt;automatically create a baseline when no baseline is there&lt;/li&gt;
+&lt;li&gt;blockout custom regions and even automatically exclude a status and or tool bars (mobile only) during a comparison&lt;/li&gt;
+&lt;li&gt;increase the element dimensions screenshots&lt;/li&gt;
+&lt;li&gt;use different comparison methods&lt;/li&gt;
+&lt;li&gt;and much more, see the &lt;a href="https://github.com/wswebcreation/wdio-image-comparison-service/blob/master/docs/OPTIONS.md"&gt;options here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The module is now based on the power of the new &lt;a href="https://github.com/wswebcreation/webdriver-image-comparison"&gt;&lt;code&gt;webdriver-image-comparison&lt;/code&gt;&lt;/a&gt; module. This is a lightweight module to retrieve the needed data and screenshots for all browsers / devices.
+The comparison power comes from &lt;a href="https://github.com/Huddle/Resemble.js"&gt;ResembleJS&lt;/a&gt;. If you want to compare images online you can check the &lt;a href="https://huddleeng.github.io/Resemble.js/"&gt;online tool&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It can be used for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;desktop browsers (Chrome / Firefox / Safari / Internet Explorer 11 / Microsoft Edge)&lt;/li&gt;
+&lt;li&gt;mobile / tablet browsers (Chrome / Safari on emulators / real devices) via Appium&lt;/li&gt;
+&lt;li&gt;Hybrid apps via Appium&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For versions check below:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://eu-central-1.saucelabs.com/u/wdio-image-comparison-service"&gt;&lt;img src="https://eu-central-1.saucelabs.com/browser-matrix/wdio-image-comparison-service.svg" alt="Sauce Test Status"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="installation"&gt;&lt;/a&gt;&lt;a href="#installation" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Install this module locally with the following command to be used as a (dev-)dependency:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-shell"&gt;npm install --save-dev wdio-image-comparison-service
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Instructions on how to install &lt;code&gt;WebdriverIO&lt;/code&gt; can be found &lt;a href="http://webdriver.io/guide/getstarted/install.html"&gt;here.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="usage"&gt;&lt;/a&gt;&lt;a href="#usage" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Usage&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;wdio-image-comparison-service&lt;/em&gt; supports NodeJS 8 or higher&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="configuration"&gt;&lt;/a&gt;&lt;a href="#configuration" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Configuration&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;wdio-image-comparison-service&lt;/code&gt; is a service so it can be used as a normal service. You can set it up in your &lt;code&gt;wdio.conf.js&lt;/code&gt; file with the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; { join } = &lt;span class="hljs-built_in"&gt;require&lt;/span&gt;(&lt;span class="hljs-string"&gt;'path'&lt;/span&gt;);
+
+&lt;span class="hljs-comment"&gt;// wdio.conf.js&lt;/span&gt;
+exports.config = {
+    &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+    &lt;span class="hljs-comment"&gt;// =====&lt;/span&gt;
+    &lt;span class="hljs-comment"&gt;// Setup&lt;/span&gt;
+    &lt;span class="hljs-comment"&gt;// =====&lt;/span&gt;
+    &lt;span class="hljs-attr"&gt;services&lt;/span&gt;: [ 
+        [&lt;span class="hljs-string"&gt;'image-comparison'&lt;/span&gt;, 
+        &lt;span class="hljs-comment"&gt;// The options&lt;/span&gt;
+        {
+            &lt;span class="hljs-comment"&gt;// Some options, see the docs for more&lt;/span&gt;
+            &lt;span class="hljs-attr"&gt;baselineFolder&lt;/span&gt;: join(process.cwd(), &lt;span class="hljs-string"&gt;'./tests/sauceLabsBaseline/'&lt;/span&gt;),
+            &lt;span class="hljs-attr"&gt;formatImageName&lt;/span&gt;: &lt;span class="hljs-string"&gt;'{tag}-{logName}-{width}x{height}'&lt;/span&gt;,
+            &lt;span class="hljs-attr"&gt;screenshotPath&lt;/span&gt;: join(process.cwd(), &lt;span class="hljs-string"&gt;'.tmp/'&lt;/span&gt;),
+            &lt;span class="hljs-attr"&gt;savePerInstance&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt;,
+            &lt;span class="hljs-attr"&gt;autoSaveBaseline&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt;,
+            &lt;span class="hljs-attr"&gt;blockOutStatusBar&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt;,
+            &lt;span class="hljs-attr"&gt;blockOutToolBar&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt;,
+            &lt;span class="hljs-comment"&gt;// ... more options&lt;/span&gt;
+        }], 
+    ],
+    &lt;span class="hljs-comment"&gt;// ...&lt;/span&gt;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More plugin options can be found &lt;a href="https://github.com/wswebcreation/wdio-image-comparison-service/blob/master/docs/OPTIONS.md#plugin-options"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="writing-tests"&gt;&lt;/a&gt;&lt;a href="#writing-tests" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Writing tests&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;wdio-image-comparison-service&lt;/em&gt; is framework agnostic, meaning that you can use it with all the frameworks WebdriverIO supports like &lt;code&gt;Jasmine|Mocha&lt;/code&gt;.
+You can use it like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;describe(&lt;span class="hljs-string"&gt;'Example'&lt;/span&gt;, () =&amp;gt; {
+  beforeEach(&lt;span class="hljs-function"&gt;&lt;span class="hljs-params"&gt;()&lt;/span&gt; =&amp;gt;&lt;/span&gt; {
+     browser.url(&lt;span class="hljs-string"&gt;'https://webdriver.io'&lt;/span&gt;);
+  });
+  
+  it(&lt;span class="hljs-string"&gt;'should save some screenshots'&lt;/span&gt;, () =&amp;gt; {
+    &lt;span class="hljs-comment"&gt;// Save a screen&lt;/span&gt;
+    browser.saveScreen(&lt;span class="hljs-string"&gt;'examplePaged'&lt;/span&gt;, { &lt;span class="hljs-comment"&gt;/* some options*/&lt;/span&gt; });
+    
+    &lt;span class="hljs-comment"&gt;// Save an element&lt;/span&gt;
+    browser.saveElement($(&lt;span class="hljs-string"&gt;'#element-id'&lt;/span&gt;), &lt;span class="hljs-string"&gt;'firstButtonElement'&lt;/span&gt;, { &lt;span class="hljs-comment"&gt;/* some options*/&lt;/span&gt; });
+    
+    &lt;span class="hljs-comment"&gt;// Save a full page screens&lt;/span&gt;
+    browser.saveFullPageScreen(&lt;span class="hljs-string"&gt;'fullPage'&lt;/span&gt;, { &lt;span class="hljs-comment"&gt;/* some options*/&lt;/span&gt; });
+  });
+  
+  it(&lt;span class="hljs-string"&gt;'should compare successful with a baseline'&lt;/span&gt;, () =&amp;gt; {
+    &lt;span class="hljs-comment"&gt;// Check a screen&lt;/span&gt;
+    expect(browser.checkScreen(&lt;span class="hljs-string"&gt;'examplePaged'&lt;/span&gt;, { &lt;span class="hljs-comment"&gt;/* some options*/&lt;/span&gt; })).toEqual(&lt;span class="hljs-number"&gt;0&lt;/span&gt;);
+    
+    &lt;span class="hljs-comment"&gt;// Check an element&lt;/span&gt;
+    expect(browser.checkElement($(&lt;span class="hljs-string"&gt;'#element-id'&lt;/span&gt;), &lt;span class="hljs-string"&gt;'firstButtonElement'&lt;/span&gt;, { &lt;span class="hljs-comment"&gt;/* some options*/&lt;/span&gt; })).toEqual(&lt;span class="hljs-number"&gt;0&lt;/span&gt;);
+    
+    &lt;span class="hljs-comment"&gt;// Check a full page screens&lt;/span&gt;
+    expect(browser.checkFullPageScreen(&lt;span class="hljs-string"&gt;'fullPage'&lt;/span&gt;, { &lt;span class="hljs-comment"&gt;/* some options*/&lt;/span&gt; })).toEqual(&lt;span class="hljs-number"&gt;0&lt;/span&gt;);
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;If you run for the first time without having a baseline the &lt;code&gt;check&lt;/code&gt;-methods will reject the promise with the following warning:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-shell"&gt;&lt;span class="hljs-meta"&gt;#&lt;/span&gt;&lt;span class="bash"&gt;&lt;span class="hljs-comment"&gt;####################################################################################&lt;/span&gt;&lt;/span&gt;
+ Baseline image not found, save the actual image manually to the baseline.
+ The image can be found here:
+ /Users/wswebcreation/Git/wdio-image-comparison-service/.tmp/actual/desktop_chrome/examplePage-chrome-latest-1366x768.png
+ If you want the module to auto save a non existing image to the baseline you
+ can provide 'autoSaveBaseline: true' to the options.
+&lt;span class="hljs-meta"&gt;#&lt;/span&gt;&lt;span class="bash"&gt;&lt;span class="hljs-comment"&gt;####################################################################################&lt;/span&gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This means that the current screenshot is saved in the actual folder and you &lt;strong&gt;manually need to copy it to your baseline&lt;/strong&gt;.
+If you instantiate &lt;code&gt;wdio-image-comparison-service&lt;/code&gt; with &lt;code&gt;autoSaveBaseline: true&lt;/code&gt; the image will automatically be saved into the baseline folder.&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="nice-new-feature"&gt;&lt;/a&gt;&lt;a href="#nice-new-feature" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Nice new feature&lt;/h3&gt;
+&lt;p&gt;When you create a fullpage screenshot you might have some elements that stay in the view, like a stickyheader or a chatbox.
+These elements normally mess up the screenshot like you can see on the left side of the below image.&lt;/p&gt;
+&lt;p&gt;But you can now add elements that need to be hidden after the first scroll which will give you a result as you can see in the right side of the below image.
+This can be done by adding this property to your test:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;browser.checkFullPageScreen(&lt;span class="hljs-string"&gt;'fullPage'&lt;/span&gt;, { 
+    &lt;span class="hljs-attr"&gt;hideAfterFirstScroll&lt;/span&gt;: [
+        $(&lt;span class="hljs-string"&gt;'nav-bar'&lt;/span&gt;),
+        $(&lt;span class="hljs-string"&gt;'chat-box'&lt;/span&gt;),
+    ], 
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src="./assets/image-comparison.jpg" alt="fullpage-example"&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a class="anchor" aria-hidden="true" id="test-result-outputs"&gt;&lt;/a&gt;&lt;a href="#test-result-outputs" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Test result outputs&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;save(Screen/Element/FullPageScreen)&lt;/code&gt; methods will provide the following information after the method has been executed:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; saveResult = { 
+  &lt;span class="hljs-comment"&gt;// The device pixel ratio of the instance that has run&lt;/span&gt;
+  &lt;span class="hljs-attr"&gt;devicePixelRatio&lt;/span&gt;: &lt;span class="hljs-number"&gt;1&lt;/span&gt;,
+  &lt;span class="hljs-comment"&gt;// The formatted filename, this depends on the options `formatImageName`&lt;/span&gt;
+  &lt;span class="hljs-attr"&gt;fileName&lt;/span&gt;: &lt;span class="hljs-string"&gt;'examplePage-chrome-latest-1366x768.png'&lt;/span&gt;,
+  &lt;span class="hljs-comment"&gt;// The path where the actual screenshot file can be found&lt;/span&gt;
+  &lt;span class="hljs-attr"&gt;path&lt;/span&gt;: &lt;span class="hljs-string"&gt;'/Users/wswebcreation/Git/wdio-image-comparison-service/.tmp/actual/desktop_chrome'&lt;/span&gt;,
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See the &lt;a href="https://github.com/wswebcreation/wdio-image-comparison-service/blob/master/docs/OUTPUT.md#save-output"&gt;Save output&lt;/a&gt; section in the &lt;a href="https://github.com/wswebcreation/wdio-image-comparison-service/blob/master/docs/OUTPUT.md"&gt;output&lt;/a&gt; docs for the images.&lt;/p&gt;
+&lt;p&gt;By default the &lt;code&gt;check(Screen/Element/FullPageScreen)&lt;/code&gt; methods will only provide a mismatch percentage like &lt;code&gt;1.23&lt;/code&gt;, but when the plugin has the options &lt;code&gt;returnAllCompareData: true&lt;/code&gt; the following information is provided after the method has been executed:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; checkResult = {  
+  &lt;span class="hljs-comment"&gt;// The formatted filename, this depends on the options `formatImageName`&lt;/span&gt;
+  &lt;span class="hljs-attr"&gt;fileName&lt;/span&gt;: &lt;span class="hljs-string"&gt;'examplePage-chrome-headless-latest-1366x768.png'&lt;/span&gt;,
+  &lt;span class="hljs-attr"&gt;folders&lt;/span&gt;: {
+      &lt;span class="hljs-comment"&gt;// The actual folder and the file name&lt;/span&gt;
+      &lt;span class="hljs-attr"&gt;actual&lt;/span&gt;: &lt;span class="hljs-string"&gt;'/Users/wswebcreation/Git/wdio-image-comparison-service/.tmp/actual/desktop_chrome/examplePage-chrome-headless-latest-1366x768.png'&lt;/span&gt;,
+      &lt;span class="hljs-comment"&gt;// The baseline folder and the file name&lt;/span&gt;
+      &lt;span class="hljs-attr"&gt;baseline&lt;/span&gt;: &lt;span class="hljs-string"&gt;'/Users/wswebcreation/Git/wdio-image-comparison-service/localBaseline/desktop_chrome/examplePage-chrome-headless-latest-1366x768.png'&lt;/span&gt;,
+      &lt;span class="hljs-comment"&gt;// This following folder is optional and only if there is a mismatch&lt;/span&gt;
+      &lt;span class="hljs-comment"&gt;// The folder that holds the diffs and the file name&lt;/span&gt;
+      &lt;span class="hljs-attr"&gt;diff&lt;/span&gt;: &lt;span class="hljs-string"&gt;'/Users/wswebcreation/Git/wdio-image-comparison-service/.tmp/diff/desktop_chrome/examplePage-chrome-headless-latest-1366x768.png'&lt;/span&gt;,
+    },
+    &lt;span class="hljs-comment"&gt;// The mismatch percentage&lt;/span&gt;
+    &lt;span class="hljs-attr"&gt;misMatchPercentage&lt;/span&gt;: &lt;span class="hljs-number"&gt;2.34&lt;/span&gt;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See the &lt;a href="https://github.com/wswebcreation/wdio-image-comparison-service/blob/master/docs/OUTPUT.md#check-output-on-failure"&gt;Check output on failure&lt;/a&gt; section in the &lt;a href="https://github.com/wswebcreation/wdio-image-comparison-service/blob/master/docs/OUTPUT.md"&gt;output&lt;/a&gt; docs for the images.&lt;/p&gt;
+&lt;h1&gt;&lt;a class="anchor" aria-hidden="true" id="support"&gt;&lt;/a&gt;&lt;a href="#support" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Support&lt;/h1&gt;
+&lt;p&gt;If you need support you can find me on the &lt;code&gt;wdio-image-comparison-service&lt;/code&gt;- Gitter channel, or click on this link &lt;a href="https://gitter.im/wswebcreation/wdio-image-comparison-service" title="Gitter chat"&gt;&lt;img src="https://badges.gitter.im/wswebcreation/wdio-image-comparison-service.png" alt="Gitter chat"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Happy testing!&lt;/p&gt;
+&lt;p&gt;Grtz,&lt;/p&gt;
+&lt;p&gt;The Blue Guy&lt;/p&gt;
+&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class="post"&gt;&lt;header class="postHeader"&gt;&lt;h1 class="postHeaderTitle"&gt;&lt;a href="/blog/2019/04/03/react-selectors.html"&gt;React Selectors&lt;/a&gt;&lt;/h1&gt;&lt;p class="post-meta"&gt;April 3, 2019&lt;/p&gt;&lt;div class="authorBlock"&gt;&lt;p class="post-authorName"&gt;&lt;a href="http://github.com/baruchvlz" target="_blank" rel="noreferrer noopener"&gt;Baruch Velez&lt;/a&gt;&lt;/p&gt;&lt;div class="authorPhoto"&gt;&lt;a href="http://github.com/baruchvlz" target="_blank" rel="noreferrer noopener"&gt;&lt;img src="https://avatars1.githubusercontent.com/u/14321495?s=460&amp;amp;v=4" alt="Baruch Velez"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;&lt;article class="post-content"&gt;&lt;div&gt;&lt;span&gt;&lt;p&gt;&lt;a href="https://github.com/facebook/react"&gt;ReactJS&lt;/a&gt; is one of the most widely use Front-End libraries in the web. Along side React, many developers use styling tools that will minify or re-write the class attribute values attached to the HTML elements via &lt;code&gt;className&lt;/code&gt; props in JSX. These minifications and overwrites make it difficult to select the generated HTML using the WebDriver's query commands like &lt;code&gt;findElement&lt;/code&gt; or &lt;code&gt;findElements&lt;/code&gt; since it's not guaranteed that the class name will remain the same.&lt;/p&gt;
+&lt;p&gt;Today we introduce two new commands, &lt;code&gt;browser.react$&lt;/code&gt; and &lt;code&gt;browser.react$$&lt;/code&gt;, to WebdriverIO's browser object that allows you to query for a single or multiple React component instances in the page with an easy to use API. These new commands will return the WebdriverIO element(s) for the query in where you will have access to the complete element commands API.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="usage"&gt;&lt;/a&gt;&lt;a href="#usage" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Usage&lt;/h2&gt;
+&lt;p&gt;Internally, WebdriverIO uses a library called &lt;a href="https://github.com/baruchvlz/resq"&gt;resq&lt;/a&gt; to query React's VirtualDOM in order to retrieve the nodes. This library allows WebdriverIO to find any component in the VirtualDOM by the component's name and also filter this selection by state and/or props.&lt;/p&gt;
+&lt;p&gt;WebdriverIO's provided API, &lt;code&gt;browser.react$&lt;/code&gt; and &lt;code&gt;browser.react$$&lt;/code&gt;, methods have three parameters. The first parameter is the selector to query, this parameter is required. The second and third parameters are optional filters, &lt;code&gt;props&lt;/code&gt; and &lt;code&gt;state&lt;/code&gt; respectively.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-js"&gt;&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; selector = &lt;span class="hljs-string"&gt;'MyComponent'&lt;/span&gt;
+&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; propFilter = { &lt;span class="hljs-attr"&gt;someProp&lt;/span&gt;: &lt;span class="hljs-literal"&gt;true&lt;/span&gt; }
+&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; stateFilter = &lt;span class="hljs-string"&gt;'this is my state'&lt;/span&gt;
+
+browser.react$(selector, {
+    &lt;span class="hljs-attr"&gt;props&lt;/span&gt;: propFilter,
+    &lt;span class="hljs-attr"&gt;state&lt;/span&gt;: stateFilter
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the examples we will cover basic usages for all three parameters.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="examples"&gt;&lt;/a&gt;&lt;a href="#examples" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Examples&lt;/h2&gt;
+&lt;p&gt;In the following examples, we will base our queries against this example React application.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-jsx"&gt;&lt;span class="hljs-comment"&gt;// mycomponent.jsx&lt;/span&gt;
+&lt;span class="hljs-keyword"&gt;import&lt;/span&gt; React &lt;span class="hljs-keyword"&gt;from&lt;/span&gt; &lt;span class="hljs-string"&gt;'react'&lt;/span&gt;
+&lt;span class="hljs-keyword"&gt;import&lt;/span&gt; ReactDOM &lt;span class="hljs-keyword"&gt;from&lt;/span&gt; &lt;span class="hljs-string"&gt;'react-dom'&lt;/span&gt;
+
+&lt;span class="hljs-keyword"&gt;const&lt;/span&gt; MyComponent = &lt;span class="hljs-function"&gt;(&lt;span class="hljs-params"&gt;props&lt;/span&gt;) =&amp;gt;&lt;/span&gt; {
+    &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; { name } = props;
+    &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; [state] = React.useState(name === &lt;span class="hljs-string"&gt;'there'&lt;/span&gt; ? &lt;span class="hljs-string"&gt;', how are you?'&lt;/span&gt; : &lt;span class="hljs-string"&gt;''&lt;/span&gt;)
+
+    &lt;span class="hljs-keyword"&gt;return&lt;/span&gt; (
+        &lt;span class="xml"&gt;&lt;span class="hljs-tag"&gt;&amp;lt;&lt;span class="hljs-name"&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;
+            Hello {name || 'World'}{state}
+        &lt;span class="hljs-tag"&gt;&amp;lt;/&lt;span class="hljs-name"&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    )
+}
+
+ReactDOM.render(
+    &lt;span class="xml"&gt;&lt;span class="hljs-tag"&gt;&amp;lt;&lt;span class="hljs-name"&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="hljs-tag"&gt;&amp;lt;&lt;span class="hljs-name"&gt;MyComponent&lt;/span&gt; /&amp;gt;&lt;/span&gt;
+        &lt;span class="hljs-tag"&gt;&amp;lt;&lt;span class="hljs-name"&gt;MyComponent&lt;/span&gt; &lt;span class="hljs-attr"&gt;name&lt;/span&gt;=&lt;span class="hljs-string"&gt;"Barry"&lt;/span&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="hljs-tag"&gt;&amp;lt;&lt;span class="hljs-name"&gt;MyComponent&lt;/span&gt; &lt;span class="hljs-attr"&gt;name&lt;/span&gt;=&lt;span class="hljs-string"&gt;"WebdriverIO"&lt;/span&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="hljs-tag"&gt;&amp;lt;&lt;span class="hljs-name"&gt;MyComponent&lt;/span&gt; &lt;span class="hljs-attr"&gt;name&lt;/span&gt;=&lt;span class="hljs-string"&gt;"there"&lt;/span&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class="hljs-tag"&gt;&amp;lt;/&lt;span class="hljs-name"&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;,
+    &lt;span class="hljs-built_in"&gt;document&lt;/span&gt;.getElementById(&lt;span class="hljs-string"&gt;'#root'&lt;/span&gt;),
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this app, we have one component that renders some text depending on the property &lt;code&gt;name&lt;/code&gt; passed to it.&lt;/p&gt;
+&lt;h4&gt;&lt;a class="anchor" aria-hidden="true" id="selecting-and-filtering"&gt;&lt;/a&gt;&lt;a href="#selecting-and-filtering" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Selecting and filtering&lt;/h4&gt;
+&lt;p&gt;Now, let's say we want to test that the first instance of &lt;code&gt;MyComponent&lt;/code&gt; is correctly displayed in the browser. Well, with the &lt;code&gt;browser.react$&lt;/code&gt; command, we can select this first instance and then query against it.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-javascript"&gt;&lt;span class="hljs-comment"&gt;// spec/mycomponent.test.js&lt;/span&gt;
+
+test(&lt;span class="hljs-string"&gt;'it should be displayed'&lt;/span&gt;, () =&amp;gt; {
+    &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; myComponent = browser.react$(&lt;span class="hljs-string"&gt;'MyComponent'&lt;/span&gt;)
+
+    expect(myComponent.isDisplayed()).toBe(&lt;span class="hljs-literal"&gt;true&lt;/span&gt;) &lt;span class="hljs-comment"&gt;// pass&lt;/span&gt;
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Simple, no? But what if we want to select the component that says &lt;code&gt;Hello WebdriverIO&lt;/code&gt; and verify that the text is correct? Well, we can filter our queries!&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-javascript"&gt;&lt;span class="hljs-comment"&gt;// spec/mycomponent.test.js&lt;/span&gt;
+
+test(&lt;span class="hljs-string"&gt;'it should correctly display "Hello WebdriverIO"'&lt;/span&gt;, () =&amp;gt; {
+    &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; myComponent = browser.react$(&lt;span class="hljs-string"&gt;'MyComponent'&lt;/span&gt;, {
+        &lt;span class="hljs-attr"&gt;props&lt;/span&gt;: { &lt;span class="hljs-attr"&gt;name&lt;/span&gt;: &lt;span class="hljs-string"&gt;'WebdriverIO'&lt;/span&gt; }
+    })
+
+    expect(myComponent.getText()).toBe(&lt;span class="hljs-string"&gt;'Hello WebdriverIO'&lt;/span&gt;) &lt;span class="hljs-comment"&gt;// pass&lt;/span&gt;
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In React, the props will always be an object so for this filter parameter we can only pass an object to be used to filter our results.&lt;/p&gt;
+&lt;p&gt;You might've noticed that in our component we have a state that adds extra text if the name matches &lt;code&gt;there&lt;/code&gt;. We can select this component by filtering the components by their current state.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="hljs css language-javascript"&gt;&lt;span class="hljs-comment"&gt;// spec/mycomponent.test.js&lt;/span&gt;
+
+test(&lt;span class="hljs-string"&gt;'it should correctly display "Hello WebdriverIO"'&lt;/span&gt;, () =&amp;gt; {
+    &lt;span class="hljs-keyword"&gt;const&lt;/span&gt; myComponent = browser.react$(&lt;span class="hljs-string"&gt;'MyComponent'&lt;/span&gt;, {
+        &lt;span class="hljs-attr"&gt;state&lt;/span&gt;: &lt;span class="hljs-string"&gt;', how are you?'&lt;/span&gt;
+    })
+
+    expect(myComponent.getText()).toBe(&lt;span class="hljs-string"&gt;'Hello there, how are you?'&lt;/span&gt;) &lt;span class="hljs-comment"&gt;// pass&lt;/span&gt;
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see, for the state filter we pass the string that equals to the current state of the component, this last parameter in the function can be any of the following: string, number, boolean, array, or object. This is because all these types are valid state types for React.&lt;/p&gt;
+&lt;h4&gt;&lt;a class="anchor" aria-hidden="true" id="what-about-browserreact"&gt;&lt;/a&gt;&lt;a href="#what-about-browserreact" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What about &lt;code&gt;browser.react$$&lt;/code&gt;?&lt;/h4&gt;
+&lt;p&gt;By now you might be wondering why we are using &lt;code&gt;browser.react$&lt;/code&gt; in all the examples. Well, both commands have the same parameters and work almost the same with the &lt;strong&gt;only difference&lt;/strong&gt; being that &lt;code&gt;browser.react$$&lt;/code&gt; will return an array of all the WebdriverIO elements corresponding to the selector and/or filter match.&lt;/p&gt;
+&lt;h2&gt;&lt;a class="anchor" aria-hidden="true" id="final-words"&gt;&lt;/a&gt;&lt;a href="#final-words" aria-hidden="true" class="hash-link"&gt;&lt;svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"&gt;&lt;path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Final Words&lt;/h2&gt;
+&lt;p&gt;We are very pleased with this addition and we hope you can take full advantage of it. We suggest you use &lt;a href="https://github.com/facebook/react-devtools"&gt;React Dev Tools&lt;/a&gt;, using this tool will help you see how the components in the application are called, which props they have, and which state they are currently in. Once you know this information, using WebdriverIO's React API will be a lot easier.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This blog post was updated after the v6 release to reflect changes to the command interface.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/span&gt;&lt;/div&gt;&lt;/article&gt;&lt;/div&gt;&lt;div class="docs-prevnext"&gt;&lt;a class="docs-next" href="/blog/page2/"&gt;Next →&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class="blacklivesmatter" style="display: block;"&gt;&lt;h3&gt;BLACK LIVES MATTER&lt;/h3&gt;&lt;p&gt;In solidarity, we ask that you consider financially supporting efforts such as&lt;a href="https://secure.actblue.com/donate/ms_blm_homepage_2019"&gt;Black Lives Matter&lt;/a&gt;,&lt;a href="https://support.eji.org/give/153413/#!/donation/checkout"&gt;The Equal Justice Initiative&lt;/a&gt;,&lt;a href="https://www.naacpldf.org/"&gt;NAACP Legal Defense and Education Fund&lt;/a&gt;, or your local civil rights charity.&lt;/p&gt;&lt;button class="close"&gt;x&lt;/button&gt;&lt;/div&gt;&lt;script src="/js/blm.js" type="application/javascript"&gt;&lt;/script&gt;&lt;footer class="nav-footer" id="footer"&gt;&lt;section class="sitemap"&gt;&lt;a href="/" class="nav-home"&gt;&lt;img src="/img/twitter-profile.png" alt="WebdriverIO" width="66" height="58"&gt;&lt;/a&gt;&lt;div&gt;&lt;h5&gt;Docs&lt;/h5&gt;&lt;a href="/docs/gettingstarted.html"&gt;Getting Started&lt;/a&gt;&lt;a href="/docs/api.html"&gt;API Reference&lt;/a&gt;&lt;a href="/docs/contribute.html"&gt;Contribute&lt;/a&gt;&lt;a href="/help.html"&gt;Help&lt;/a&gt;&lt;/div&gt;&lt;div&gt;&lt;h5&gt;Community&lt;/h5&gt;&lt;a href="https://stackoverflow.com/questions/tagged/webdriver-io" target="_blank" rel="noreferrer noopener"&gt;Stack Overflow&lt;/a&gt;&lt;a href="https://gitter.im/webdriverio/webdriverio"&gt;Support Chat&lt;/a&gt;&lt;a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y"&gt;Slack&lt;/a&gt;&lt;a href="https://twitter.com/webdriverio" target="_blank" rel="noreferrer noopener"&gt;Twitter&lt;/a&gt;&lt;/div&gt;&lt;div&gt;&lt;h5&gt;More&lt;/h5&gt;&lt;a href="/docs/enterprise.html"&gt;Tidelift Subscription&lt;/a&gt;&lt;a href="/blog"&gt;Blog&lt;/a&gt;&lt;a href="https://github.com/webdriverio/webdriverio"&gt;GitHub&lt;/a&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/section&gt;&lt;a href="https://openjsf.org/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"&gt;&lt;img src="/img/open-jsf-logo.svg" alt="OpenJS Foundation" width="170"&gt;&lt;/a&gt;&lt;section class="copyright"&gt;Copyright © 2020 OpenJS Foundation&lt;/section&gt;&lt;/footer&gt;&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"&gt;&lt;/script&gt;&lt;script&gt;window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));&lt;/script&gt;&lt;script&gt;
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search &amp;&amp; search.focus();
+                  }
+                });
+              &lt;/script&gt;&lt;script&gt;
+              var search = docsearch({
+                appId: 'BH4D9OD16A',
+                apiKey: '1b22fa823f22b7916528edc0e36d9d4a',
+                indexName: 'webdriver',
+                inputSelector: '#search_input_react'
+              });
+            &lt;/script&gt;&lt;iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.c4b33f07650267db9f8a72eaac551cac.html?origin=https%3A%2F%2Fwebdriver.io" title="Twitter settings iframe" style="display: none;"&gt;&lt;/iframe&gt;&lt;div id="back-to-top" class="hidden"&gt;&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20200718 14:22:54.577" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20200718 14:22:54.504" endtime="20200718 14:22:54.578"></status>
+<msg timestamp="20200722 08:01:44.666" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200722 08:01:42.426" endtime="20200722 08:01:44.666"></status>
 </kw>
-<msg timestamp="20200718 14:22:54.579" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20200718 14:22:54.682" level="FAIL">MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F204C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<status status="FAIL" starttime="20200718 14:22:44.418" endtime="20200718 14:22:54.682"></status>
+<msg timestamp="20200722 08:01:44.667" level="FAIL">Element locator 'xpath=//android.widget.TextView[@text='Home']' did not match any elements after 5 seconds</msg>
+<status status="FAIL" starttime="20200722 08:01:35.641" endtime="20200722 08:01:44.667"></status>
 </kw>
-<status status="FAIL" starttime="20200718 14:22:44.416" endtime="20200718 14:22:54.683" critical="yes">MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F204C0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</status>
+<status status="FAIL" starttime="20200722 08:01:35.640" endtime="20200722 08:01:44.667"></status>
+</kw>
+<status status="FAIL" starttime="20200722 08:01:35.640" endtime="20200722 08:01:44.667"></status>
+</kw>
+<tags>
+<tag>Test</tag>
+</tags>
+<status status="FAIL" starttime="20200722 08:01:35.639" endtime="20200722 08:01:44.667" critical="yes">Setup failed:
+Element locator 'xpath=//android.widget.TextView[@text='Home']' did not match any elements after 5 seconds</status>
 </test>
-<status status="FAIL" starttime="20200718 14:22:43.609" endtime="20200718 14:22:54.684"></status>
+<kw name="Close the application" library="Setup" type="teardown">
+<kw name="Close All Applications" library="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" starttime="20200722 08:01:44.669" endtime="20200722 08:01:44.908"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Should Contain</arg>
+<arg>${remote_url}</arg>
+<arg>localhost</arg>
+</arguments>
+<assign>
+<var>${match}</var>
+<var>${value}</var>
+</assign>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${remote_url}</arg>
+<arg>localhost</arg>
+</arguments>
+<msg timestamp="20200722 08:01:44.909" level="FAIL">'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="FAIL" starttime="20200722 08:01:44.909" endtime="20200722 08:01:44.909"></status>
+</kw>
+<msg timestamp="20200722 08:01:44.909" level="INFO">${match} = FAIL</msg>
+<msg timestamp="20200722 08:01:44.909" level="INFO">${value} = 'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="PASS" starttime="20200722 08:01:44.908" endtime="20200722 08:01:44.909"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${match}' == 'PASS'</arg>
+<arg>call method</arg>
+<arg>${s}</arg>
+<arg>stopAppiumServer</arg>
+</arguments>
+<status status="PASS" starttime="20200722 08:01:44.910" endtime="20200722 08:01:44.910"></status>
+</kw>
+<status status="PASS" starttime="20200722 08:01:44.668" endtime="20200722 08:01:44.910"></status>
+</kw>
+<status status="FAIL" starttime="20200722 08:00:39.611" endtime="20200722 08:01:44.910"></status>
 </suite>
-<status status="FAIL" starttime="20200718 14:22:43.505" endtime="20200718 14:22:54.686"></status>
+<status status="FAIL" starttime="20200722 08:00:39.573" endtime="20200722 08:01:44.914"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1">Critical Tests</stat>
-<stat pass="0" fail="1">All Tests</stat>
+<stat pass="0" fail="2">Critical Tests</stat>
+<stat pass="0" fail="2">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1">Test</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" id="s1" name="Suites">Suites</stat>
-<stat pass="0" fail="1" id="s1-s1" name="Sim">Suites.Sim</stat>
+<stat pass="0" fail="2" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="2" id="s1-s1" name="SwitchContextDemo">Suites.SwitchContextDemo</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200718 14:22:48.457" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F20370&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
-<msg timestamp="20200718 14:22:50.478" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F203E8&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
-<msg timestamp="20200718 14:22:52.494" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x03F20418&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /wd/hub/session</msg>
-<msg timestamp="20200718 14:22:54.579" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>

@@ -1,0 +1,22 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Test                                                                   
+==============================================================================
+Work with multple elements                                            5
+a
+b
+c
+d
+abcd
+| PASS |
+------------------------------------------------------------------------------
+Suites.Test                                                           | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Automation\AppiumLibraryRobotFramework\robotframeworkAppiumLibrary\Reports\pabot_results\4\output.xml

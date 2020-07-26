@@ -4,7 +4,12 @@ Resource         ../PageObjects/ContextPageObject.robot
 
 *** Keywords ***
 Get available context in the app
-    [return]    Get all available context
+    ${val}=     Get all available context
+    [return]    ${val}
+
+Get available current context
+    ${val}=     Get the Current Context
+    [return]    ${val}
 
 Switch to the current Context
     [Arguments]     ${context}

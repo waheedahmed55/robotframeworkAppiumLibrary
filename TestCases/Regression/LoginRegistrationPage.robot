@@ -1,8 +1,8 @@
 *** Settings ***
-Resource         ../Utility/Setup.robot
-Resource         ../Utility/CommonKeywords.robot
-Resource         ../Helper/LoginRegistrationPageHelper.robot
-Resource         ../TestData/ApplicationProperties.robot
+Resource         ../../Utility/Setup.robot
+Resource         ../../Utility/CommonKeywords.robot
+Resource         ../../Helper/LoginRegistrationPageHelper.robot
+Resource         ../../TestData/ApplicationProperties.robot
 Suite Setup      Open the application in device
 Test Setup       Open the option     Home
 Suite Teardown   Close the application

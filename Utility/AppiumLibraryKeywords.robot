@@ -297,11 +297,13 @@ Switch to the context
 
 #Get the Current Context
 Get the Current Context
-    [return]    Get Current Context
+    ${val}=     Get Current Context
+    [return]    ${val}
 
-#Get all context
+#Get all cont
 Get all available context
-    [return]    Get Contexts
+    ${val}=     Get Contexts
+    [return]    ${val}
 
 Generate Random String With Defined Size
     [Arguments]    ${size}    ${type}

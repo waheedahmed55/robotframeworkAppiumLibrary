@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.1 on win32)" generated="20200718 14:22:43.610" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.1 on win32)" generated="20200722 07:59:36.776" rpa="false">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="FormsDataDriven" source="C:\Automation\AppiumLibraryRobotFramework\TestCases\FormsDataDriven.robot">
+<suite id="s1-s1" name="FormsDataDriven" source="C:\Automation\AppiumLibraryRobotFramework\robotframeworkAppiumLibrary\TestCases\FormsDataDriven.robot">
 <kw name="Open the application in device" library="Setup" type="setup">
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -20,12 +20,12 @@
 <arg>${remote_url}</arg>
 <arg>localhost</arg>
 </arguments>
-<msg timestamp="20200718 14:22:46.368" level="FAIL">'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
-<status status="FAIL" starttime="20200718 14:22:46.367" endtime="20200718 14:22:46.368"></status>
+<msg timestamp="20200722 07:59:42.244" level="FAIL">'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="FAIL" starttime="20200722 07:59:42.243" endtime="20200722 07:59:42.244"></status>
 </kw>
-<msg timestamp="20200718 14:22:46.368" level="INFO">${match} = FAIL</msg>
-<msg timestamp="20200718 14:22:46.368" level="INFO">${value} = 'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
-<status status="PASS" starttime="20200718 14:22:46.367" endtime="20200718 14:22:46.368"></status>
+<msg timestamp="20200722 07:59:42.244" level="INFO">${match} = FAIL</msg>
+<msg timestamp="20200722 07:59:42.244" level="INFO">${value} = 'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="PASS" starttime="20200722 07:59:42.243" endtime="20200722 07:59:42.244"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -35,22 +35,22 @@
 <arg>${s}</arg>
 <arg>startAppiumServer</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:22:46.369" endtime="20200718 14:22:46.369"></status>
+<status status="PASS" starttime="20200722 07:59:42.244" endtime="20200722 07:59:42.244"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20200718 14:22:51.371" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20200718 14:22:46.370" endtime="20200718 14:22:51.371"></status>
+<msg timestamp="20200722 07:59:47.247" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200722 07:59:42.245" endtime="20200722 07:59:47.247"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>RUNNING...</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:22:51.371" endtime="20200718 14:22:51.372"></status>
+<status status="PASS" starttime="20200722 07:59:47.247" endtime="20200722 07:59:47.247"></status>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.
@@ -67,10 +67,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>deviceName=${deviceName}</arg>
 <arg>automationName=${automationName}</arg>
 <arg>app=${appPath}</arg>
+<arg>nativeWebScreenshot=true</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:22:51.372" endtime="20200718 14:23:10.638"></status>
+<status status="PASS" starttime="20200722 07:59:47.247" endtime="20200722 08:00:06.349"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:22:46.366" endtime="20200718 14:23:10.639"></status>
+<status status="PASS" starttime="20200722 07:59:42.242" endtime="20200722 08:00:06.352"></status>
 </kw>
 <test id="s1-s1-t1" name="Perform action on Waheed webdriver.io is awesome This button is active">
 <kw name="Open the option" library="CommonKeywords" type="setup">
@@ -88,9 +89,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:10.643" endtime="20200718 14:23:11.427"></status>
+<status status="PASS" starttime="20200722 08:00:06.360" endtime="20200722 08:00:07.559"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:10.642" endtime="20200718 14:23:11.428"></status>
+<status status="PASS" starttime="20200722 08:00:06.358" endtime="20200722 08:00:07.559"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -107,21 +108,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:11.429" endtime="20200718 14:23:11.736"></status>
+<status status="PASS" starttime="20200722 08:00:07.561" endtime="20200722 08:00:07.925"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:11.428" endtime="20200718 14:23:11.736"></status>
+<status status="PASS" starttime="20200722 08:00:07.560" endtime="20200722 08:00:07.925"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:11.741" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:23:11.737" endtime="20200718 14:23:12.035"></status>
+<msg timestamp="20200722 08:00:07.931" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200722 08:00:07.926" endtime="20200722 08:00:08.272"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:11.428" endtime="20200718 14:23:12.035"></status>
+<status status="PASS" starttime="20200722 08:00:07.560" endtime="20200722 08:00:08.272"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:10.641" endtime="20200718 14:23:12.035"></status>
+<status status="PASS" starttime="20200722 08:00:06.355" endtime="20200722 08:00:08.273"></status>
 </kw>
 <kw name="DataDriven Test cases">
 <arguments>
@@ -144,9 +145,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:12.036" endtime="20200718 14:23:12.313"></status>
+<status status="PASS" starttime="20200722 08:00:08.278" endtime="20200722 08:00:08.669"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.036" endtime="20200718 14:23:12.313"></status>
+<status status="PASS" starttime="20200722 08:00:08.276" endtime="20200722 08:00:08.670"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -163,21 +164,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:12.314" endtime="20200718 14:23:12.605"></status>
+<status status="PASS" starttime="20200722 08:00:08.679" endtime="20200722 08:00:08.988"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.313" endtime="20200718 14:23:12.605"></status>
+<status status="PASS" starttime="20200722 08:00:08.675" endtime="20200722 08:00:08.990"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:12.610" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
-<status status="PASS" starttime="20200718 14:23:12.606" endtime="20200718 14:23:12.904"></status>
+<msg timestamp="20200722 08:00:09.003" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
+<status status="PASS" starttime="20200722 08:00:08.990" endtime="20200722 08:00:09.345"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.313" endtime="20200718 14:23:12.904"></status>
+<status status="PASS" starttime="20200722 08:00:08.671" endtime="20200722 08:00:09.345"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.035" endtime="20200718 14:23:12.905"></status>
+<status status="PASS" starttime="20200722 08:00:08.275" endtime="20200722 08:00:09.345"></status>
 </kw>
 <kw name="Enter data in the field" library="FormsPageHelper">
 <arguments>
@@ -199,9 +200,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:12.908" endtime="20200718 14:23:13.698"></status>
+<status status="PASS" starttime="20200722 08:00:09.348" endtime="20200722 08:00:10.158"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.907" endtime="20200718 14:23:13.699"></status>
+<status status="PASS" starttime="20200722 08:00:09.347" endtime="20200722 08:00:10.159"></status>
 </kw>
 <kw name="Clear text of the field" library="AppiumLibraryKeywords">
 <arguments>
@@ -218,19 +219,19 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:13.702" endtime="20200718 14:23:13.951"></status>
+<status status="PASS" starttime="20200722 08:00:10.162" endtime="20200722 08:00:10.476"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:13.702" endtime="20200718 14:23:13.951"></status>
+<status status="PASS" starttime="20200722 08:00:10.161" endtime="20200722 08:00:10.477"></status>
 </kw>
 <kw name="Clear Text" library="AppiumLibrary">
 <doc>Clears the text field identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:13.954" level="INFO">Clear text field 'accessibility_id=text-input'</msg>
-<status status="PASS" starttime="20200718 14:23:13.951" endtime="20200718 14:23:14.835"></status>
+<msg timestamp="20200722 08:00:10.483" level="INFO">Clear text field 'accessibility_id=text-input'</msg>
+<status status="PASS" starttime="20200722 08:00:10.477" endtime="20200722 08:00:11.358"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:13.699" endtime="20200718 14:23:14.837"></status>
+<status status="PASS" starttime="20200722 08:00:10.160" endtime="20200722 08:00:11.359"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -238,20 +239,20 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${locator}</arg>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:14.848" level="INFO">Typing text 'Waheed' into text field 'accessibility_id=text-input'</msg>
-<status status="PASS" starttime="20200718 14:23:14.840" endtime="20200718 14:23:15.997"></status>
+<msg timestamp="20200722 08:00:11.371" level="INFO">Typing text 'Waheed' into text field 'accessibility_id=text-input'</msg>
+<status status="PASS" starttime="20200722 08:00:11.360" endtime="20200722 08:00:12.696"></status>
 </kw>
 <kw name="Hide the keypad" library="AppiumLibraryKeywords">
 <kw name="Hide Keyboard" library="AppiumLibrary">
 <doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
 a particular key, ex. `Done`. In Android, no parameters are used.</doc>
-<status status="PASS" starttime="20200718 14:23:15.998" endtime="20200718 14:23:16.486"></status>
+<status status="PASS" starttime="20200722 08:00:12.697" endtime="20200722 08:00:13.221"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:15.997" endtime="20200718 14:23:16.487"></status>
+<status status="PASS" starttime="20200722 08:00:12.697" endtime="20200722 08:00:13.223"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.906" endtime="20200718 14:23:16.487"></status>
+<status status="PASS" starttime="20200722 08:00:09.346" endtime="20200722 08:00:13.224"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.905" endtime="20200718 14:23:16.487"></status>
+<status status="PASS" starttime="20200722 08:00:09.346" endtime="20200722 08:00:13.225"></status>
 </kw>
 <kw name="Verify data from the result field" library="FormsPageHelper">
 <arguments>
@@ -275,9 +276,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:16.490" endtime="20200718 14:23:17.258"></status>
+<status status="PASS" starttime="20200722 08:00:13.233" endtime="20200722 08:00:14.111"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:16.490" endtime="20200718 14:23:17.258"></status>
+<status status="PASS" starttime="20200722 08:00:13.230" endtime="20200722 08:00:14.111"></status>
 </kw>
 <kw name="Get Text" library="AppiumLibrary">
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
@@ -287,12 +288,12 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <assign>
 <var>${value}</var>
 </assign>
-<msg timestamp="20200718 14:23:17.538" level="INFO">Element 'accessibility_id=input-text-result' text is 'Waheed' </msg>
-<msg timestamp="20200718 14:23:17.538" level="INFO">${value} = Waheed</msg>
-<status status="PASS" starttime="20200718 14:23:17.258" endtime="20200718 14:23:17.538"></status>
+<msg timestamp="20200722 08:00:14.399" level="INFO">Element 'accessibility_id=input-text-result' text is 'Waheed' </msg>
+<msg timestamp="20200722 08:00:14.400" level="INFO">${value} = Waheed</msg>
+<status status="PASS" starttime="20200722 08:00:14.111" endtime="20200722 08:00:14.400"></status>
 </kw>
-<msg timestamp="20200718 14:23:17.540" level="INFO">${value} = Waheed</msg>
-<status status="PASS" starttime="20200718 14:23:16.489" endtime="20200718 14:23:17.541"></status>
+<msg timestamp="20200722 08:00:14.401" level="INFO">${value} = Waheed</msg>
+<status status="PASS" starttime="20200722 08:00:13.228" endtime="20200722 08:00:14.401"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -300,9 +301,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${value}</arg>
 <arg>${data}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:17.541" endtime="20200718 14:23:17.543"></status>
+<status status="PASS" starttime="20200722 08:00:14.401" endtime="20200722 08:00:14.402"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:16.487" endtime="20200718 14:23:17.543"></status>
+<status status="PASS" starttime="20200722 08:00:13.226" endtime="20200722 08:00:14.402"></status>
 </kw>
 <kw name="Click on Radio button" library="FormsPageHelper">
 <kw name="Click on an element" library="AppiumLibraryKeywords">
@@ -320,21 +321,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:17.545" endtime="20200718 14:23:17.757"></status>
+<status status="PASS" starttime="20200722 08:00:14.407" endtime="20200722 08:00:14.752"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:17.544" endtime="20200718 14:23:17.757"></status>
+<status status="PASS" starttime="20200722 08:00:14.405" endtime="20200722 08:00:14.752"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:17.761" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
-<status status="PASS" starttime="20200718 14:23:17.757" endtime="20200718 14:23:18.025"></status>
+<msg timestamp="20200722 08:00:14.758" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
+<status status="PASS" starttime="20200722 08:00:14.753" endtime="20200722 08:00:15.054"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:17.544" endtime="20200718 14:23:18.026"></status>
+<status status="PASS" starttime="20200722 08:00:14.403" endtime="20200722 08:00:15.055"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:17.543" endtime="20200718 14:23:18.026"></status>
+<status status="PASS" starttime="20200722 08:00:14.402" endtime="20200722 08:00:15.057"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -355,21 +356,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:18.031" endtime="20200718 14:23:18.946"></status>
+<status status="PASS" starttime="20200722 08:00:15.063" endtime="20200722 08:00:16.022"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:18.029" endtime="20200718 14:23:18.947"></status>
+<status status="PASS" starttime="20200722 08:00:15.061" endtime="20200722 08:00:16.022"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:19.253" level="INFO">Current page contains text 'Click to turn the switch OFF'.</msg>
-<status status="PASS" starttime="20200718 14:23:18.947" endtime="20200718 14:23:19.253"></status>
+<msg timestamp="20200722 08:00:16.272" level="INFO">Current page contains text 'Click to turn the switch OFF'.</msg>
+<status status="PASS" starttime="20200722 08:00:16.023" endtime="20200722 08:00:16.272"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:18.028" endtime="20200718 14:23:19.254"></status>
+<status status="PASS" starttime="20200722 08:00:15.059" endtime="20200722 08:00:16.273"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:18.027" endtime="20200718 14:23:19.254"></status>
+<status status="PASS" starttime="20200722 08:00:15.057" endtime="20200722 08:00:16.273"></status>
 </kw>
 <kw name="Click on Radio button" library="FormsPageHelper">
 <kw name="Click on an element" library="AppiumLibraryKeywords">
@@ -387,21 +388,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:19.259" endtime="20200718 14:23:19.487"></status>
+<status status="PASS" starttime="20200722 08:00:16.277" endtime="20200722 08:00:16.588"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:19.257" endtime="20200718 14:23:19.491"></status>
+<status status="PASS" starttime="20200722 08:00:16.276" endtime="20200722 08:00:16.589"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:19.503" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
-<status status="PASS" starttime="20200718 14:23:19.493" endtime="20200718 14:23:19.759"></status>
+<msg timestamp="20200722 08:00:16.599" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
+<status status="PASS" starttime="20200722 08:00:16.590" endtime="20200722 08:00:16.871"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:19.256" endtime="20200718 14:23:19.759"></status>
+<status status="PASS" starttime="20200722 08:00:16.274" endtime="20200722 08:00:16.872"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:19.255" endtime="20200718 14:23:19.759"></status>
+<status status="PASS" starttime="20200722 08:00:16.274" endtime="20200722 08:00:16.872"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -422,21 +423,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:19.761" endtime="20200718 14:23:20.597"></status>
+<status status="PASS" starttime="20200722 08:00:16.875" endtime="20200722 08:00:17.697"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:19.761" endtime="20200718 14:23:20.597"></status>
+<status status="PASS" starttime="20200722 08:00:16.874" endtime="20200722 08:00:17.699"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:20.851" level="INFO">Current page contains text 'Click to turn the switch ON'.</msg>
-<status status="PASS" starttime="20200718 14:23:20.598" endtime="20200718 14:23:20.851"></status>
+<msg timestamp="20200722 08:00:18.055" level="INFO">Current page contains text 'Click to turn the switch ON'.</msg>
+<status status="PASS" starttime="20200722 08:00:17.700" endtime="20200722 08:00:18.055"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:19.760" endtime="20200718 14:23:20.852"></status>
+<status status="PASS" starttime="20200722 08:00:16.873" endtime="20200722 08:00:18.055"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:19.760" endtime="20200718 14:23:20.852"></status>
+<status status="PASS" starttime="20200722 08:00:16.872" endtime="20200722 08:00:18.055"></status>
 </kw>
 <kw name="Select value from dropdown" library="FormsPageHelper">
 <arguments>
@@ -457,19 +458,19 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:20.855" endtime="20200718 14:23:21.145"></status>
+<status status="PASS" starttime="20200722 08:00:18.057" endtime="20200722 08:00:18.305"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:20.854" endtime="20200718 14:23:21.145"></status>
+<status status="PASS" starttime="20200722 08:00:18.057" endtime="20200722 08:00:18.305"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:21.151" level="INFO">Clicking element 'accessibility_id=select-Dropdown'.</msg>
-<status status="PASS" starttime="20200718 14:23:21.145" endtime="20200718 14:23:21.415"></status>
+<msg timestamp="20200722 08:00:18.307" level="INFO">Clicking element 'accessibility_id=select-Dropdown'.</msg>
+<status status="PASS" starttime="20200722 08:00:18.305" endtime="20200722 08:00:18.651"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:20.853" endtime="20200718 14:23:21.415"></status>
+<status status="PASS" starttime="20200722 08:00:18.056" endtime="20200722 08:00:18.651"></status>
 </kw>
 <kw name="Click on text" library="AppiumLibraryKeywords">
 <arguments>
@@ -482,11 +483,11 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${exact_match}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:21.416" endtime="20200718 14:23:22.206"></status>
+<status status="PASS" starttime="20200722 08:00:18.651" endtime="20200722 08:00:19.530"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:21.415" endtime="20200718 14:23:22.206"></status>
+<status status="PASS" starttime="20200722 08:00:18.651" endtime="20200722 08:00:19.530"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:20.852" endtime="20200718 14:23:22.206"></status>
+<status status="PASS" starttime="20200722 08:00:18.055" endtime="20200722 08:00:19.531"></status>
 </kw>
 <kw name="Click on Active button" library="FormsPageHelper">
 <kw name="Click on an element" library="AppiumLibraryKeywords">
@@ -504,21 +505,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:22.210" endtime="20200718 14:23:23.071"></status>
+<status status="PASS" starttime="20200722 08:00:19.535" endtime="20200722 08:00:20.512"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:22.208" endtime="20200718 14:23:23.072"></status>
+<status status="PASS" starttime="20200722 08:00:19.533" endtime="20200722 08:00:20.514"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:23.078" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="button-Active"]/android.view.ViewGroup/android.widget.TextView'.</msg>
-<status status="PASS" starttime="20200718 14:23:23.072" endtime="20200718 14:23:23.393"></status>
+<msg timestamp="20200722 08:00:20.533" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="button-Active"]/android.view.ViewGroup/android.widget.TextView'.</msg>
+<status status="PASS" starttime="20200722 08:00:20.517" endtime="20200722 08:00:20.904"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:22.207" endtime="20200718 14:23:23.393"></status>
+<status status="PASS" starttime="20200722 08:00:19.532" endtime="20200722 08:00:20.905"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:22.206" endtime="20200718 14:23:23.394"></status>
+<status status="PASS" starttime="20200722 08:00:19.531" endtime="20200722 08:00:20.906"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -539,21 +540,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:23.402" endtime="20200718 14:23:23.976"></status>
+<status status="PASS" starttime="20200722 08:00:20.912" endtime="20200722 08:00:21.481"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:23.400" endtime="20200718 14:23:23.977"></status>
+<status status="PASS" starttime="20200722 08:00:20.909" endtime="20200722 08:00:21.482"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:24.122" level="INFO">Current page contains text 'This button is active'.</msg>
-<status status="PASS" starttime="20200718 14:23:23.977" endtime="20200718 14:23:24.123"></status>
+<msg timestamp="20200722 08:00:21.650" level="INFO">Current page contains text 'This button is active'.</msg>
+<status status="PASS" starttime="20200722 08:00:21.483" endtime="20200722 08:00:21.651"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:23.396" endtime="20200718 14:23:24.123"></status>
+<status status="PASS" starttime="20200722 08:00:20.908" endtime="20200722 08:00:21.651"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:23.394" endtime="20200718 14:23:24.124"></status>
+<status status="PASS" starttime="20200722 08:00:20.906" endtime="20200722 08:00:21.652"></status>
 </kw>
 <kw name="Click on OK button" library="FormsPageHelper">
 <kw name="Click on text" library="AppiumLibraryKeywords">
@@ -567,15 +568,15 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${exact_match}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:24.126" endtime="20200718 14:23:24.407"></status>
+<status status="PASS" starttime="20200722 08:00:21.655" endtime="20200722 08:00:21.960"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:24.125" endtime="20200718 14:23:24.407"></status>
+<status status="PASS" starttime="20200722 08:00:21.653" endtime="20200722 08:00:21.961"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:24.124" endtime="20200718 14:23:24.408"></status>
+<status status="PASS" starttime="20200722 08:00:21.652" endtime="20200722 08:00:21.962"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:12.035" endtime="20200718 14:23:24.408"></status>
+<status status="PASS" starttime="20200722 08:00:08.273" endtime="20200722 08:00:21.962"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:10.639" endtime="20200718 14:23:24.409" critical="yes"></status>
+<status status="PASS" starttime="20200722 08:00:06.352" endtime="20200722 08:00:21.963" critical="yes"></status>
 </test>
 <test id="s1-s1-t2" name="Perform action on Raheel Appium is awesome This button is active">
 <kw name="Open the option" library="CommonKeywords" type="setup">
@@ -593,9 +594,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:24.419" endtime="20200718 14:23:25.143"></status>
+<status status="PASS" starttime="20200722 08:00:21.971" endtime="20200722 08:00:22.808"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:24.416" endtime="20200718 14:23:25.144"></status>
+<status status="PASS" starttime="20200722 08:00:21.968" endtime="20200722 08:00:22.809"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -612,21 +613,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:25.145" endtime="20200718 14:23:25.418"></status>
+<status status="PASS" starttime="20200722 08:00:22.814" endtime="20200722 08:00:23.450"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:25.145" endtime="20200718 14:23:25.419"></status>
+<status status="PASS" starttime="20200722 08:00:22.812" endtime="20200722 08:00:23.450"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:25.425" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:23:25.419" endtime="20200718 14:23:25.709"></status>
+<msg timestamp="20200722 08:00:23.453" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200722 08:00:23.450" endtime="20200722 08:00:23.947"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:25.144" endtime="20200718 14:23:25.709"></status>
+<status status="PASS" starttime="20200722 08:00:22.810" endtime="20200722 08:00:23.948"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:24.414" endtime="20200718 14:23:25.709"></status>
+<status status="PASS" starttime="20200722 08:00:21.966" endtime="20200722 08:00:23.948"></status>
 </kw>
 <kw name="DataDriven Test cases">
 <arguments>
@@ -649,9 +650,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:25.713" endtime="20200718 14:23:26.491"></status>
+<status status="PASS" starttime="20200722 08:00:23.951" endtime="20200722 08:00:24.774"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:25.712" endtime="20200718 14:23:26.492"></status>
+<status status="PASS" starttime="20200722 08:00:23.950" endtime="20200722 08:00:24.774"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -668,21 +669,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:26.497" endtime="20200718 14:23:26.801"></status>
+<status status="PASS" starttime="20200722 08:00:24.777" endtime="20200722 08:00:25.061"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:26.494" endtime="20200718 14:23:26.801"></status>
+<status status="PASS" starttime="20200722 08:00:24.776" endtime="20200722 08:00:25.061"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:26.808" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
-<status status="PASS" starttime="20200718 14:23:26.802" endtime="20200718 14:23:27.142"></status>
+<msg timestamp="20200722 08:00:25.063" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
+<status status="PASS" starttime="20200722 08:00:25.061" endtime="20200722 08:00:25.356"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:26.493" endtime="20200718 14:23:27.143"></status>
+<status status="PASS" starttime="20200722 08:00:24.775" endtime="20200722 08:00:25.357"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:25.710" endtime="20200718 14:23:27.143"></status>
+<status status="PASS" starttime="20200722 08:00:23.949" endtime="20200722 08:00:25.357"></status>
 </kw>
 <kw name="Enter data in the field" library="FormsPageHelper">
 <arguments>
@@ -704,9 +705,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:27.149" endtime="20200718 14:23:27.919"></status>
+<status status="PASS" starttime="20200722 08:00:25.360" endtime="20200722 08:00:26.186"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:27.148" endtime="20200718 14:23:27.919"></status>
+<status status="PASS" starttime="20200722 08:00:25.360" endtime="20200722 08:00:26.186"></status>
 </kw>
 <kw name="Clear text of the field" library="AppiumLibraryKeywords">
 <arguments>
@@ -723,19 +724,19 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:27.922" endtime="20200718 14:23:28.149"></status>
+<status status="PASS" starttime="20200722 08:00:26.189" endtime="20200722 08:00:26.459"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:27.921" endtime="20200718 14:23:28.150"></status>
+<status status="PASS" starttime="20200722 08:00:26.188" endtime="20200722 08:00:26.459"></status>
 </kw>
 <kw name="Clear Text" library="AppiumLibrary">
 <doc>Clears the text field identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:28.159" level="INFO">Clear text field 'accessibility_id=text-input'</msg>
-<status status="PASS" starttime="20200718 14:23:28.151" endtime="20200718 14:23:28.770"></status>
+<msg timestamp="20200722 08:00:26.463" level="INFO">Clear text field 'accessibility_id=text-input'</msg>
+<status status="PASS" starttime="20200722 08:00:26.459" endtime="20200722 08:00:27.202"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:27.920" endtime="20200718 14:23:28.771"></status>
+<status status="PASS" starttime="20200722 08:00:26.187" endtime="20200722 08:00:27.202"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -743,20 +744,20 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:28.781" level="INFO">Typing text 'Raheel' into text field 'accessibility_id=text-input'</msg>
-<status status="PASS" starttime="20200718 14:23:28.772" endtime="20200718 14:23:30.213"></status>
+<msg timestamp="20200722 08:00:27.206" level="INFO">Typing text 'Raheel' into text field 'accessibility_id=text-input'</msg>
+<status status="PASS" starttime="20200722 08:00:27.202" endtime="20200722 08:00:28.653"></status>
 </kw>
 <kw name="Hide the keypad" library="AppiumLibraryKeywords">
 <kw name="Hide Keyboard" library="AppiumLibrary">
 <doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
 a particular key, ex. `Done`. In Android, no parameters are used.</doc>
-<status status="PASS" starttime="20200718 14:23:30.214" endtime="20200718 14:23:30.627"></status>
+<status status="PASS" starttime="20200722 08:00:28.654" endtime="20200722 08:00:29.129"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:30.214" endtime="20200718 14:23:30.627"></status>
+<status status="PASS" starttime="20200722 08:00:28.653" endtime="20200722 08:00:29.129"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:27.145" endtime="20200718 14:23:30.627"></status>
+<status status="PASS" starttime="20200722 08:00:25.358" endtime="20200722 08:00:29.129"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:27.144" endtime="20200718 14:23:30.628"></status>
+<status status="PASS" starttime="20200722 08:00:25.357" endtime="20200722 08:00:29.130"></status>
 </kw>
 <kw name="Verify data from the result field" library="FormsPageHelper">
 <arguments>
@@ -780,9 +781,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:30.631" endtime="20200718 14:23:31.426"></status>
+<status status="PASS" starttime="20200722 08:00:29.134" endtime="20200722 08:00:29.923"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:30.630" endtime="20200718 14:23:31.426"></status>
+<status status="PASS" starttime="20200722 08:00:29.132" endtime="20200722 08:00:29.923"></status>
 </kw>
 <kw name="Get Text" library="AppiumLibrary">
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
@@ -792,12 +793,12 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <assign>
 <var>${value}</var>
 </assign>
-<msg timestamp="20200718 14:23:31.659" level="INFO">Element 'accessibility_id=input-text-result' text is 'Raheel' </msg>
-<msg timestamp="20200718 14:23:31.660" level="INFO">${value} = Raheel</msg>
-<status status="PASS" starttime="20200718 14:23:31.427" endtime="20200718 14:23:31.660"></status>
+<msg timestamp="20200722 08:00:30.228" level="INFO">Element 'accessibility_id=input-text-result' text is 'Raheel' </msg>
+<msg timestamp="20200722 08:00:30.228" level="INFO">${value} = Raheel</msg>
+<status status="PASS" starttime="20200722 08:00:29.923" endtime="20200722 08:00:30.228"></status>
 </kw>
-<msg timestamp="20200718 14:23:31.661" level="INFO">${value} = Raheel</msg>
-<status status="PASS" starttime="20200718 14:23:30.629" endtime="20200718 14:23:31.661"></status>
+<msg timestamp="20200722 08:00:30.228" level="INFO">${value} = Raheel</msg>
+<status status="PASS" starttime="20200722 08:00:29.131" endtime="20200722 08:00:30.228"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -805,9 +806,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${value}</arg>
 <arg>${data}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:31.662" endtime="20200718 14:23:31.664"></status>
+<status status="PASS" starttime="20200722 08:00:30.229" endtime="20200722 08:00:30.229"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:30.628" endtime="20200718 14:23:31.665"></status>
+<status status="PASS" starttime="20200722 08:00:29.130" endtime="20200722 08:00:30.229"></status>
 </kw>
 <kw name="Click on Radio button" library="FormsPageHelper">
 <kw name="Click on an element" library="AppiumLibraryKeywords">
@@ -825,21 +826,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:31.668" endtime="20200718 14:23:31.907"></status>
+<status status="PASS" starttime="20200722 08:00:30.231" endtime="20200722 08:00:30.503"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:31.667" endtime="20200718 14:23:31.909"></status>
+<status status="PASS" starttime="20200722 08:00:30.230" endtime="20200722 08:00:30.504"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:31.920" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
-<status status="PASS" starttime="20200718 14:23:31.909" endtime="20200718 14:23:32.137"></status>
+<msg timestamp="20200722 08:00:30.507" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
+<status status="PASS" starttime="20200722 08:00:30.504" endtime="20200722 08:00:30.788"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:31.666" endtime="20200718 14:23:32.138"></status>
+<status status="PASS" starttime="20200722 08:00:30.230" endtime="20200722 08:00:30.788"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:31.665" endtime="20200718 14:23:32.140"></status>
+<status status="PASS" starttime="20200722 08:00:30.229" endtime="20200722 08:00:30.788"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -860,21 +861,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:32.146" endtime="20200718 14:23:32.874"></status>
+<status status="PASS" starttime="20200722 08:00:30.793" endtime="20200722 08:00:31.612"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:32.145" endtime="20200718 14:23:32.875"></status>
+<status status="PASS" starttime="20200722 08:00:30.791" endtime="20200722 08:00:31.612"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:33.128" level="INFO">Current page contains text 'Click to turn the switch OFF'.</msg>
-<status status="PASS" starttime="20200718 14:23:32.875" endtime="20200718 14:23:33.129"></status>
+<msg timestamp="20200722 08:00:31.958" level="INFO">Current page contains text 'Click to turn the switch OFF'.</msg>
+<status status="PASS" starttime="20200722 08:00:31.612" endtime="20200722 08:00:31.959"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:32.142" endtime="20200718 14:23:33.130"></status>
+<status status="PASS" starttime="20200722 08:00:30.790" endtime="20200722 08:00:31.959"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:32.140" endtime="20200718 14:23:33.131"></status>
+<status status="PASS" starttime="20200722 08:00:30.789" endtime="20200722 08:00:31.959"></status>
 </kw>
 <kw name="Click on Radio button" library="FormsPageHelper">
 <kw name="Click on an element" library="AppiumLibraryKeywords">
@@ -892,21 +893,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:33.138" endtime="20200718 14:23:33.356"></status>
+<status status="PASS" starttime="20200722 08:00:31.961" endtime="20200722 08:00:32.231"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:33.136" endtime="20200718 14:23:33.358"></status>
+<status status="PASS" starttime="20200722 08:00:31.961" endtime="20200722 08:00:32.231"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:33.367" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
-<status status="PASS" starttime="20200718 14:23:33.358" endtime="20200718 14:23:33.614"></status>
+<msg timestamp="20200722 08:00:32.235" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
+<status status="PASS" starttime="20200722 08:00:32.231" endtime="20200722 08:00:32.563"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:33.133" endtime="20200718 14:23:33.615"></status>
+<status status="PASS" starttime="20200722 08:00:31.960" endtime="20200722 08:00:32.563"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:33.132" endtime="20200718 14:23:33.616"></status>
+<status status="PASS" starttime="20200722 08:00:31.959" endtime="20200722 08:00:32.564"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -927,21 +928,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:33.621" endtime="20200718 14:23:34.368"></status>
+<status status="PASS" starttime="20200722 08:00:32.571" endtime="20200722 08:00:33.348"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:33.619" endtime="20200718 14:23:34.370"></status>
+<status status="PASS" starttime="20200722 08:00:32.570" endtime="20200722 08:00:33.349"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:34.663" level="INFO">Current page contains text 'Click to turn the switch ON'.</msg>
-<status status="PASS" starttime="20200718 14:23:34.371" endtime="20200718 14:23:34.663"></status>
+<msg timestamp="20200722 08:00:33.595" level="INFO">Current page contains text 'Click to turn the switch ON'.</msg>
+<status status="PASS" starttime="20200722 08:00:33.349" endtime="20200722 08:00:33.595"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:33.618" endtime="20200718 14:23:34.663"></status>
+<status status="PASS" starttime="20200722 08:00:32.568" endtime="20200722 08:00:33.596"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:33.617" endtime="20200718 14:23:34.663"></status>
+<status status="PASS" starttime="20200722 08:00:32.565" endtime="20200722 08:00:33.596"></status>
 </kw>
 <kw name="Select value from dropdown" library="FormsPageHelper">
 <arguments>
@@ -962,19 +963,19 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:34.665" endtime="20200718 14:23:34.864"></status>
+<status status="PASS" starttime="20200722 08:00:33.601" endtime="20200722 08:00:33.858"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:34.664" endtime="20200718 14:23:34.866"></status>
+<status status="PASS" starttime="20200722 08:00:33.599" endtime="20200722 08:00:33.858"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:34.881" level="INFO">Clicking element 'accessibility_id=select-Dropdown'.</msg>
-<status status="PASS" starttime="20200718 14:23:34.867" endtime="20200718 14:23:35.151"></status>
+<msg timestamp="20200722 08:00:33.861" level="INFO">Clicking element 'accessibility_id=select-Dropdown'.</msg>
+<status status="PASS" starttime="20200722 08:00:33.858" endtime="20200722 08:00:34.139"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:34.664" endtime="20200718 14:23:35.152"></status>
+<status status="PASS" starttime="20200722 08:00:33.597" endtime="20200722 08:00:34.141"></status>
 </kw>
 <kw name="Click on text" library="AppiumLibraryKeywords">
 <arguments>
@@ -987,11 +988,11 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${exact_match}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:35.153" endtime="20200718 14:23:36.600"></status>
+<status status="PASS" starttime="20200722 08:00:34.145" endtime="20200722 08:00:34.909"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:35.152" endtime="20200718 14:23:36.600"></status>
+<status status="PASS" starttime="20200722 08:00:34.142" endtime="20200722 08:00:34.909"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:34.663" endtime="20200718 14:23:36.600"></status>
+<status status="PASS" starttime="20200722 08:00:33.596" endtime="20200722 08:00:34.909"></status>
 </kw>
 <kw name="Click on Active button" library="FormsPageHelper">
 <kw name="Click on an element" library="AppiumLibraryKeywords">
@@ -1009,21 +1010,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:36.602" endtime="20200718 14:23:36.864"></status>
+<status status="PASS" starttime="20200722 08:00:34.912" endtime="20200722 08:00:35.823"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:36.602" endtime="20200718 14:23:36.865"></status>
+<status status="PASS" starttime="20200722 08:00:34.911" endtime="20200722 08:00:35.824"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:36.869" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="button-Active"]/android.view.ViewGroup/android.widget.TextView'.</msg>
-<status status="PASS" starttime="20200718 14:23:36.865" endtime="20200718 14:23:37.147"></status>
+<msg timestamp="20200722 08:00:35.828" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="button-Active"]/android.view.ViewGroup/android.widget.TextView'.</msg>
+<status status="PASS" starttime="20200722 08:00:35.824" endtime="20200722 08:00:36.153"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:36.601" endtime="20200718 14:23:37.148"></status>
+<status status="PASS" starttime="20200722 08:00:34.910" endtime="20200722 08:00:36.154"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:36.600" endtime="20200718 14:23:37.148"></status>
+<status status="PASS" starttime="20200722 08:00:34.909" endtime="20200722 08:00:36.154"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -1044,21 +1045,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:37.151" endtime="20200718 14:23:37.832"></status>
+<status status="PASS" starttime="20200722 08:00:36.170" endtime="20200722 08:00:36.834"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:37.150" endtime="20200718 14:23:37.833"></status>
+<status status="PASS" starttime="20200722 08:00:36.163" endtime="20200722 08:00:36.834"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:38.157" level="INFO">Current page contains text 'This button is active'.</msg>
-<status status="PASS" starttime="20200718 14:23:37.833" endtime="20200718 14:23:38.158"></status>
+<msg timestamp="20200722 08:00:37.159" level="INFO">Current page contains text 'This button is active'.</msg>
+<status status="PASS" starttime="20200722 08:00:36.835" endtime="20200722 08:00:37.159"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:37.149" endtime="20200718 14:23:38.158"></status>
+<status status="PASS" starttime="20200722 08:00:36.162" endtime="20200722 08:00:37.160"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:37.148" endtime="20200718 14:23:38.159"></status>
+<status status="PASS" starttime="20200722 08:00:36.155" endtime="20200722 08:00:37.160"></status>
 </kw>
 <kw name="Click on OK button" library="FormsPageHelper">
 <kw name="Click on text" library="AppiumLibraryKeywords">
@@ -1072,15 +1073,15 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${exact_match}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:38.163" endtime="20200718 14:23:38.424"></status>
+<status status="PASS" starttime="20200722 08:00:37.161" endtime="20200722 08:00:37.526"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:38.162" endtime="20200718 14:23:38.425"></status>
+<status status="PASS" starttime="20200722 08:00:37.160" endtime="20200722 08:00:37.527"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:38.160" endtime="20200718 14:23:38.425"></status>
+<status status="PASS" starttime="20200722 08:00:37.160" endtime="20200722 08:00:37.527"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:25.709" endtime="20200718 14:23:38.425"></status>
+<status status="PASS" starttime="20200722 08:00:23.948" endtime="20200722 08:00:37.527"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:24.410" endtime="20200718 14:23:38.425" critical="yes"></status>
+<status status="PASS" starttime="20200722 08:00:21.964" endtime="20200722 08:00:37.527" critical="yes"></status>
 </test>
 <test id="s1-s1-t3" name="Perform action on Moeed This app is awesome This button is active">
 <kw name="Open the option" library="CommonKeywords" type="setup">
@@ -1098,9 +1099,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:38.430" endtime="20200718 14:23:39.120"></status>
+<status status="PASS" starttime="20200722 08:00:37.529" endtime="20200722 08:00:38.260"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:38.429" endtime="20200718 14:23:39.121"></status>
+<status status="PASS" starttime="20200722 08:00:37.528" endtime="20200722 08:00:38.260"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -1117,21 +1118,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:39.123" endtime="20200718 14:23:39.412"></status>
+<status status="PASS" starttime="20200722 08:00:38.262" endtime="20200722 08:00:38.568"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:39.122" endtime="20200718 14:23:39.413"></status>
+<status status="PASS" starttime="20200722 08:00:38.261" endtime="20200722 08:00:38.569"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:39.416" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
-<status status="PASS" starttime="20200718 14:23:39.413" endtime="20200718 14:23:39.677"></status>
+<msg timestamp="20200722 08:00:38.574" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Home']'.</msg>
+<status status="PASS" starttime="20200722 08:00:38.569" endtime="20200722 08:00:38.850"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:39.121" endtime="20200718 14:23:39.678"></status>
+<status status="PASS" starttime="20200722 08:00:38.260" endtime="20200722 08:00:38.851"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:38.428" endtime="20200718 14:23:39.679"></status>
+<status status="PASS" starttime="20200722 08:00:37.528" endtime="20200722 08:00:38.851"></status>
 </kw>
 <kw name="DataDriven Test cases">
 <arguments>
@@ -1154,9 +1155,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:39.685" endtime="20200718 14:23:40.435"></status>
+<status status="PASS" starttime="20200722 08:00:38.854" endtime="20200722 08:00:39.638"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:39.684" endtime="20200718 14:23:40.436"></status>
+<status status="PASS" starttime="20200722 08:00:38.853" endtime="20200722 08:00:39.638"></status>
 </kw>
 <kw name="Click on an element" library="AppiumLibraryKeywords">
 <arguments>
@@ -1173,21 +1174,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:40.440" endtime="20200718 14:23:40.661"></status>
+<status status="PASS" starttime="20200722 08:00:39.640" endtime="20200722 08:00:39.864"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:40.439" endtime="20200718 14:23:40.662"></status>
+<status status="PASS" starttime="20200722 08:00:39.639" endtime="20200722 08:00:39.864"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:40.671" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
-<status status="PASS" starttime="20200718 14:23:40.663" endtime="20200718 14:23:41.012"></status>
+<msg timestamp="20200722 08:00:39.869" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Forms']'.</msg>
+<status status="PASS" starttime="20200722 08:00:39.864" endtime="20200722 08:00:40.218"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:40.436" endtime="20200718 14:23:41.013"></status>
+<status status="PASS" starttime="20200722 08:00:39.638" endtime="20200722 08:00:40.218"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:39.683" endtime="20200718 14:23:41.013"></status>
+<status status="PASS" starttime="20200722 08:00:38.852" endtime="20200722 08:00:40.219"></status>
 </kw>
 <kw name="Enter data in the field" library="FormsPageHelper">
 <arguments>
@@ -1209,9 +1210,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:41.018" endtime="20200718 14:23:41.831"></status>
+<status status="PASS" starttime="20200722 08:00:40.222" endtime="20200722 08:00:41.040"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:41.017" endtime="20200718 14:23:41.833"></status>
+<status status="PASS" starttime="20200722 08:00:40.221" endtime="20200722 08:00:41.040"></status>
 </kw>
 <kw name="Clear text of the field" library="AppiumLibraryKeywords">
 <arguments>
@@ -1228,19 +1229,19 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:41.842" endtime="20200718 14:23:42.041"></status>
+<status status="PASS" starttime="20200722 08:00:41.041" endtime="20200722 08:00:41.461"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:41.836" endtime="20200718 14:23:42.042"></status>
+<status status="PASS" starttime="20200722 08:00:41.041" endtime="20200722 08:00:41.461"></status>
 </kw>
 <kw name="Clear Text" library="AppiumLibrary">
 <doc>Clears the text field identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:42.046" level="INFO">Clear text field 'accessibility_id=text-input'</msg>
-<status status="PASS" starttime="20200718 14:23:42.042" endtime="20200718 14:23:42.826"></status>
+<msg timestamp="20200722 08:00:41.464" level="INFO">Clear text field 'accessibility_id=text-input'</msg>
+<status status="PASS" starttime="20200722 08:00:41.461" endtime="20200722 08:00:42.171"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:41.833" endtime="20200718 14:23:42.826"></status>
+<status status="PASS" starttime="20200722 08:00:41.040" endtime="20200722 08:00:42.172"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -1248,20 +1249,20 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:42.831" level="INFO">Typing text 'Moeed' into text field 'accessibility_id=text-input'</msg>
-<status status="PASS" starttime="20200718 14:23:42.827" endtime="20200718 14:23:44.226"></status>
+<msg timestamp="20200722 08:00:42.181" level="INFO">Typing text 'Moeed' into text field 'accessibility_id=text-input'</msg>
+<status status="PASS" starttime="20200722 08:00:42.173" endtime="20200722 08:00:43.533"></status>
 </kw>
 <kw name="Hide the keypad" library="AppiumLibraryKeywords">
 <kw name="Hide Keyboard" library="AppiumLibrary">
 <doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
 a particular key, ex. `Done`. In Android, no parameters are used.</doc>
-<status status="PASS" starttime="20200718 14:23:44.226" endtime="20200718 14:23:44.685"></status>
+<status status="PASS" starttime="20200722 08:00:43.535" endtime="20200722 08:00:44.029"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:44.226" endtime="20200718 14:23:44.686"></status>
+<status status="PASS" starttime="20200722 08:00:43.534" endtime="20200722 08:00:44.030"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:41.016" endtime="20200718 14:23:44.686"></status>
+<status status="PASS" starttime="20200722 08:00:40.220" endtime="20200722 08:00:44.030"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:41.014" endtime="20200718 14:23:44.687"></status>
+<status status="PASS" starttime="20200722 08:00:40.219" endtime="20200722 08:00:44.030"></status>
 </kw>
 <kw name="Verify data from the result field" library="FormsPageHelper">
 <arguments>
@@ -1285,9 +1286,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:44.691" endtime="20200718 14:23:45.489"></status>
+<status status="PASS" starttime="20200722 08:00:44.034" endtime="20200722 08:00:44.860"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:44.690" endtime="20200718 14:23:45.490"></status>
+<status status="PASS" starttime="20200722 08:00:44.032" endtime="20200722 08:00:44.860"></status>
 </kw>
 <kw name="Get Text" library="AppiumLibrary">
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
@@ -1297,12 +1298,12 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <assign>
 <var>${value}</var>
 </assign>
-<msg timestamp="20200718 14:23:45.752" level="INFO">Element 'accessibility_id=input-text-result' text is 'Moeed' </msg>
-<msg timestamp="20200718 14:23:45.753" level="INFO">${value} = Moeed</msg>
-<status status="PASS" starttime="20200718 14:23:45.490" endtime="20200718 14:23:45.753"></status>
+<msg timestamp="20200722 08:00:45.145" level="INFO">Element 'accessibility_id=input-text-result' text is 'Moeed' </msg>
+<msg timestamp="20200722 08:00:45.146" level="INFO">${value} = Moeed</msg>
+<status status="PASS" starttime="20200722 08:00:44.860" endtime="20200722 08:00:45.147"></status>
 </kw>
-<msg timestamp="20200718 14:23:45.754" level="INFO">${value} = Moeed</msg>
-<status status="PASS" starttime="20200718 14:23:44.688" endtime="20200718 14:23:45.754"></status>
+<msg timestamp="20200722 08:00:45.149" level="INFO">${value} = Moeed</msg>
+<status status="PASS" starttime="20200722 08:00:44.031" endtime="20200722 08:00:45.149"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -1310,9 +1311,9 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${value}</arg>
 <arg>${data}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:45.754" endtime="20200718 14:23:45.755"></status>
+<status status="PASS" starttime="20200722 08:00:45.150" endtime="20200722 08:00:45.151"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:44.687" endtime="20200718 14:23:45.756"></status>
+<status status="PASS" starttime="20200722 08:00:44.030" endtime="20200722 08:00:45.152"></status>
 </kw>
 <kw name="Click on Radio button" library="FormsPageHelper">
 <kw name="Click on an element" library="AppiumLibraryKeywords">
@@ -1330,21 +1331,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:45.758" endtime="20200718 14:23:45.987"></status>
+<status status="PASS" starttime="20200722 08:00:45.157" endtime="20200722 08:00:45.404"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:45.758" endtime="20200718 14:23:45.990"></status>
+<status status="PASS" starttime="20200722 08:00:45.155" endtime="20200722 08:00:45.406"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:46.005" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
-<status status="PASS" starttime="20200718 14:23:45.993" endtime="20200718 14:23:46.226"></status>
+<msg timestamp="20200722 08:00:45.418" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
+<status status="PASS" starttime="20200722 08:00:45.407" endtime="20200722 08:00:45.735"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:45.757" endtime="20200718 14:23:46.226"></status>
+<status status="PASS" starttime="20200722 08:00:45.154" endtime="20200722 08:00:45.736"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:45.756" endtime="20200718 14:23:46.227"></status>
+<status status="PASS" starttime="20200722 08:00:45.153" endtime="20200722 08:00:45.736"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -1365,21 +1366,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:46.231" endtime="20200718 14:23:46.987"></status>
+<status status="PASS" starttime="20200722 08:00:45.742" endtime="20200722 08:00:46.531"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:46.230" endtime="20200718 14:23:46.988"></status>
+<status status="PASS" starttime="20200722 08:00:45.740" endtime="20200722 08:00:46.533"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:47.266" level="INFO">Current page contains text 'Click to turn the switch OFF'.</msg>
-<status status="PASS" starttime="20200718 14:23:46.989" endtime="20200718 14:23:47.266"></status>
+<msg timestamp="20200722 08:00:46.810" level="INFO">Current page contains text 'Click to turn the switch OFF'.</msg>
+<status status="PASS" starttime="20200722 08:00:46.534" endtime="20200722 08:00:46.811"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:46.229" endtime="20200718 14:23:47.266"></status>
+<status status="PASS" starttime="20200722 08:00:45.738" endtime="20200722 08:00:46.811"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:46.227" endtime="20200718 14:23:47.267"></status>
+<status status="PASS" starttime="20200722 08:00:45.737" endtime="20200722 08:00:46.812"></status>
 </kw>
 <kw name="Click on Radio button" library="FormsPageHelper">
 <kw name="Click on an element" library="AppiumLibraryKeywords">
@@ -1397,21 +1398,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:47.269" endtime="20200718 14:23:47.542"></status>
+<status status="PASS" starttime="20200722 08:00:46.816" endtime="20200722 08:00:47.042"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:47.268" endtime="20200718 14:23:47.544"></status>
+<status status="PASS" starttime="20200722 08:00:46.815" endtime="20200722 08:00:47.043"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:47.553" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
-<status status="PASS" starttime="20200718 14:23:47.545" endtime="20200718 14:23:47.792"></status>
+<msg timestamp="20200722 08:00:47.046" level="INFO">Clicking element 'accessibility_id=switch'.</msg>
+<status status="PASS" starttime="20200722 08:00:47.043" endtime="20200722 08:00:47.388"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:47.267" endtime="20200718 14:23:47.793"></status>
+<status status="PASS" starttime="20200722 08:00:46.813" endtime="20200722 08:00:47.389"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:47.267" endtime="20200718 14:23:47.793"></status>
+<status status="PASS" starttime="20200722 08:00:46.812" endtime="20200722 08:00:47.389"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -1432,21 +1433,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:47.795" endtime="20200718 14:23:48.709"></status>
+<status status="PASS" starttime="20200722 08:00:47.391" endtime="20200722 08:00:48.189"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:47.794" endtime="20200718 14:23:48.709"></status>
+<status status="PASS" starttime="20200722 08:00:47.390" endtime="20200722 08:00:48.190"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:48.957" level="INFO">Current page contains text 'Click to turn the switch ON'.</msg>
-<status status="PASS" starttime="20200718 14:23:48.710" endtime="20200718 14:23:48.957"></status>
+<msg timestamp="20200722 08:00:48.475" level="INFO">Current page contains text 'Click to turn the switch ON'.</msg>
+<status status="PASS" starttime="20200722 08:00:48.191" endtime="20200722 08:00:48.475"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:47.794" endtime="20200718 14:23:48.958"></status>
+<status status="PASS" starttime="20200722 08:00:47.390" endtime="20200722 08:00:48.475"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:47.793" endtime="20200718 14:23:48.958"></status>
+<status status="PASS" starttime="20200722 08:00:47.389" endtime="20200722 08:00:48.475"></status>
 </kw>
 <kw name="Select value from dropdown" library="FormsPageHelper">
 <arguments>
@@ -1467,19 +1468,19 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:48.961" endtime="20200718 14:23:49.207"></status>
+<status status="PASS" starttime="20200722 08:00:48.477" endtime="20200722 08:00:48.742"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:48.960" endtime="20200718 14:23:49.207"></status>
+<status status="PASS" starttime="20200722 08:00:48.477" endtime="20200722 08:00:48.742"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:49.212" level="INFO">Clicking element 'accessibility_id=select-Dropdown'.</msg>
-<status status="PASS" starttime="20200718 14:23:49.208" endtime="20200718 14:23:49.456"></status>
+<msg timestamp="20200722 08:00:48.745" level="INFO">Clicking element 'accessibility_id=select-Dropdown'.</msg>
+<status status="PASS" starttime="20200722 08:00:48.742" endtime="20200722 08:00:49.133"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:48.959" endtime="20200718 14:23:49.456"></status>
+<status status="PASS" starttime="20200722 08:00:48.476" endtime="20200722 08:00:49.133"></status>
 </kw>
 <kw name="Click on text" library="AppiumLibraryKeywords">
 <arguments>
@@ -1492,11 +1493,11 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${exact_match}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:49.457" endtime="20200718 14:23:50.251"></status>
+<status status="PASS" starttime="20200722 08:00:49.135" endtime="20200722 08:00:49.949"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:49.456" endtime="20200718 14:23:50.251"></status>
+<status status="PASS" starttime="20200722 08:00:49.134" endtime="20200722 08:00:49.949"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:48.958" endtime="20200718 14:23:50.251"></status>
+<status status="PASS" starttime="20200722 08:00:48.476" endtime="20200722 08:00:49.950"></status>
 </kw>
 <kw name="Click on Active button" library="FormsPageHelper">
 <kw name="Click on an element" library="AppiumLibraryKeywords">
@@ -1514,21 +1515,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${locator}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:50.256" endtime="20200718 14:23:51.167"></status>
+<status status="PASS" starttime="20200722 08:00:49.953" endtime="20200722 08:00:50.853"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:50.255" endtime="20200718 14:23:51.167"></status>
+<status status="PASS" starttime="20200722 08:00:49.952" endtime="20200722 08:00:50.854"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${locator}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:51.172" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="button-Active"]/android.view.ViewGroup/android.widget.TextView'.</msg>
-<status status="PASS" starttime="20200718 14:23:51.167" endtime="20200718 14:23:51.416"></status>
+<msg timestamp="20200722 08:00:50.856" level="INFO">Clicking element 'xpath=//android.view.ViewGroup[@content-desc="button-Active"]/android.view.ViewGroup/android.widget.TextView'.</msg>
+<status status="PASS" starttime="20200722 08:00:50.854" endtime="20200722 08:00:51.111"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:50.255" endtime="20200718 14:23:51.417"></status>
+<status status="PASS" starttime="20200722 08:00:49.952" endtime="20200722 08:00:51.112"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:50.252" endtime="20200718 14:23:51.417"></status>
+<status status="PASS" starttime="20200722 08:00:49.951" endtime="20200722 08:00:51.112"></status>
 </kw>
 <kw name="Verify text is available on the page" library="CommonKeywords">
 <arguments>
@@ -1549,21 +1550,21 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${timeout}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:51.421" endtime="20200718 14:23:51.977"></status>
+<status status="PASS" starttime="20200722 08:00:51.114" endtime="20200722 08:00:51.826"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:51.419" endtime="20200718 14:23:51.977"></status>
+<status status="PASS" starttime="20200722 08:00:51.113" endtime="20200722 08:00:51.826"></status>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <doc>Verifies that current page contains `text`.</doc>
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20200718 14:23:52.101" level="INFO">Current page contains text 'This button is active'.</msg>
-<status status="PASS" starttime="20200718 14:23:51.977" endtime="20200718 14:23:52.101"></status>
+<msg timestamp="20200722 08:00:51.989" level="INFO">Current page contains text 'This button is active'.</msg>
+<status status="PASS" starttime="20200722 08:00:51.827" endtime="20200722 08:00:51.989"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:51.418" endtime="20200718 14:23:52.101"></status>
+<status status="PASS" starttime="20200722 08:00:51.112" endtime="20200722 08:00:51.989"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:51.417" endtime="20200718 14:23:52.101"></status>
+<status status="PASS" starttime="20200722 08:00:51.112" endtime="20200722 08:00:51.989"></status>
 </kw>
 <kw name="Click on OK button" library="FormsPageHelper">
 <kw name="Click on text" library="AppiumLibraryKeywords">
@@ -1577,20 +1578,20 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>${exact_match}</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:52.102" endtime="20200718 14:23:52.337"></status>
+<status status="PASS" starttime="20200722 08:00:51.990" endtime="20200722 08:00:52.315"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:52.102" endtime="20200718 14:23:52.337"></status>
+<status status="PASS" starttime="20200722 08:00:51.990" endtime="20200722 08:00:52.316"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:52.101" endtime="20200718 14:23:52.338"></status>
+<status status="PASS" starttime="20200722 08:00:51.989" endtime="20200722 08:00:52.316"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:39.679" endtime="20200718 14:23:52.338"></status>
+<status status="PASS" starttime="20200722 08:00:38.851" endtime="20200722 08:00:52.316"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:38.427" endtime="20200718 14:23:52.338" critical="yes"></status>
+<status status="PASS" starttime="20200722 08:00:37.527" endtime="20200722 08:00:52.316" critical="yes"></status>
 </test>
 <kw name="Close the application" library="Setup" type="teardown">
 <kw name="Close All Applications" library="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20200718 14:23:52.342" endtime="20200718 14:23:52.568"></status>
+<status status="PASS" starttime="20200722 08:00:52.318" endtime="20200722 08:00:52.613"></status>
 </kw>
 <kw name="Run Keyword And Ignore Error" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
@@ -1609,12 +1610,12 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${remote_url}</arg>
 <arg>localhost</arg>
 </arguments>
-<msg timestamp="20200718 14:23:52.572" level="FAIL">'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
-<status status="FAIL" starttime="20200718 14:23:52.570" endtime="20200718 14:23:52.572"></status>
+<msg timestamp="20200722 08:00:52.615" level="FAIL">'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="FAIL" starttime="20200722 08:00:52.614" endtime="20200722 08:00:52.615"></status>
 </kw>
-<msg timestamp="20200718 14:23:52.573" level="INFO">${match} = FAIL</msg>
-<msg timestamp="20200718 14:23:52.573" level="INFO">${value} = 'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
-<status status="PASS" starttime="20200718 14:23:52.569" endtime="20200718 14:23:52.573"></status>
+<msg timestamp="20200722 08:00:52.615" level="INFO">${match} = FAIL</msg>
+<msg timestamp="20200722 08:00:52.615" level="INFO">${value} = 'https://waheedahmed4:6f1fmVAzjqUiLspnJnJJ@hub-cloud.browserstack.com/wd/hub' does not contain 'localhost'</msg>
+<status status="PASS" starttime="20200722 08:00:52.613" endtime="20200722 08:00:52.615"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1624,13 +1625,13 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${s}</arg>
 <arg>stopAppiumServer</arg>
 </arguments>
-<status status="PASS" starttime="20200718 14:23:52.573" endtime="20200718 14:23:52.574"></status>
+<status status="PASS" starttime="20200722 08:00:52.615" endtime="20200722 08:00:52.616"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:23:52.342" endtime="20200718 14:23:52.574"></status>
+<status status="PASS" starttime="20200722 08:00:52.318" endtime="20200722 08:00:52.616"></status>
 </kw>
-<status status="PASS" starttime="20200718 14:22:43.699" endtime="20200718 14:23:52.574"></status>
+<status status="PASS" starttime="20200722 07:59:36.912" endtime="20200722 08:00:52.616"></status>
 </suite>
-<status status="PASS" starttime="20200718 14:22:43.617" endtime="20200718 14:23:52.578"></status>
+<status status="PASS" starttime="20200722 07:59:36.784" endtime="20200722 08:00:52.618"></status>
 </suite>
 <statistics>
 <total>
